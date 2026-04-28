@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. عنوان رسمي أكثر -->
+    <title>عن الشركة - PROEXPO للحلول الاستثمارية والمعارض</title>
+    <meta name="description" content="PROEXPO شركة رائدة في حلول الأعمال، دراسات الجدوى، تنظيم المعارض الدولية، وتأسيس المشاريع الاستثمارية. تعرف على رؤيتنا وخبراتنا.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background: #fff; }
+        
+        .about-header {
+            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            padding: 90px 20px 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        /* تأثير مائي خفيف للخلفية */
+        .about-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0; right: 0;
+            height: 60px;
+            background: #fff;
+            clip-path: ellipse(60% 100% at 50% 100%);
+        }
+        
+        .about-header h1 { 
+            font-size: 3.2rem; 
+            font-weight: 900; 
+            margin-bottom: 15px; 
+            letter-spacing: -1px;
+        }
+        .about-header h1 span { color: #27AE60; position: relative; }
+        .about-header h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px; left: 0; right: 0;
+            height: 3px;
+            background: #27AE60;
+            border-radius: 2px;
+        }
+        .about-header .subtitle { 
+            font-size: 1.3rem; 
+            opacity: 0.9; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            line-height: 2; 
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: -20px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* بطاقة التأسيس - إضافة رسمية */
+        .establishment-badge {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 30px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8e8;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        .establishment-badge .est-icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, #27AE60, #1e8449);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        .establishment-badge .est-text h3 {
+            font-size: 1.3rem;
+            color: #2C3E50;
+            margin-bottom: 5px;
+        }
+        .establishment-badge .est-text p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .establishment-badge .est-year {
+            margin-right: auto;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #27AE60;
+            opacity: 0.15;
+            letter-spacing: 2px;
+        }
+        
+        .about-intro {
+            background: white;
+            border-radius: 20px;
+            padding: 45px 40px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .about-intro::before {
+            content: '\201C'; /* علامة اقتباس كبيرة */
+            position: absolute;
+            top: 15px; right: 25px;
+            font-size: 5rem;
+            color: #27AE60;
+            opacity: 0.08;
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .about-intro p {
+            color: #444;
+            font-size: 1.08rem;
+            line-height: 2.2;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .about-intro p:last-child { margin-bottom: 0; }
+        .about-intro .highlight {
+            color: #2C3E50;
+            font-weight: 700;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 1.9rem;
+            color: #2C3E50;
+            margin: 55px 0 30px;
+            text-align: center;
+            font-weight: 800;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #27AE60;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .section-title span { color: #27AE60; }
+        
+        .cards-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 18px;
+            padding: 35px 30px;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+        }
+        .info-card:nth-child(1)::before { background: #27AE60; }
+        .info-card:nth-child(2)::before { background: #2980B9; }
+        .info-card:nth-child(3)::before { background: #E74C3C; }
+        .info-card:nth-child(4)::before { background: #F39C12; }
+        
+        .info-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        .info-card .card-icon {
+            width: 65px; height: 65px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .info-card h3 { font-size: 1.25rem; color: #2C3E50; margin-bottom: 15px; font-weight: 800; }
+        .info-card p { color: #555; font-size: 0.98rem; line-height: 1.9; text-align: justify; }
+        
+        /* شبكة القيم */
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        .value-item {
+            background: #f9fafb;
+            padding: 25px 22px;
+            border-radius: 14px;
+            border-right: 4px solid #27AE60;
+            font-size: 0.93rem;
+            color: #444;
+            line-height: 1.8;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .value-item:nth-child(2) { border-right-color: #2980B9; }
+        .value-item:nth-child(3) { border-right-color: #E74C3C; }
+        .value-item:nth-child(4) { border-right-color: #F39C12; }
+        .value-item:nth-child(5) { border-right-color: #8E44AD; }
+        .value-item:nth-child(6) { border-right-color: #2C3E50; }
+        
+        .value-item:hover {
+            background: #eafaf1;
+            transform: translateX(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+        .value-item strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #1a2a3a;
+            font-size: 1.05rem;
+            font-weight: 800;
+        }
+        
+        /* قسم الفروع */
+        .branches-section {
+            background: white;
+            border-radius: 20px;
+            padding: 35px 35px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            margin-top: 30px;
+        }
+        .branches-section h3 {
+            font-size: 1.4rem;
+            color: #2C3E50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .branches-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .branch-item {
+            padding: 20px;
+            background: #f8faf9;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+        .branch-item:hover { background: #eafaf1; }
+        .branch-item i { font-size: 1.8rem; color: #27AE60; margin-bottom: 10px; }
+        .branch-item h4 { color: #2C3E50; margin-bottom: 5px; }
+        .branch-item p { color: #888; font-size: 0.85rem; }
+        
+        /* الألوان */
+        .bg-green { background: linear-gradient(135deg, #27AE60, #1e8449); }
+        .bg-blue { background: linear-gradient(135deg, #2980B9, #1a5276); }
+        .bg-red { background: linear-gradient(135deg, #E74C3C, #922b21); }
+        .bg-orange { background: linear-gradient(135deg, #F39C12, #b9770e); }
+        
+        @media (max-width: 768px) {
+            .about-header h1 { font-size: 2.2rem; }
+            .about-header { padding: 60px 20px; }
+            .cards-row { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .branches-list { grid-template-columns: 1fr; }
+            .about-intro { padding: 25px 20px; }
+            .section-title { font-size: 1.5rem; }
+            .establishment-badge { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- أيقونات التواصل العائمة -->
+    <a href="https://wa.me/963933438019" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="consultation.html" class="consult-float" aria-label="احجز استشارة">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar" aria-label="القائمة الرئيسية">
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار PROEXPO - شركة حلول الأعمال والاستثمار" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html" class="active" aria-current="page">عن الشركة</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="portfolio.html">أعمالنا</a></li>
+                <li><a href="consultation.html">الاستشارات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- رأس الصفحة -->
+    <header class="about-header">
+        <h1>عن <span>الشركة</span></h1>
+        <p class="subtitle">بوابتكم الموثوقة نحو الاستثمار الآمن والمستدام في الأسواق الإقليمية والدولية</p>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="about-container">
+        
+        <!-- بطاقة التأسيس - هوية مؤسسية -->
+        <div class="establishment-badge">
+            <div class="est-icon"><i class="fas fa-building"></i></div>
+            <div class="est-text">
+                <h3>شركة مسجلة رسمياً</h3>
+                <p>نعمل وفق أعلى معايير الحوكمة والشفافية المؤسسية</p>
+            </div>
+            <div class="est-year">2000</div>
+        </div>
+        
+        <!-- النص التعريفي الرسمي -->
+        <section class="about-intro" aria-label="نبذة عن الشركة">
+            <p>
+                تأسست <span class="highlight">PROEXPO</span> لتكون الذراع الاستشاري المتكامل لرواد الأعمال والمستثمرين، حيث نقدم باقة شاملة من <span class="highlight">حلول الأعمال</span> وخدمات فتح الأسواق عبر تنظيم معارض دولية متخصصة. كما نمتلك خبرة راسخة في إعداد <span class="highlight">دراسات الجدوى الاقتصادية</span> المعتمدة، وتأسيس المشاريع الاستثمارية وهيكلتها، واستقطاب المستثمرين الاستراتيجيين، وتقييم وتسويق العلامات التجارية. 
+            </p>
+            <p>
+                وبفضل علاقاتنا الواسعة مع <span class="highlight">محافظ مالية وصناديق استثمارية</span> راغبة في التمويل بالمرابحة، نوفر لعملائنا حلولاً تمويلية متكاملة لتجهيز ملفات المشاريع وفق أعلى المعايير المصرفية.
+            </p>
+            <p>
+                منذ انطلاقتنا، اعتمدت شركتنا <span class="highlight">استراتيجية عمل منهجية</span> ترتكز على أعلى معايير الجودة في كافة أنشطتها. ويفخر فريقنا بضم نخبة من <span class="highlight">المستشارين المحترفين</span> في مختلف التخصصات، مدعومين بشبكة علاقات دولية واسعة من شركاء استراتيجيين في مختلف قارات العالم، مما أتاح لنا بناء قاعدة عملاء متميزة تضم مستثمرين ورجال أعمال وشركات رائدة حول العالم.
+            </p>
+        </section>
+
+        <!-- تاريخنا + رؤيتنا + رسالتنا -->
+        <div class="cards-row">
+            <article class="info-card">
+                <div class="card-icon bg-green"><i class="fas fa-history"></i></div>
+                <h3>تاريخنا وتطورنا</h3>
+                <p>
+                    بدأت رحلتنا في العاصمة السورية <strong>دمشق</strong> مطلع عام 2000، واستمررنا في التوسع الاستراتيجي بافتتاح <strong>فرع السودان</strong> عام 2013، ثم <strong>فرع إسطنبول - تركيا</strong> عام 2016. وقد رسخنا مكانتنا الريادية بفضل قوة الأداء والقدرة على تقديم معارض ومؤتمرات ودراسات اقتصادية استقطبت نخبة رجال الأعمال والمستثمرين من شتى أنحاء العالم.
+                </p>
+            </article>
+            
+            <article class="info-card">
+                <div class="card-icon bg-blue"><i class="fas fa-eye"></i></div>
+                <h3>رؤيتنا ورسالتنا</h3>
+                <p>
+                    <strong>رؤيتنا:</strong> أن نكون الشريك الاستراتيجي الأول في مجال حلول الأعمال والاستثمار على مستوى الشرق الأوسط وإفريقيا.<br>
+                    <strong>رسالتنا:</strong> تقديم خدمات متكاملة تشمل دراسات الجدوى، تنظيم المعارض التجارية الدولية، والتجارة الاستثمارية المتخصصة، مع تزويد عملائنا بشبكة واسعة من الكفاءات العالمية لتحقيق أهدافهم التجارية بأفضل صورة ممكنة.
+                </p>
+            </article>
+        </div>
+
+        <!-- خبراتنا -->
+        <article class="info-card" style="margin-bottom:30px;">
+            <div class="card-icon bg-red"><i class="fas fa-medal"></i></div>
+            <h3>خبراتنا المتراكمة</h3>
+            <p>
+                يضم فريقنا الاستشاري نخبة من الخبراء ذوي خبرة تتجاوز <strong>25 عاماً</strong> في مجالات الأنشطة التجارية والصناعية والسياحية والطبية. نعتبر من أعرق الشركات في إعداد دراسات الجدوى المتكاملة، وتقديم حلول الاستثمار، وتنظيم المعارض الدولية في منطقة الشرق الأوسط. يتميز فريقنا الإحصائي المتخصص بقدرته الفائقة على جمع وتحليل البيانات بدقة، مما يمكننا من تصميم خطط واستراتيجيات مبتكرة ومحدثة وقابلة للتنفيذ الفعلي.
+            </p>
+        </article>
+
+        <!-- قيمنا ومبادئنا المؤسسية -->
+        <h2 class="section-title">قيمنا <span>ومبادئنا المؤسسية</span></h2>
+        
+        <div class="values-grid">
+            <div class="value-item">
+                <strong>النزاهة والشفافية</strong>
+                تقوم أعمالنا على أسس راسخة من الثقة والانفتاح والإنصاف على كافة المستويات التنظيمية في الشركة.
+            </div>
+            <div class="value-item">
+                <strong>المسؤولية المجتمعية</strong>
+                نلتزم بالمساهمة الفاعلة في تحقيق التنمية المستدامة من خلال رعاية موظفينا وعائلاتهم ودعم المجتمع المحلي.
+            </div>
+            <div class="value-item">
+                <strong>الابتكار والتطوير المستمر</strong>
+                نشجع كوادرنا على طرح وتطوير أفكار وحلول متجددة وفعالة تلبي احتياجات السوق المتغيرة.
+            </div>
+            <div class="value-item">
+                <strong>النجاح المتبادل</strong>
+                نضع احتياجات عملائنا في صدارة أولوياتنا، ونبني معهم علاقات استراتيجية طويلة الأمد أساسها الثقة والمنفعة المتبادلة.
+            </div>
+            <div class="value-item">
+                <strong>الالتزام والانضباط</strong>
+                يلتزم جميع مستشارينا وشركائنا بدقة المواعيد، وتحقيق الأهداف، واتباع إجراءات العمل المعتمدة.
+            </div>
+            <div class="value-item">
+                <strong>الاحترام المتبادل</strong>
+                نؤسس لعلاقات مهنية قوامها الاحترام والصدق والشفافية والصراحة مع كافة الأطراف.
+            </div>
+        </div>
+
+        <!-- فروعنا -->
+        <section class="branches-section">
+            <h3><i class="fas fa-map-marker-alt" style="color:#27AE60; margin-left:8px;"></i> تواجدنا الإقليمي</h3>
+            <div class="branches-list">
+                <div class="branch-item">
+                    <i class="fas fa-map-pin"></i>
+                    <h4>دمشق - سوريا</h4>
+                    <p>المركز الرئيسي (منذ 2000)</p>
+                </div>
+                <div class="branch-item">
+                    <i class="fas fa-map-pin"></i>
+                    <h4>الخرطوم - السودان</h4>
+                    <p>فرع إقليمي (منذ 2013)</p>
+                </div>
+                <div class="branch-item">
+                    <i class="fas fa-map-pin"></i>
+                    <h4>إسطنبول - تركيا</h4>
+                    <p>فرع دولي (منذ 2016)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer role="contentinfo">
+        <p>© 2026 PROEXPO. جميع الحقوق محفوظة. | <a href="privacy.html" style="color:#27AE60;">سياسة الخصوصية</a> | <a href="terms.html" style="color:#27AE60;">الشروط والأحكام</a></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

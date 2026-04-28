@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان رسمي -->
+    <title>خدمات PROEXPO | دراسات جدوى، معارض دولية، تمويل، تأسيس مشاريع</title>
+    <meta name="description" content="خدمات PROEXPO المتكاملة: دراسات جدوى اقتصادية، تنظيم معارض دولية، حلول تمويل بالمرابحة، تأسيس وتجهيز المشاريع، تقييم الشركات، والوساطة التجارية الدولية.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background: #f9fafb; }
+        
+        /* ===== هيدر الصفحة ===== */
+        .services-header {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 100%);
+            padding: 90px 20px 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .services-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0; right: 0;
+            height: 70px;
+            background: #f9fafb;
+            clip-path: ellipse(65% 100% at 50% 100%);
+        }
+        .services-header h1 { 
+            font-size: 3.2rem; 
+            font-weight: 900; 
+            margin-bottom: 18px; 
+            letter-spacing: -1px;
+        }
+        .services-header h1 span { 
+            color: #27AE60; 
+            position: relative;
+        }
+        .services-header h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px; left: 0; right: 0;
+            height: 3px;
+            background: #27AE60;
+            border-radius: 2px;
+        }
+        .services-header .header-subtitle { 
+            font-size: 1.25rem; 
+            opacity: 0.9; 
+            max-width: 650px; 
+            margin: 0 auto; 
+            line-height: 1.9;
+            font-weight: 500;
+        }
+        
+        .services-container {
+            max-width: 1100px;
+            margin: -30px auto 70px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* ===== شريط إحصائي ===== */
+        .stats-mini {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+        .stat-box {
+            background: white;
+            border-radius: 16px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 3px 18px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            transition: 0.3s;
+        }
+        .stat-box:hover { transform: translateY(-3px); }
+        .stat-box .stat-icon {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+        .stat-box:nth-child(1) .stat-icon { color: #27AE60; }
+        .stat-box:nth-child(2) .stat-icon { color: #2980B9; }
+        .stat-box:nth-child(3) .stat-icon { color: #E74C3C; }
+        .stat-box:nth-child(4) .stat-icon { color: #F39C12; }
+        .stat-box h4 { color: #2C3E50; font-size: 0.95rem; }
+        
+        /* ===== عنوان الأقسام ===== */
+        .section-divider {
+            text-align: center;
+            margin: 45px 0 30px;
+        }
+        .section-divider h2 {
+            font-size: 1.8rem;
+            color: #1a2a3a;
+            font-weight: 800;
+            display: inline-block;
+            position: relative;
+        }
+        .section-divider h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #27AE60;
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+        .section-divider h2 span { color: #27AE60; }
+        
+        /* ===== بطاقة الخدمة ===== */
+        .service-card {
+            background: white;
+            border-radius: 18px;
+            padding: 35px 32px;
+            margin-bottom: 22px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 5px;
+            height: 100%;
+        }
+        /* ألوان الشريط الجانبي */
+        .service-card:nth-child(1)::before { background: #27AE60; }
+        .service-card:nth-child(2)::before { background: #2980B9; }
+        .service-card:nth-child(3)::before { background: #E74C3C; }
+        .service-card:nth-child(4)::before { background: #F39C12; }
+        .service-card:nth-child(5)::before { background: #8E44AD; }
+        .service-card:nth-child(6)::before { background: #2C3E50; }
+        .service-card:nth-child(7)::before { background: #16A085; }
+        .service-card:nth-child(8)::before { background: #D35400; }
+        .service-card:nth-child(9)::before { background: #C0392B; }
+        .service-card:nth-child(10)::before { background: #2471A3; }
+        
+        .service-card:hover {
+            transform: translateX(-6px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-num {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #e8e8e8;
+            line-height: 1;
+            min-width: 55px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .service-card:hover .service-num {
+            color: #27AE60;
+        }
+        
+        .service-icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+        }, #E74C3C, #922b21); }
+        .bg-orange { background: linear-gradient(
+        .bg-green { background: linear-gradient(135deg, #27AE60, #1e8449); }
+        .bg-blue { background: linear-gradient(135deg, #2980B9, #1a5276); }
+        .bg-red { background: linear-gradient(135deg135deg, #F39C12, #b9770e); }
+        .bg-purple { background: linear-gradient(135deg, #8E44AD, #6c3483); }
+        .bg-dark { background: linear-gradient(135deg, #2C3E50, #1a2a3a); }
+        .bg-teal { background: linear-gradient(135deg, #16A085, #0e6655); }
+        .bg-brown { background: linear-gradient(135deg, #D35400, #a04000); }
+        .bg-crimson { background: linear-gradient(135deg, #C0392B, #922b21); }
+        .bg-ocean { background: linear-gradient(135deg, #2471A3, #154c73); }
+        
+        .service-content { flex: 1; }
+        .service-content h3 { 
+            font-size: 1.25rem; 
+            color: #2C3E50; 
+            margin-bottom: 8px; 
+            font-weight: 800;
+        }
+        .service-content p { 
+            color: #666; 
+            font-size: 0.93rem; 
+            line-height: 1.9; 
+            text-align: justify;
+        }
+        .service-content .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .service-content .service-features span {
+            background: #f0fdf4;
+            color: #27AE60;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        
+        /* ===== قسم CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            border-radius: 22px;
+            padding: 45px 35px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+        .cta-section h3 { 
+            font-size: 1.6rem; 
+            margin-bottom: 12px; 
+            font-weight: 800;
+        }
+        .cta-section h3 span { color: #27AE60; }
+        .cta-section p { 
+            opacity: 0.9; 
+            margin-bottom: 28px; 
+            line-height: 2; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        .cta-section .btn-cta {
+            display: inline-block;
+            background: #27AE60;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(39,174,96,0.3);
+        }
+        .cta-section .btn-cta:hover {
+            background: #219A52;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(39,174,96,0.5);
+        }
+        
+        /* ===== الفوتر ===== */
+        footer {
+            background: #1a2a3a;
+            color: #ccc;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #27AE60;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        footer a:hover { text-decoration: underline; }
+        
+        /* ===== ميديا كويري ===== */
+        @media (max-width: 768px) {
+            .services-header h1 { font-size: 2.2rem; }
+            .services-header { padding: 60px 20px; }
+            .stats-mini { grid-template-columns: 1fr 1fr; }
+            .service-card { flex-direction: column; gap: 15px; padding: 25px 20px; }
+            .service-num { display: none; }
+            .section-divider h2 { font-size: 1.4rem; }
+            .cta-section { padding: 30px 20px; }
+        }
+        @media (max-width: 480px) {
+            .stats-mini { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- أزرار التواصل العائمة -->
+    <a href="https://wa.me/963933438019" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="consultation.html" class="consult-float" aria-label="احجز استشارة">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar" aria-label="القائمة الرئيسية">
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار PROEXPO - الحلول الاستثمارية" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الشركة</a></li>
+                <li><a href="services.html" class="active" aria-current="page">خدماتنا</a></li>
+                <li><a href="portfolio.html">أعمالنا</a></li>
+                <li><a href="consultation.html">الاستشارات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== هيدر الصفحة ===== -->
+    <header class="services-header">
+        <h1><span>خدماتنا</span> المتكاملة</h1>
+        <p class="header-subtitle">نقدم باقة شاملة من حلول الأعمال والاستثمار لعملائنا في الشرق الأوسط والعالم</p>
+    </header>
+
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main class="services-container">
+        
+        <!-- شريط إحصائي سريع -->
+        <section class="stats-mini" aria-label="مميزات خدماتنا">
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                <h4>خدمات متكاملة وشاملة</h4>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                <h4>خبرة تزيد عن 25 عاماً</h4>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-globe-asia"></i></div>
+                <h4>تغطية إقليمية ودولية</h4>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                <h4>سرية واحترافية عالية</h4>
+            </div>
+        </section>
+        
+        <!-- ===== القسم الأول: دراسات الجدوى والاستشارات ===== -->
+        <div class="section-divider">
+            <h2><i class="fas fa-chart-pie" style="color:#27AE60; margin-left:10px;"></i> دراسات الجدوى <span>والاستشارات</span></h2>
+        </div>
+
+        <!-- خدمة 1 -->
+        <article class="service-card">
+            <div class="service-num">01</div>
+            <div class="service-icon-wrapper bg-green"><i class="fas fa-chart-pie"></i></div>
+            <div class="service-content">
+                <h3>دراسات الجدوى الاقتصادية</h3>
+                <p>نعد دراسات جدوى اقتصادية شاملة ومتكاملة وفق أعلى المعايير الدولية. تشمل الدراسة التحليل السوقي، التحليل المالي، تقييم المخاطر، تحليل المنافسين، والخطة التشغيلية لضمان نجاح مشروعك منذ البداية.</p>
+                <div class="service-features">
+                    <span>تحليل سوقي</span><span>تحليل مالي</span><span>خطة تشغيلية</span><span>دراسة مخاطر</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- خدمة 2 -->
+        <article class="service-card">
+            <div class="service-num">02</div>
+            <div class="service-icon-wrapper bg-blue"><i class="fas fa-chart-line"></i></div>
+            <div class="service-content">
+                <h3>دراسات الجدوى الاستثمارية</h3>
+                <p>نقدم تحليلاً معمقاً للفرص الاستثمارية وتقييم المخاطر والعوائد المتوقعة. تعتمد دراساتنا على بيانات محدثة ونماذج مالية متطورة لتزويد المستثمر برؤية واضحة قبل اتخاذ القرار.</p>
+                <div class="service-features">
+                    <span>تقييم فرص</span><span>تحليل عوائد</span><span>نماذج مالية</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- خدمة 3 -->
+        <article class="service-card">
+            <div class="service-num">03</div>
+            <div class="service-icon-wrapper bg-red"><i class="fas fa-search-dollar"></i></div>
+            <div class="service-content">
+                <h3>تحليل متطلبات توسع الأنشطة التسويقية والتجارية</h3>
+                <p>ندرس الأسواق المستهدفة ونحلل فرص التوسع التجاري والتسويقي لأنشطتك، مع تقديم خارطة طريق واضحة للنمو والتوسع في أسواق جديدة.</p>
+                <div class="service-features">
+                    <span>دراسة أسواق</span><span>تحليل منافسين</span><span>استراتيجية توسع</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===== القسم الثاني: المعارض والفعاليات ===== -->
+        <div class="section-divider">
+            <h2><i class="fas fa-globe" style="color:#2980B9; margin-left:10px;"></i> المعارض <span>والفعاليات الدولية</span></h2>
+        </div>
+
+        <!-- خدمة 4 -->
+        <article class="service-card">
+            <div class="service-num">04</div>
+            <div class="service-icon-wrapper bg-orange"><i class="fas fa-globe"></i></div>
+            <div class="service-content">
+                <h3>تنظيم وتجهيز المعارض والمؤتمرات الدولية</h3>
+                <p>نمتلك خبرة تزيد عن 20 عاماً في تنظيم المعارض والمؤتمرات الدولية بأعلى مستويات الاحترافية. نتولى كافة مراحل التنظيم بدءاً من التخطيط وحتى التنفيذ والمتابعة.</p>
+                <div class="service-features">
+                    <span>تخطيط كامل</span><span>تجهيز أجنحة</span><span>استقطاب مشاركين</span><span>تسويق إعلامي</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===== القسم الثالث: التمويل والتأسيس ===== -->
+        <div class="section-divider">
+            <h2><i class="fas fa-hand-holding-usd" style="color:#E74C3C; margin-left:10px;"></i> التمويل <span>والتأسيس</span></h2>
+        </div>
+
+        <!-- خدمة 5 -->
+        <article class="service-card">
+            <div class="service-num">05</div>
+            <div class="service-icon-wrapper bg-purple"><i class="fas fa-file-invoice"></i></div>
+            <div class="service-content">
+                <h3>إعداد ملفات التمويل والمرابحة</h3>
+                <p>نقوم بتجهيز ملفات تمويل متكاملة للمشاريع الواعدة من خلال علاقاتنا الوثيقة بالعديد من المحافظ المالية الراغبة في الاستثمار. نساعدك في الحصول على التمويل الأنسب لمشروعك.</p>
+                <div class="service-features">
+                    <span>ملف تمويلي</span><span>تمويل مرابحة</span><span>علاقات مصرفية</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- خدمة 6 -->
+        <article class="service-card">
+            <div class="service-num">06</div>
+            <div class="service-icon-wrapper bg-dark"><i class="fas fa-industry"></i></div>
+            <div class="service-content">
+                <h3>توريد خطوط الإنتاج والآلات والمعدات</h3>
+                <p>نوفر خطوط الإنتاج والآلات والمعدات من أفضل المصادر العالمية بأسعار تنافسية وجودة مضمونة. نرافقك من مرحلة الاختيار وحتى التركيب والتشغيل.</p>
+                <div class="service-features">
+                    <span>توريد آلات</span><span>تركيب وتشغيل</span><span>أسعار تنافسية</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- خدمة 7 -->
+        <article class="service-card">
+            <div class="service-num">07</div>
+            <div class="service-icon-wrapper bg-crimson"><i class="fas fa-building"></i></div>
+            <div class="service-content">
+                <h3>تقييم الشركات والمصانع</h3>
+                <p>نقدم خدمة تقييم شامل للشركات والمصانع من الناحية المالية والإدارية والفنية والتشغيلية، وتقديم تقرير مفصل مع توصيات للتطوير والتحسين.</p>
+                <div class="service-features">
+                    <span>تقييم مالي</span><span>تقييم فني</span><span>توصيات تطوير</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- خدمة 8 -->
+        <article class="service-card">
+            <div class="service-num">08</div>
+            <div class="service-icon-wrapper bg-ocean"><i class="fas fa-clipboard-check"></i></div>
+            <div class="service-content">
+                <h3>دراسة المنتج وتقييم خطوط الإنتاج</h3>
+                <p>نحلل المنتجات الحالية ونقيم كفاءة خطوط الإنتاج ونقدم توصيات عملية للتطوير ورفع الكفاءة الإنتاجية وخفض التكاليف التشغيلية.</p>
+                <div class="service-features">
+                    <span>تحليل منتج</span><span>كفاءة إنتاج</span><span>خفض تكاليف</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===== القسم الرابع: التجارة والوساطة ===== -->
+        <div class="section-divider">
+            <h2><i class="fas fa-handshake" style="color:#16A085; margin-left:10px;"></i> التجارة <span>والوساطة الدولية</span></h2>
+        </div>
+
+        <!-- خدمة 9 -->
+        <article class="service-card">
+            <div class="service-num">09</div>
+            <div class="service-icon-wrapper bg-teal"><i class="fas fa-handshake"></i></div>
+            <div class="service-content">
+                <h3>تنظيم التعاقدات التجارية (الوساطة الدولية)</h3>
+                <p>نقوم بتسهيل التعاقدات التجارية عبر شبكة علاقاتنا الدولية الواسعة، ونعمل كوسيط موثوق بين الشركات والمستثمرين من مختلف دول العالم.</p>
+                <div class="service-features">
+                    <span>وساطة موثوقة</span><span>عقود دولية</span><span>شبكة علاقات</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- خدمة 10 -->
+        <article class="service-card">
+            <div class="service-num">10</div>
+            <div class="service-icon-wrapper bg-brown"><i class="fas fa-tag"></i></div>
+            <div class="service-content">
+                <h3>تهيئة العلامات التجارية للمنتجات الدولية</h3>
+                <p>نساعد في تجهيز وتسجيل العلامات التجارية للمنتجات للدخول إلى الأسواق الدولية، مع دراسة متطلبات كل سوق وتوفير الاستشارات اللازمة للامتثال للمعايير.</p>
+                <div class="service-features">
+                    <span>تسجيل علامات</span><span>تجهيز للأسواق</span><span>امتثال للمعايير</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- ===== قسم CTA ===== -->
+        <section class="cta-section">
+            <h3>هل أنت جاهز <span>للبدء؟</span></h3>
+            <p>
+                فريقنا الاستشاري على أتم الاستعداد لتقديم استشارة أولية مجانية وتقييم احتياجات مشروعك. 
+                لا تتردد في التواصل معنا لمناقشة كيف يمكننا مساعدتك في تحقيق أهدافك.
+            </p>
+            <a href="consultation.html" class="btn-cta">
+                <i class="fas fa-paper-plane" style="margin-left:8px;"></i> احجز استشارتك الآن
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ===== تذييل الصفحة ===== -->
+    <footer role="contentinfo">
+        <p>
+            <a href="index.html">الرئيسية</a> | 
+            <a href="about.html">عن الشركة</a> | 
+            <a href="services.html">خدماتنا</a> | 
+            <a href="portfolio.html">أعمالنا</a> | 
+            <a href="consultation.html">الاستشارات</a> | 
+            <a href="contact.html">اتصل بنا</a> |
+            <a href="privacy.html">سياسة الخصوصية</a> | 
+            <a href="terms.html">الشروط والأحكام</a>
+        </p>
+        <p style="margin-top:8px;">© 2026 PROEXPO. جميع الحقوق محفوظة. | شركة مسجلة رسمياً</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

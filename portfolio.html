@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان رسمي -->
+    <title>معرض الأعمال - PROEXPO | دراسات جدوى، معارض، مشاريع منجزة</title>
+    <meta name="description" content="سجل حافل من إنجازات PROEXPO: أكثر من 250 دراسة جدوى، عشرات المعارض الدولية، تأسيس مشاريع في سوريا، السودان، تركيا، وأرمينيا. صور وشهادات موثقة.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background: #f9fafb; }
+        
+        /* ===== هيدر الصفحة ===== */
+        .page-header {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 100%);
+            padding: 90px 20px 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0; right: 0;
+            height: 70px;
+            background: #f9fafb;
+            clip-path: ellipse(65% 100% at 50% 100%);
+        }
+        .page-header h1 { 
+            font-size: 3.2rem; 
+            font-weight: 900; 
+            margin-bottom: 18px; 
+            letter-spacing: -1px;
+        }
+        .page-header h1 span { 
+            color: #27AE60; 
+            position: relative;
+        }
+        .page-header h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px; left: 0; right: 0;
+            height: 3px;
+            background: #27AE60;
+            border-radius: 2px;
+        }
+        .page-header .header-subtitle { 
+            font-size: 1.25rem; 
+            opacity: 0.9; 
+            max-width: 650px; 
+            margin: 0 auto; 
+            line-height: 1.9;
+            font-weight: 500;
+        }
+        
+        .page-container {
+            max-width: 1100px;
+            margin: -30px auto 70px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* ===== شريط إحصائي سريع ===== */
+        .quick-stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+        .quick-stat {
+            background: white;
+            border-radius: 18px;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        .quick-stat:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .quick-stat .qs-num {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        .quick-stat:nth-child(1) .qs-num { color: #27AE60; }
+        .quick-stat:nth-child(2) .qs-num { color: #2980B9; }
+        .quick-stat:nth-child(3) .qs-num { color: #E74C3C; }
+        .quick-stat:nth-child(4) .qs-num { color: #F39C12; }
+        
+        .quick-stat .qs-label {
+            color: #555;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* ===== بطاقة تعريفية ===== */
+        .intro-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            margin-bottom: 30px;
+            text-align: center;
+            border-right: 5px solid #27AE60;
+        }
+        .intro-card p {
+            color: #444;
+            font-size: 1.1rem;
+            line-height: 2.2;
+            text-align: justify;
+        }
+        
+        /* ===== أقسام المشاريع ===== */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            margin-bottom: 28px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+        }
+        .section-card:nth-of-type(1)::before { background: #27AE60; }
+        .section-card:nth-of-type(2)::before { background: #2980B9; }
+        .section-card:nth-of-type(3)::before { background: #E74C3C; }
+        .section-card:nth-of-type(4)::before { background: #F39C12; }
+        .section-card:nth-of-type(5)::before { background: #8E44AD; }
+        
+        .section-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+        
+        .section-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+        .section-card .card-header .card-icon {
+            width: 55px; height: 55px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+        .bg-green { background: linear-gradient(135deg, #27AE60, #1e8449); }
+        .bg-blue { background: linear-gradient(135deg, #2980B9, #1a5276); }
+        .bg-red { background: linear-gradient(135deg, #E74C3C, #922b21); }
+        .bg-orange { background: linear-gradient(135deg, #F39C12, #b9770e); }
+        .bg-purple { background: linear-gradient(135deg, #8E44AD, #6c3483); }
+        
+        .section-card h3 {
+            font-size: 1.4rem;
+            color: #2C3E50;
+            font-weight: 800;
+        }
+        .section-card .card-subtitle { 
+            color: #888; 
+            margin-bottom: 28px; 
+            font-size: 0.95rem; 
+            display: block;
+            margin-right: 70px;
+        }
+        
+        /* شبكة العناصر */
+        .items-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .item-row {
+            background: #f8faf9;
+            padding: 16px 18px;
+            border-radius: 12px;
+            border-right: 4px solid #27AE60;
+            font-size: 0.92rem;
+            color: #333;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+        .item-row:hover {
+            background: #eafaf1;
+            transform: translateX(-4px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .item-row .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .dot-green { background: #27AE60; }
+        .dot-blue { background: #2980B9; }
+        .dot-red { background: #E74C3C; }
+        .dot-gray { background: #2C3E50; }
+        .dot-orange { background: #F39C12; }
+        .dot-purple { background: #8E44AD; }
+        
+        /* ===== معرض الصور ===== */
+        .gallery-section-title {
+            font-size: 1.6rem;
+            color: #2C3E50;
+            text-align: center;
+            margin: 40px 0 25px;
+            font-weight: 800;
+        }
+        .gallery-section-title span { color: #27AE60; }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .gallery-item::after {
+            content: '\f00e'; /* أيقونة بحث */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .gallery-item:hover::after { opacity: 1; }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+            transition: 0.3s;
+        }
+        .gallery-item:hover img { filter: brightness(0.7); }
+        
+        /* ===== شهادات العملاء ===== */
+        .testimonials-section {
+            margin-top: 40px;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            transition: 0.3s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .testimonial-card .quote-mark {
+            font-size: 3rem;
+            color: #27AE60;
+            opacity: 0.2;
+            position: absolute;
+            top: 15px; right: 20px;
+            font-family: serif;
+        }
+        .testimonial-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+        .testimonial-card .client-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .testimonial-card .client-avatar {
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            background: #27AE60;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .testimonial-card .client-name {
+            font-weight: 700;
+            color: #2C3E50;
+        }
+        .testimonial-card .client-role {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        
+        /* ===== دعوة للتواصل ===== */
+        .cta-mini {
+            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+        .cta-mini h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .cta-mini p { opacity: 0.9; margin-bottom: 25px; line-height: 1.9; }
+        .cta-mini .btn-green {
+            display: inline-block;
+            background: #27AE60;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+        .cta-mini .btn-green:hover {
+            background: #219A52;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* ===== Lightbox ===== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 25px; right: 35px;
+            color: white;
+            font-size: 45px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .lightbox .close:hover { color: #E74C3C; }
+        
+        /* ===== الفوتر ===== */
+        footer {
+            background: #1a2a3a;
+            color: #ccc;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #27AE60;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        footer a:hover { text-decoration: underline; }
+        
+        /* ===== ميديا كويري ===== */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.2rem; }
+            .page-header { padding: 60px 20px; }
+            .quick-stats-bar { grid-template-columns: 1fr 1fr; }
+            .items-grid { grid-template-columns: 1fr; }
+            .section-card { padding: 25px 20px; }
+            .section-card .card-subtitle { margin-right: 0; }
+            .intro-card { padding: 25px 20px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .quick-stats-bar { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- أزرار التواصل العائمة -->
+    <a href="https://wa.me/963933438019" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="consultation.html" class="consult-float" aria-label="احجز استشارة">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar" aria-label="القائمة الرئيسية">
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار PROEXPO - حلول الأعمال والاستثمار" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الشركة</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="portfolio.html" class="active" aria-current="page">أعمالنا</a></li>
+                <li><a href="consultation.html">الاستشارات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== هيدر الصفحة ===== -->
+    <header class="page-header">
+        <h1>معرض <span>أعمالنا</span></h1>
+        <p class="header-subtitle">سجل حافل بالإنجازات والمشاريع الناجحة في مختلف القطاعات حول العالم</p>
+    </header>
+
+    <!-- ===== المحتوى الرئيسي ===== -->
+    <main class="page-container">
+        
+        <!-- شريط إحصائي سريع -->
+        <section class="quick-stats-bar" aria-label="إحصائيات سريعة">
+            <div class="quick-stat">
+                <div class="qs-num">+250</div>
+                <div class="qs-label">دراسة جدوى منجزة</div>
+            </div>
+            <div class="quick-stat">
+                <div class="qs-num">+15</div>
+                <div class="qs-label">معرضاً دولياً منظماً</div>
+            </div>
+            <div class="quick-stat">
+                <div class="qs-num">+6</div>
+                <div class="qs-label">مشاريع مؤسسة ومجهزة</div>
+            </div>
+            <div class="quick-stat">
+                <div class="qs-num">4</div>
+                <div class="qs-label">دول نعمل فيها</div>
+            </div>
+        </section>
+        
+        <!-- نص تعريفي -->
+        <div class="intro-card">
+            <p>
+                منذ تأسيس <strong>PROEXPO</strong> عام 2000، ركزت الشركة أنشطتها على بناء علاقات استراتيجية وثيقة في قطاع حلول الأعمال. وقد استقطبت الشركة نخبة من المحترفين وخبراء الأعمال في مختلف القطاعات الاقتصادية، مدعومة بشبكة واسعة من الوكلاء والمستشارين المنتشرين حول العالم.
+            </p>
+        </div>
+
+        <!-- ===== القسم الأول: الدراسات المنجزة ===== -->
+        <section class="section-card" aria-labelledby="studies-title">
+            <div class="card-header">
+                <div class="card-icon bg-green"><i class="fas fa-file-alt"></i></div>
+                <h3 id="studies-title">الدراسات المنجزة</h3>
+            </div>
+            <span class="card-subtitle">نفخر بإنجاز أكثر من 250 دراسة جدوى اقتصادية متكاملة في مختلف القطاعات</span>
+            
+            <div class="items-grid">
+                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع صناعة الأدوية</div>
+                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع صناعة الأسمدة العضوية</div>
+                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع مصنع ريبورت</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع النسيج العضوي</div>
+                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع صناعة المعادن من البازلت</div>
+                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع البطاطا النصف مقلية</div>
+                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع صناعة الشوكولا والبسكويت</div>
+                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع صناعة الأحذية</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع الملابس الجاهزة الرجالية</div>
+                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع مصنع الإسمنت</div>
+                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع الأجبان والألبان</div>
+                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع الحلاوة والطحينة</div>
+                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع البطاطا الحلوة</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع الكونسروة</div>
+                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع لوحات الإعلان الإلكترونية (الأوليد)</div>
+                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع الحفظ الغذائي بطريقة الضغط</div>
+                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع زراعة الذرة العلفية</div>
+                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع زراعة الموز</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع مستشفى تجميلية</div>
+                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع صناعة السيارات الكهربائية</div>
+                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع صناعة الأدوية البيطرية</div>
+                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع مستشفى ونادي بيطري</div>
+                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع تربية الأرانب</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع منتجع صحي سياحي</div>
+                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع شاليهات عائلية</div>
+                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع محطة توليد الكهرباء الكهروضوئية</div>
+            </div>
+        </section>
+
+        <!-- ===== القسم الثاني: تأسيس المشاريع ===== -->
+        <section class="section-card" aria-labelledby="setup-title">
+            <div class="card-header">
+                <div class="card-icon bg-blue"><i class="fas fa-industry"></i></div>
+                <h3 id="setup-title">تأسيس وتجهيز المشاريع</h3>
+            </div>
+            <span class="card-subtitle">مشاريع تم تأسيسها وتجهيزها بالكامل في عدة دول</span>
+            
+            <div class="items-grid">
+                <div class="item-row"><span class="dot dot-blue"></span> تأسيس وتجهيز مصنع لصناعة الأدوية - <strong>السودان</strong></div>
+                <div class="item-row"><span class="dot dot-green"></span> تأسيس وتجهيز مصنع لصناعة الأسمدة العضوية - <strong>أرمينيا</strong></div>
+                <div class="item-row"><span class="dot dot-red"></span> تأسيس وتجهيز مصنع لصناعة النسيج العضوي - <strong>تركيا</strong></div>
+                <div class="item-row"><span class="dot dot-gray"></span> تأسيس وتجهيز مصنع لمشروع البطاطا النصف مقلية - <strong>تركيا</strong></div>
+                <div class="item-row"><span class="dot dot-orange"></span> تأسيس وتجهيز مصنع لصناعة الشوكولا والبسكويت - <strong>سوريا</strong></div>
+                <div class="item-row"><span class="dot dot-blue"></span> تأسيس وتجهيز مصنع لصناعة الموبيليا والأبواب - <strong>السودان</strong></div>
+            </div>
+        </section>
+
+        <!-- ===== القسم الثالث: المعارض السابقة ===== -->
+        <section class="section-card" aria-labelledby="exhibitions-title">
+            <div class="card-header">
+                <div class="card-icon bg-red"><i class="fas fa-globe"></i></div>
+                <h3 id="exhibitions-title">معارضنا ومؤتمراتنا السابقة</h3>
+            </div>
+            <span class="card-subtitle">سجل حافل من المعارض والمؤتمرات والرحلات التجارية الدولية</span>
+            
+            <div class="items-grid">
+                <div class="item-row"><span class="dot dot-green"></span> معرض المنتجات السورية في ليبيا 2003 / 2004 / 2005</div>
+                <div class="item-row"><span class="dot dot-blue"></span> معرض المنتجات السورية في طرابلس 2006</div>
+                <div class="item-row"><span class="dot dot-red"></span> المعرض الدولي للزراعة والري والصناعات الغذائية - عمان (الرابعة والخامسة)</div>
+                <div class="item-row"><span class="dot dot-gray"></span> معرض دواجن السودان منذ 2004</div>
+                <div class="item-row"><span class="dot dot-orange"></span> المعرض الزراعي السوري الدولي - تسويق مشترك مع وزارة الزراعة</div>
+                <div class="item-row"><span class="dot dot-green"></span> معرض المنتجات السورية العربية وروسيا 2007</div>
+                <div class="item-row"><span class="dot dot-blue"></span> معرض دواجن إثيوبيا ديسمبر 2011 / 2014 / 2017</div>
+                <div class="item-row"><span class="dot dot-red"></span> معرض تسوق في الخرطوم - السودان</div>
+                <div class="item-row"><span class="dot dot-gray"></span> معرض التمور في إسطنبول - تركيا 2019</div>
+                <div class="item-row"><span class="dot dot-orange"></span> معرض منتدى الاستثمار والتعاون الدولي - إسطنبول 2018 / 2019</div>
+                <div class="item-row"><span class="dot dot-green"></span> تنظيم رحلات تجارية وزراعية لكبار الشخصيات - هولندا، تركيا، روسيا، ألمانيا</div>
+            </div>
+        </section>
+
+        <!-- ===== القسم الرابع: شهادات العملاء ===== -->
+        <section class="testimonials-section" aria-labelledby="testimonials-title">
+            <h3 class="gallery-section-title" id="testimonials-title">ماذا يقول <span>عملاؤنا؟</span></h3>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p>"فريق PROEXPO قدم لنا دراسة جدوى متكاملة لمشروعنا الصناعي، وكانت دقيقة جداً وساعدتنا في الحصول على التمويل المناسب. أنصح بالتعامل معهم."</p>
+                    <div class="client-info">
+                        <div class="client-avatar" style="background:#2980B9;">أ.م</div>
+                        <div>
+                            <div class="client-name">أحمد المصري</div>
+                            <div class="client-role">رئيس مجلس إدارة - شركة صناعية</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p>"تعاملت مع PROEXPO في تنظيم معرض دولي، وكان التنظيم على أعلى مستوى. علاقاتهم الدولية ساعدتنا في استقطاب مستثمرين من دول مختلفة."</p>
+                    <div class="client-info">
+                        <div class="client-avatar" style="background:#E74C3C;">خ.ع</div>
+                        <div>
+                            <div class="client-name">د. خالد العلي</div>
+                            <div class="client-role">مدير عام - مجموعة تجارية</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== القسم الخامس: صور من أعمالنا ===== -->
+        <section aria-labelledby="gallery-title">
+            <h3 class="gallery-section-title" id="gallery-title">صور من <span>فعالياتنا</span></h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/eX5EZDf.jpeg" alt="صورة من أحد معارض PROEXPO الدولية" onclick="openLightbox(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/JhFjbXA.jpeg" alt="فعالية PROEXPO في معرض تجاري" onclick="openLightbox(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/WmKlIg5.jpeg" alt="جناح PROEXPO في معرض دولي" onclick="openLightbox(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.imgur.com/6MgHPZN.jpeg" alt="فريق PROEXPO في أحد المؤتمرات" onclick="openLightbox(this.src)">
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== دعوة للتواصل ===== -->
+        <div class="cta-mini">
+            <h3>هل لديك مشروع وتريد <span style="color:#27AE60;">دراسة جدوى</span> احترافية؟</h3>
+            <p>فريقنا من الخبراء جاهز لتحويل فكرتك إلى مشروع ناجح. اطلب استشارتك الآن.</p>
+            <a href="consultation.html" class="btn-green">
+                <i class="fas fa-paper-plane" style="margin-left:8px;"></i> احجز استشارة مجانية
+            </a>
+        </div>
+
+    </main>
+
+    <!-- ===== Lightbox للصور ===== -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img src="" alt="صورة مكبرة" id="lightboxImg">
+    </div>
+
+    <!-- ===== تذييل الصفحة ===== -->
+    <footer role="contentinfo">
+        <p>
+            <a href="index.html">الرئيسية</a> | 
+            <a href="about.html">عن الشركة</a> | 
+            <a href="services.html">خدماتنا</a> | 
+            <a href="portfolio.html">أعمالنا</a> | 
+            <a href="privacy.html">سياسة الخصوصية</a> | 
+            <a href="terms.html">الشروط والأحكام</a>
+        </p>
+        <p style="margin-top:8px;">© 2026 PROEXPO. جميع الحقوق محفوظة. | شركة مسجلة رسمياً</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightboxImg').src = src;
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+        // إغلاق بالضغط على Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>

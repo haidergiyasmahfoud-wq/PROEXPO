@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان رسمي مع كلمات مفتاحية -->
+    <title>طلب استشارة - PROEXPO | حلول الأعمال والاستثمار</title>
+    <meta name="description" content="احجز استشارتك المجانية مع نخبة خبراء PROEXPO. نقدم استشارات في دراسات الجدوى، تنظيم المعارض، حلول التمويل، وتأسيس المشاريع. رد خلال 24 ساعة.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+        body { background: #f9fafb; }
+        
+        /* تحسين الهيدر */
+        .consult-header {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 100%);
+            padding: 90px 20px 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .consult-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0; right: 0;
+            height: 70px;
+            background: #f9fafb;
+            clip-path: ellipse(65% 100% at 50% 100%);
+        }
+        .consult-header h1 { 
+            font-size: 3.2rem; 
+            font-weight: 900; 
+            margin-bottom: 18px; 
+            letter-spacing: -1px;
+        }
+        .consult-header h1 span { 
+            color: #27AE60; 
+            position: relative;
+        }
+        .consult-header h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px; left: 0; right: 0;
+            height: 3px;
+            background: #27AE60;
+            border-radius: 2px;
+        }
+        .consult-header .header-subtitle { 
+            font-size: 1.25rem; 
+            opacity: 0.9; 
+            max-width: 650px; 
+            margin: 0 auto; 
+            line-height: 1.9;
+            font-weight: 500;
+        }
+        
+        .consult-container {
+            max-width: 1100px;
+            margin: -30px auto 70px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* --- القسم العلوي: كيف تعمل الاستشارة --- */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+        .process-step {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 22px;
+            text-align: center;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .process-step .step-number {
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, #27AE60, #1e8449);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin: 0 auto 18px;
+            box-shadow: 0 6px 18px rgba(39,174,96,0.25);
+        }
+        .process-step h4 {
+            font-size: 1.1rem;
+            color: #2C3E50;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+        .process-step p {
+            color: #777;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        
+        /* --- الشبكة الرئيسية --- */
+        .consult-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        /* --- استمارة الطلب --- */
+        .form-wrapper {
+            background: white;
+            border-radius: 22px;
+            padding: 45px 40px;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.07);
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        .form-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #27AE60, #1e8449);
+        }
+        .form-wrapper .form-header-icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, #27AE60, #1e8449);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            margin: 0 auto 20px;
+            box-shadow: 0 8px 25px rgba(39,174,96,0.2);
+        }
+        .form-wrapper h3 {
+            font-size: 1.5rem;
+            color: #1a2a3a;
+            margin-bottom: 6px;
+            text-align: center;
+            font-weight: 800;
+        }
+        .form-wrapper .form-subtitle {
+            color: #888;
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .form-group { margin-bottom: 20px; }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2C3E50;
+            font-weight: 700;
+            font-size: 0.92rem;
+        }
+        .form-group label .required {
+            color: #E74C3C;
+            margin-right: 3px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 18px;
+            border: 2px solid #e8eaed;
+            border-radius: 14px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            background: #fafbfc;
+            color: #333;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #27AE60;
+            outline: none;
+            background: #fff;
+            box-shadow: 0 0 0 5px rgba(39,174,96,0.06);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #bbb;
+        }
+        
+        /* Checkbox الموافقة */
+        .consent-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #777;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+        .consent-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 4px;
+            accent-color: #27AE60;
+        }
+        .consent-group a {
+            color: #27AE60;
+            text-decoration: underline;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #27AE60, #1e8449);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 20px rgba(39,174,96,0.2);
+        }
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #219A52, #176b39);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(39,174,96,0.35);
+        }
+        .btn-submit i { margin-left: 8px; }
+        
+        /* --- البطاقات الجانبية --- */
+        .info-side {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+        .info-card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 4px;
+            height: 100%;
+        }
+        .info-card:nth-child(1)::before { background: #27AE60; }
+        .info-card:nth-child(2)::before { background: #2980B9; }
+        .info-card:nth-child(3)::before { background: #E74C3C; }
+        .info-card:nth-child(4)::before { background: #F39C12; }
+        
+        .info-card:hover {
+            transform: translateX(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .info-card .info-icon {
+            width: 58px; height: 58px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+        }
+        .bg-green { background: linear-gradient(135deg, #27AE60, #1e8449); }
+        .bg-blue { background: linear-gradient(135deg, #2980B9, #1a5276); }
+        .bg-red { background: linear-gradient(135deg, #E74C3C, #922b21); }
+        .bg-orange { background: linear-gradient(135deg, #F39C12, #b9770e); }
+        
+        .info-card h4 { 
+            font-size: 1.05rem; 
+            color: #2C3E50; 
+            margin-bottom: 5px; 
+            font-weight: 800;
+        }
+        .info-card p { 
+            color: #666; 
+            font-size: 0.9rem; 
+            line-height: 1.7; 
+        }
+        
+        /* --- قسم التواصل المباشر --- */
+        .direct-contact {
+            background: white;
+            border-radius: 22px;
+            padding: 40px;
+            margin-top: 45px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            text-align: center;
+        }
+        .direct-contact h3 {
+            font-size: 1.5rem;
+            color: #2C3E50;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        .direct-contact .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .direct-contact .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #2C3E50;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 15px 25px;
+            background: #f8faf9;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+        .direct-contact .contact-link:hover {
+            background: #eafaf1;
+            color: #27AE60;
+        }
+        .direct-contact .contact-link i {
+            font-size: 1.4rem;
+            color: #27AE60;
+        }
+        
+        /* الفوتر */
+        footer {
+            background: #1a2a3a;
+            color: #ccc;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #27AE60;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        footer a:hover { text-decoration: underline; }
+        
+        @media (max-width: 768px) {
+            .consult-header h1 { font-size: 2.2rem; }
+            .consult-header { padding: 60px 20px; }
+            .process-steps { grid-template-columns: 1fr; }
+            .consult-grid { grid-template-columns: 1fr; }
+            .form-wrapper { padding: 30px 22px; }
+            .direct-contact .contact-methods { flex-direction: column; align-items: center; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- أزرار التواصل العائمة -->
+    <a href="https://wa.me/963933438019" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="consultation.html" class="consult-float" aria-label="احجز استشارة">
+        <i class="fas fa-comment-dots"></i>
+    </a>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar" aria-label="القائمة الرئيسية">
+        <div class="nav-container">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار PROEXPO - حلول الأعمال والاستثمار" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الشركة</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="portfolio.html">أعمالنا</a></li>
+                <li><a href="consultation.html" class="active" aria-current="page">الاستشارات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- --- هيدر الصفحة --- -->
+    <header class="consult-header">
+        <h1>اطلب <span>استشارتك</span></h1>
+        <p class="header-subtitle">فريقنا من المستشارين الخبراء جاهز للإجابة على استفساراتكم وتقديم الحلول الاستراتيجية المناسبة لأعمالكم</p>
+    </header>
+
+    <!-- --- المحتوى الرئيسي --- -->
+    <main class="consult-container">
+        
+        <!-- خطوات آلية العمل -->
+        <section class="process-steps" aria-label="كيفية عمل الاستشارة">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>تقديم الطلب</h4>
+                <p>املأ النموذج ببيانات مشروعك أو استفسارك بدقة</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>التواصل والتقييم</h4>
+                <p>يتواصل معك مستشار متخصص خلال 24 ساعة لمناقشة التفاصيل</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>تقديم الحل</h4>
+                <p>نزودك بتقرير استشاري مبدئي وخطة عمل مقترحة</p>
+            </div>
+        </section>
+
+        <div class="consult-grid">
+            
+            <!-- --- استمارة طلب الاستشارة --- -->
+            <section class="form-wrapper" aria-labelledby="form-title">
+                <div class="form-header-icon"><i class="fas fa-file-signature"></i></div>
+                <h3 id="form-title">نموذج طلب استشارة</h3>
+                <p class="form-subtitle">جميع الحقول التي تحمل علامة <span style="color:#E74C3C;">*</span> إلزامية. نلتزم بسرية تامة لبياناتكم.</p>
+                
+                <form id="consultationForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullname">الاسم الكامل <span class="required">*</span></label>
+                        <input type="text" id="fullname" name="fullname" placeholder="أدخل اسمك الثلاثي" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">اسم الشركة أو المؤسسة</label>
+                        <input type="text" id="company" name="company" placeholder="اسم الشركة (إن وجدت)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني الرسمي <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف مع رمز الدولة <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="مثال: 009639xxxxxxxx" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">نوع الخدمة المطلوبة <span class="required">*</span></label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>-- الرجاء اختيار الخدمة --</option>
+                            <option value="feasibility">دراسات جدوى اقتصادية</option>
+                            <option value="exhibitions">تنظيم معارض ومؤتمرات دولية</option>
+                            <option value="funding">حلول تمويل واستثمار (مرابحة)</option>
+                            <option value="setup">تأسيس وهيكلة المشاريع</option>
+                            <option value="marketing">تقييم وتسويق العلامات التجارية</option>
+                            <option value="general">استشارة عامة في حلول الأعمال</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="details">تفاصيل المشروع أو الاستفسار <span class="required">*</span></label>
+                        <textarea id="details" name="details" placeholder="يرجى وصف مشروعك، أهدافك، والميزانية التقريبية (إن وجدت) لنساعدك بشكل أفضل..." rows="5" required></textarea>
+                    </div>
+                    
+                    <!-- موافقة الخصوصية -->
+                    <div class="consent-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">أوافق على <a href="privacy.html" target="_blank">سياسة الخصوصية</a> وأعلم أن بياناتي ستعامل بسرية تامة ولن تتم مشاركتها مع أي طرف ثالث.</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> إرسال طلب الاستشارة
+                    </button>
+                </form>
+            </section>
+            
+            <!-- --- البطاقات الجانبية --- -->
+            <aside class="info-side" aria-label="معلومات إضافية">
+                <div class="info-card">
+                    <div class="info-icon bg-green"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h4>سرعة الاستجابة</h4>
+                        <p>نلتزم بالرد على كافة الاستفسارات خلال مدة أقصاها 24 ساعة عمل.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon bg-blue"><i class="fas fa-user-tie"></i></div>
+                    <div>
+                        <h4>استشاريون معتمدون</h4>
+                        <p>يضم فريقنا نخبة من المستشارين ذوي الخبرة التي تتجاوز 25 عاماً في مجالات الاستثمار والتجارة.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon bg-red"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <h4>سرية وخصوصية تامة</h4>
+                        <p>جميع بياناتكم ومعلومات مشاريعكم محمية بموجب اتفاقية عدم إفصاح (NDA) عند الطلب.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon bg-orange"><i class="fas fa-globe"></i></div>
+                    <div>
+                        <h4>تغطية إقليمية ودولية</h4>
+                        <p>نقدم خدماتنا في سوريا، السودان، تركيا، وشبكة شركائنا تمتد لمختلف دول العالم.</p>
+                    </div>
+                </div>
+            </aside>
+            
+        </div>
+
+        <!-- --- قسم التواصل المباشر --- -->
+        <section class="direct-contact">
+            <h3><i class="fas fa-headset" style="color:#27AE60; margin-left:10px;"></i> تفضل بالتواصل المباشر</h3>
+            <div class="contact-methods">
+                <a href="https://wa.me/963933438019" target="_blank" class="contact-link">
+                    <i class="fab fa-whatsapp"></i> واتساب الأعمال
+                </a>
+                <a href="mailto:info@proexpo.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> info@proexpo.com
+                </a>
+                <a href="tel:+963933438019" class="contact-link">
+                    <i class="fas fa-phone-alt"></i> اتصال هاتفي
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- --- تذييل الصفحة --- -->
+    <footer role="contentinfo">
+        <p>© 2026 PROEXPO. جميع الحقوق محفوظة.</p>
+        <p>
+            <a href="privacy.html">سياسة الخصوصية</a> | 
+            <a href="terms.html">الشروط والأحكام</a> | 
+            <a href="about.html">عن الشركة</a>
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
