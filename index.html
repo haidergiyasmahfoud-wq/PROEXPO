@@ -3,59 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROEXPO | الحلول الاستثمارية المتكاملة - دراسات جدوى، معارض، تمويل</title>
-    <meta name="description" content="PROEXPO شركة رائدة في حلول الأعمال والاستثمار. نقدم دراسات جدوى اقتصادية، تنظيم معارض دولية، حلول تمويل بالمرابحة، وتأسيس المشاريع. 25 عاماً من الخبرة في سوريا، السودان، تركيا.">
-    <meta name="keywords" content="دراسات جدوى, حلول استثمارية, تمويل مشاريع, معارض دولية, PROEXPO, استشارات اقتصادية">
-    
-    <meta property="og:title" content="PROEXPO | الحلول الاستثمارية المتكاملة">
+    <title>برواكسبو | الحلول الاستثمارية المتكاملة - دراسات جدوى، معارض، تمويل</title>
+    <meta name="description" content="برواكسبو شركة رائدة في حلول الأعمال والاستثمار. دراسات جدوى، معارض دولية، تمويل بالمرابحة، تأسيس المشاريع. 25 عاماً خبرة.">
+    <meta name="keywords" content="دراسات جدوى, حلول استثمارية, تمويل مشاريع, معارض دولية, PROEXPO, برواكسبو, استشارات اقتصادية">
+    <meta property="og:title" content="برواكسبو | الحلول الاستثمارية المتكاملة">
     <meta property="og:description" content="بوابتكم نحو الاستثمار الآمن والمستدام. 25 عاماً من الخبرة.">
     <meta property="og:image" content="https://i.imgur.com/zjR42Yj.png">
     <meta property="og:type" content="website">
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background: #fff; }
-        
-        /* ========== شريط علوي ========== */
-        .top-bar {
-            background: #0d1b2a;
-            color: #ccc;
-            font-size: 0.8rem;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .top-bar .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .top-bar a {
-            color: #27AE60;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-        .top-bar a:hover { color: #2ECC71; text-decoration: underline; }
-        .top-bar .social-links a {
-            color: #ccc;
-            margin: 0 6px;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-        .top-bar .social-links a:hover { color: #27AE60; }
-        
-        /* ========== الهيرو - تصميم جديد كلياً ========== */
+        /* ========== الهيرو ========== */
         .hero {
             background: linear-gradient(160deg, #0d1b2a 0%, #1a2a3a 30%, #1b3a2a 70%, #0d1b2a 100%);
             min-height: 95vh;
@@ -68,115 +29,75 @@
             position: relative;
             overflow: hidden;
         }
-        
-        /* دوائر زخرفية في الخلفية */
         .hero::before {
             content: '';
             position: absolute;
-            top: -150px;
-            right: -100px;
-            width: 500px;
-            height: 500px;
+            top: -150px; right: -100px;
+            width: 500px; height: 500px;
             background: radial-gradient(circle, rgba(39,174,96,0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -100px;
-            left: -80px;
-            width: 400px;
-            height: 400px;
+            bottom: -100px; left: -80px;
+            width: 400px; height: 400px;
             background: radial-gradient(circle, rgba(41,128,185,0.06) 0%, transparent 70%);
             border-radius: 50%;
         }
-        
-        /* تأثير التموج السفلي */
         .hero .wave-bottom {
             position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
+            bottom: -2px; left: 0; right: 0;
             height: 80px;
             background: #fff;
             clip-path: ellipse(70% 100% at 50% 100%);
             z-index: 2;
         }
-        
-        /* نقاط متحركة في الخلفية */
         .hero .bg-dots {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             opacity: 0.03;
             background-image: radial-gradient(circle, #fff 1px, transparent 1px);
             background-size: 30px 30px;
             z-index: 0;
         }
+        .hero-content { max-width: 900px; position: relative; z-index: 1; }
         
-        .hero-content { 
-            max-width: 900px; 
-            position: relative; 
-            z-index: 1; 
-        }
-        
-        /* إطار الشعار مع ظل أبيض */
         .hero-logo-wrapper {
             display: inline-block;
             position: relative;
             margin-bottom: 20px;
         }
-        
-        .hero-content .hero-logo-img {
-            height: 200px;
-            width: auto;
-            position: relative;
-            z-index: 1;
-            filter: 
-                drop-shadow(0 0 30px rgba(255,255,255,0.5)) 
-                drop-shadow(0 0 60px rgba(255,255,255,0.3)) 
-                drop-shadow(0 0 90px rgba(255,255,255,0.15))
-                drop-shadow(0 10px 30px rgba(0,0,0,0.5));
-            animation: logoFloat 4s ease-in-out infinite;
-        }
-        
-        /* دائرة الظل الأبيض خلف الشعار */
         .hero-logo-wrapper::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 280px;
-            height: 280px;
+            width: 280px; height: 280px;
             background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 40%, transparent 70%);
             border-radius: 50%;
             z-index: 0;
             animation: glowPulse 3s ease-in-out infinite;
         }
-        
+        .hero-logo-img {
+            height: 200px;
+            width: auto;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 0 30px rgba(255,255,255,0.5)) drop-shadow(0 0 60px rgba(255,255,255,0.3)) drop-shadow(0 0 90px rgba(255,255,255,0.15)) drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+            animation: logoFloat 4s ease-in-out infinite;
+        }
         @keyframes logoFloat {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-        
         @keyframes glowPulse {
-            0%, 100% { 
-                width: 280px;
-                height: 280px;
-                opacity: 0.8;
-            }
-            50% { 
-                width: 320px;
-                height: 320px;
-                opacity: 1;
-            }
+            0%, 100% { width: 280px; height: 280px; opacity: 0.8; }
+            50% { width: 320px; height: 320px; opacity: 1; }
         }
         
-        /* السطر التعريفي تحت اللوجو */
-        .hero-content .hero-tagline {
+        .hero-tagline {
             font-size: 2rem;
             font-weight: 800;
             color: #fff;
@@ -186,552 +107,176 @@
             position: relative;
             z-index: 1;
         }
-        .hero-content .hero-tagline span {
-            color: #27AE60;
-        }
+        .hero-tagline span { color: #27AE60; }
         
-        /* فاصل صغير */
         .hero-divider {
-            width: 80px;
-            height: 3px;
+            width: 80px; height: 3px;
             background: linear-gradient(90deg, transparent, #27AE60, transparent);
             margin: 0 auto 25px;
             border-radius: 2px;
-            position: relative;
-            z-index: 1;
+            position: relative; z-index: 1;
         }
-        
-        .hero-content .hero-title { 
-            font-size: 1.8rem; 
-            font-weight: 600; 
-            margin-bottom: 22px; 
-            line-height: 1.6;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
+        .hero-title { 
+            font-size: 1.8rem; font-weight: 600; margin-bottom: 22px; 
+            line-height: 1.6; opacity: 0.9; position: relative; z-index: 1;
         }
-        .hero-content .hero-title span { 
-            color: #27AE60; 
-            font-weight: 800;
-            position: relative;
-            white-space: nowrap;
-        }
-        .hero-content .hero-title span::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 2px;
-            background: #27AE60;
-            border-radius: 2px;
-            opacity: 0.7;
-        }
-        .hero-content .hero-desc { 
-            font-size: 1.15rem; 
-            opacity: 0.8; 
-            margin-bottom: 40px; 
-            line-height: 2.1; 
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 1;
+        .hero-title span { color: #27AE60; font-weight: 800; }
+        .hero-desc { 
+            font-size: 1.15rem; opacity: 0.8; margin-bottom: 40px; 
+            line-height: 2.1; max-width: 650px; margin-left: auto; margin-right: auto;
+            position: relative; z-index: 1;
         }
         .hero-btns { 
-            display: flex; 
-            gap: 18px; 
-            justify-content: center; 
-            flex-wrap: wrap; 
-            position: relative;
-            z-index: 1;
+            display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; 
+            position: relative; z-index: 1;
         }
         .btn { 
-            padding: 16px 38px; 
-            border-radius: 50px; 
-            font-weight: 700; 
-            text-decoration: none; 
-            font-size: 1.05rem; 
-            transition: all 0.3s ease; 
-            border: 2px solid transparent; 
-            letter-spacing: 0.5px;
+            padding: 16px 38px; border-radius: 50px; font-weight: 700; 
+            text-decoration: none; font-size: 1.05rem; transition: all 0.3s ease; 
+            border: 2px solid transparent; letter-spacing: 0.5px;
         }
-        .btn-green { 
-            background: #27AE60; 
-            color: white; 
-            box-shadow: 0 8px 25px rgba(39,174,96,0.4);
-        }
-        .btn-green:hover { 
-            background: #219A52; 
-            transform: translateY(-4px); 
-            box-shadow: 0 15px 40px rgba(39,174,96,0.6); 
-        }
-        .btn-outline { 
-            border-color: rgba(255,255,255,0.7); 
-            color: white; 
-            background: rgba(255,255,255,0.05);
-            backdrop-filter: blur(5px);
-        }
-        .btn-outline:hover { 
-            background: white; 
-            color: #1a2a3a; 
-            transform: translateY(-4px);
-            border-color: white;
-        }
-        
-        /* ========== شريط الثقة ========== */
-        .trust-bar {
-            background: white;
-            padding: 25px 20px;
-            border-bottom: 1px solid #f0f0f0;
-            position: relative;
-            z-index: 3;
-        }
-        .trust-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #2C3E50;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        .trust-item i {
-            color: #27AE60;
-            font-size: 1.3rem;
-        }
-        
-        /* ========== قسم دراسة الجدوى ========== */
-        .cta-feasibility-section {
-            padding: 60px 20px;
-            background: #fff;
-        }
-        .cta-feasibility-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .btn-green { background: #27AE60; color: white; box-shadow: 0 8px 25px rgba(39,174,96,0.4); }
+        .btn-green:hover { background: #219A52; transform: translateY(-4px); box-shadow: 0 15px 40px rgba(39,174,96,0.6); }
+        .btn-outline { border-color: rgba(255,255,255,0.7); color: white; background: rgba(255,255,255,0.05); backdrop-filter: blur(5px); }
+        .btn-outline:hover { background: white; color: #1a2a3a; transform: translateY(-4px); border-color: white; }
+
+        /* شريط الثقة */
+        .trust-bar { background: white; padding: 25px 20px; border-bottom: 1px solid #f0f0f0; position: relative; z-index: 3; }
+        .trust-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 10px; color: #2C3E50; font-weight: 600; font-size: 0.95rem; }
+        .trust-item i { color: #27AE60; font-size: 1.3rem; }
+
+        /* قسم دراسة الجدوى */
+        .cta-feasibility-section { padding: 60px 20px; background: #fff; }
+        .cta-feasibility-container { max-width: 900px; margin: 0 auto; }
         .cta-feasibility-card {
             background: linear-gradient(135deg, #1a2a3a, #2C3E50);
-            border-radius: 24px;
-            padding: 50px 40px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
+            border-radius: 24px; padding: 50px 40px; text-align: center;
+            color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            position: relative; overflow: hidden;
         }
         .cta-feasibility-card::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: rgba(39,174,96,0.15);
-            border-radius: 50%;
+            content: ''; position: absolute; top: -50px; right: -50px;
+            width: 200px; height: 200px;
+            background: rgba(39,174,96,0.15); border-radius: 50%;
         }
         .cta-feasibility-card::after {
-            content: '';
-            position: absolute;
-            bottom: -30px;
-            left: -30px;
-            width: 150px;
-            height: 150px;
-            background: rgba(39,174,96,0.1);
-            border-radius: 50%;
+            content: ''; position: absolute; bottom: -30px; left: -30px;
+            width: 150px; height: 150px;
+            background: rgba(39,174,96,0.1); border-radius: 50%;
         }
-        .cta-feasibility-card h2 {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-            position: relative;
-            z-index: 1;
+        .cta-feasibility-card h2 { font-size: 2rem; font-weight: 900; margin-bottom: 12px; position: relative; z-index: 1; }
+        .cta-feasibility-card h2 span { color: #27AE60; }
+        .cta-feasibility-card .subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; position: relative; z-index: 1; }
+        .cta-feasibility-card .features-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 35px; position: relative; z-index: 1; }
+        .cta-feasibility-card .feature-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1rem; }
+        .cta-feasibility-card .feature-item i { color: #27AE60; font-size: 1.3rem; }
+        .btn-feasibility {
+            display: inline-block; background: #27AE60; color: white;
+            padding: 16px 40px; border-radius: 50px; font-weight: 700;
+            font-size: 1.1rem; text-decoration: none; transition: 0.3s;
+            position: relative; z-index: 1; box-shadow: 0 10px 30px rgba(39,174,96,0.4);
         }
-        .cta-feasibility-card h2 span {
-            color: #27AE60;
-            position: relative;
-        }
-        .cta-feasibility-card h2 span::after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: #27AE60;
-            border-radius: 2px;
-        }
-        .cta-feasibility-card .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 1;
-        }
-        .cta-feasibility-card .features-row {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 35px;
-            position: relative;
-            z-index: 1;
-        }
-        .cta-feasibility-card .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-        .cta-feasibility-card .feature-item i {
-            color: #27AE60;
-            font-size: 1.3rem;
-        }
-        .cta-feasibility-card .btn-feasibility {
-            display: inline-block;
-            background: #27AE60;
-            color: white;
-            padding: 16px 40px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: 0.3s;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 10px 30px rgba(39,174,96,0.4);
-        }
-        .cta-feasibility-card .btn-feasibility:hover {
-            background: #219A52;
-            transform: translateY(-4px);
-            box-shadow: 0 15px 40px rgba(39,174,96,0.6);
-        }
-        
-        /* ========== العبارات الملهمة ========== */
-        .quotes-section {
-            padding: 80px 20px;
-            background: #f8faf9;
-        }
-        .quotes-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 28px;
-        }
-        .quote-card {
-            background: white;
-            border-radius: 18px;
-            padding: 40px 28px;
-            text-align: center;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.04);
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        .quote-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-        }
+        .btn-feasibility:hover { background: #219A52; transform: translateY(-4px); }
+
+        /* العبارات */
+        .quotes-section { padding: 80px 20px; background: #f8faf9; }
+        .quotes-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+        .quote-card { background: white; border-radius: 18px; padding: 40px 28px; text-align: center; box-shadow: 0 4px 25px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; transition: all 0.3s ease; position: relative; }
+        .quote-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
         .quote-card:nth-child(1)::before { background: #27AE60; }
         .quote-card:nth-child(2)::before { background: #2980B9; }
         .quote-card:nth-child(3)::before { background: #E74C3C; }
-        
-        .quote-card:hover { 
-            transform: translateY(-7px); 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
-        }
-        .quote-icon { 
-            font-size: 2.8rem; 
-            margin-bottom: 18px; 
-        }
+        .quote-card:hover { transform: translateY(-7px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .quote-icon { font-size: 2.8rem; margin-bottom: 18px; }
         .quote-card:nth-child(1) .quote-icon { color: #27AE60; }
         .quote-card:nth-child(2) .quote-icon { color: #2980B9; }
         .quote-card:nth-child(3) .quote-icon { color: #E74C3C; }
-        
-        .quote-card p { 
-            font-size: 1.1rem; 
-            color: #2C3E50; 
-            line-height: 1.9; 
-            font-weight: 700; 
-        }
-        
-        /* ========== الإحصائيات ========== */
-        .stats-section {
-            padding: 80px 20px;
-            background: white;
-        }
+        .quote-card p { font-size: 1.1rem; color: #2C3E50; line-height: 1.9; font-weight: 700; }
+
+        /* الإحصائيات */
+        .stats-section { padding: 80px 20px; background: white; }
         .stats-container { max-width: 1000px; margin: 0 auto; }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: #1a2a3a;
-            margin-bottom: 50px;
-            font-weight: 800;
-            position: relative;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 70px;
-            height: 4px;
-            background: #27AE60;
-            margin: 12px auto 0;
-            border-radius: 2px;
-        }
-        .section-title span { color: #27AE60; }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-        .stat-item {
-            text-align: center;
-            padding: 35px 18px;
-            background: #f8faf9;
-            border-radius: 18px;
-            transition: all 0.3s ease;
-            border: 1px solid #eee;
-        }
-        .stat-item:hover {
-            background: white;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-            transform: translateY(-5px);
-        }
-        .stat-item .num {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .stat-item { text-align: center; padding: 35px 18px; background: #f8faf9; border-radius: 18px; transition: all 0.3s ease; border: 1px solid #eee; }
+        .stat-item:hover { background: white; box-shadow: 0 12px 35px rgba(0,0,0,0.08); transform: translateY(-5px); }
+        .stat-item .num { font-size: 3rem; font-weight: 900; margin-bottom: 10px; }
         .stat-item:nth-child(1) .num { color: #27AE60; }
         .stat-item:nth-child(2) .num { color: #2980B9; }
         .stat-item:nth-child(3) .num { color: #E74C3C; }
         .stat-item:nth-child(4) .num { color: #F39C12; }
-        
-        .stat-item .label {
-            color: #555;
-            font-size: 1rem;
-            font-weight: 600;
-            line-height: 1.7;
-        }
-        
-        /* ========== الخدمات ========== */
-        .services-section {
-            padding: 80px 20px;
-            background: #f8faf9;
-        }
+        .stat-item .label { color: #555; font-size: 1rem; font-weight: 600; }
+
+        /* الخدمات */
+        .services-section { padding: 80px 20px; background: #f8faf9; }
         .services-container { max-width: 1100px; margin: 0 auto; }
-        
-        .services-grid-4 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-        }
-        .service-box {
-            background: white;
-            border-radius: 18px;
-            padding: 35px 22px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            position: relative;
-            overflow: hidden;
-        }
-        .service-box::before {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 4px;
-            transition: height 0.3s ease;
-        }
+        .services-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+        .service-box { background: white; border-radius: 18px; padding: 35px 22px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; transition: all 0.3s ease; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
+        .service-box::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; transition: height 0.3s ease; }
         .service-box:nth-child(1)::before { background: #27AE60; }
         .service-box:nth-child(2)::before { background: #2980B9; }
         .service-box:nth-child(3)::before { background: #E74C3C; }
         .service-box:nth-child(4)::before { background: #F39C12; }
-        
         .service-box:hover::before { height: 8px; }
-        .service-box:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12); 
-        }
-        .service-box .s-icon {
-            width: 65px; height: 65px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.7rem; color: white; margin: 0 auto 18px;
-            box-shadow: 0 8px 22px rgba(0,0,0,0.1);
-        }
+        .service-box:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+        .s-icon { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; color: white; margin: 0 auto 18px; box-shadow: 0 8px 22px rgba(0,0,0,0.1); }
         .service-box:nth-child(1) .s-icon { background: #27AE60; }
         .service-box:nth-child(2) .s-icon { background: #2980B9; }
         .service-box:nth-child(3) .s-icon { background: #E74C3C; }
         .service-box:nth-child(4) .s-icon { background: #F39C12; }
-        
-        .service-box h4 { 
-            font-size: 1.1rem; 
-            color: #2C3E50; 
-            margin-bottom: 10px; 
-            font-weight: 800;
-        }
-        .service-box p { 
-            color: #666; 
-            font-size: 0.88rem; 
-            line-height: 1.7;
-        }
-        
-        /* ========== لماذا نحن ========== */
-        .why-us-section {
-            padding: 80px 20px;
-            background: white;
-        }
+        .service-box h4 { font-size: 1.1rem; color: #2C3E50; margin-bottom: 10px; font-weight: 800; }
+        .service-box p { color: #666; font-size: 0.88rem; line-height: 1.7; }
+
+        /* لماذا نحن */
+        .why-us-section { padding: 80px 20px; background: white; }
         .why-us-container { max-width: 1000px; margin: 0 auto; }
-        
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-        .why-us-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 18px;
-            padding: 25px;
-            background: #f8faf9;
-            border-radius: 16px;
-            border-right: 4px solid #27AE60;
-            transition: all 0.3s ease;
-        }
+        .why-us-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+        .why-us-item { display: flex; align-items: flex-start; gap: 18px; padding: 25px; background: #f8faf9; border-radius: 16px; border-right: 4px solid #27AE60; transition: all 0.3s ease; }
         .why-us-item:nth-child(2) { border-right-color: #2980B9; }
         .why-us-item:nth-child(3) { border-right-color: #E74C3C; }
         .why-us-item:nth-child(4) { border-right-color: #F39C12; }
-        
-        .why-us-item:hover {
-            background: #eafaf1;
-            transform: translateX(-5px);
-        }
-        .why-us-item .why-icon {
-            width: 55px; height: 55px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.4rem;
-            flex-shrink: 0;
-        }
-        .bg-green { background: #27AE60; }
-        .bg-blue { background: #2980B9; }
-        .bg-red { background: #E74C3C; }
-        .bg-orange { background: #F39C12; }
-        
-        .why-us-item h4 { 
-            color: #2C3E50; 
-            margin-bottom: 5px; 
-            font-weight: 800;
-            font-size: 1.05rem;
-        }
-        .why-us-item p { 
-            color: #666; 
-            font-size: 0.9rem; 
-            line-height: 1.7; 
-        }
-        
-        /* ========== CTA ========== */
-        .cta-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
-            text-align: center;
-            color: white;
-        }
+        .why-us-item:hover { background: #eafaf1; transform: translateX(-5px); }
+        .why-icon { width: 55px; height: 55px; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; flex-shrink: 0; }
+        .why-us-item h4 { color: #2C3E50; margin-bottom: 5px; font-weight: 800; font-size: 1.05rem; }
+        .why-us-item p { color: #666; font-size: 0.9rem; line-height: 1.7; }
+
+        /* CTA */
+        .cta-section { padding: 80px 20px; background: linear-gradient(135deg, #1a2a3a, #2C3E50); text-align: center; color: white; }
         .cta-container { max-width: 700px; margin: 0 auto; }
-        .cta-section h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
+        .cta-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 15px; }
         .cta-section h2 span { color: #27AE60; }
-        .cta-section p {
-            font-size: 1.15rem;
-            opacity: 0.9;
-            margin-bottom: 35px;
-            line-height: 2;
-        }
-        .cta-section .btn-green {
-            background: #27AE60;
-            color: white;
-            padding: 18px 45px;
-            font-size: 1.2rem;
-        }
-        
-        /* ========== تذييل ========== */
-        footer {
-            background: #0d1b2a;
-            color: #ccc;
-            padding: 40px 20px 25px;
-            text-align: center;
-        }
-        footer .footer-links {
-            margin-bottom: 20px;
-        }
-        footer .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        footer .footer-links a:hover { color: #27AE60; }
-        footer .copyright {
-            color: #888;
-            font-size: 0.85rem;
-        }
-        
+        .cta-section p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 35px; line-height: 2; }
+
         /* ========== ميديا كويري ========== */
-        @media (max-width: 992px) {
-            .services-grid-4 { grid-template-columns: 1fr 1fr; }
-            .why-us-grid { grid-template-columns: 1fr; }
-        }
         @media (max-width: 768px) {
-            .hero-content .hero-logo-img { height: 140px; }
+            .hero-logo-img { height: 140px; }
             .hero-logo-wrapper::before { width: 200px; height: 200px; }
-            .hero-content .hero-tagline { font-size: 1.4rem; }
-            .hero-content .hero-title { font-size: 1.3rem; }
-            .hero-content .hero-desc { font-size: 0.95rem; }
+            .hero-tagline { font-size: 1.4rem; }
+            .hero-title { font-size: 1.3rem; }
+            .hero-desc { font-size: 0.95rem; }
             .quotes-container { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: 1fr 1fr; }
+            .services-grid-4 { grid-template-columns: 1fr 1fr; }
+            .why-us-grid { grid-template-columns: 1fr; }
             .trust-container { gap: 20px; }
-            .section-title { font-size: 1.6rem; }
-            .cta-section h2 { font-size: 1.5rem; }
             .cta-feasibility-card { padding: 30px 20px; }
             .cta-feasibility-card h2 { font-size: 1.5rem; }
             .cta-feasibility-card .features-row { gap: 15px; }
         }
         @media (max-width: 480px) {
-            .hero-content .hero-logo-img { height: 110px; }
+            .hero-logo-img { height: 110px; }
             .hero-logo-wrapper::before { width: 160px; height: 160px; }
-            .hero-content .hero-tagline { font-size: 1.1rem; }
+            .hero-tagline { font-size: 1.1rem; }
+            .hero-title { font-size: 1.1rem; }
             .stats-grid { grid-template-columns: 1fr; }
             .services-grid-4 { grid-template-columns: 1fr; }
-            .hero-btns { flex-direction: column; align-items: center; }
-            .btn { width: 100%; text-align: center; }
+            .hero-btns { flex-direction: row; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; width: 100%; padding: 0 5px; }
+            .hero-btns .btn { width: auto; min-width: 140px; padding: 14px 24px; font-size: 0.85rem; display: inline-block !important; white-space: nowrap; flex: 1 1 auto; max-width: 48%; }
+            .hero-btns .btn-outline { display: inline-block !important; }
         }
     </style>
 </head>
 <body>
-    <!-- ============ الشريط العلوي ============ -->
     <div class="top-bar">
         <div class="container">
             <div>
@@ -750,7 +295,6 @@
         </div>
     </div>
 
-    <!-- ============ أيقونات عائمة ============ -->
     <a href="https://wa.me/963933438019" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -758,16 +302,15 @@
         <i class="fas fa-comment-dots"></i>
     </a>
 
-    <!-- ============ القائمة الرئيسية ============ -->
     <nav class="navbar" aria-label="القائمة الرئيسية">
         <div class="nav-container">
             <div class="logo-area">
                 <a href="index.html">
-                    <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار PROEXPO" class="logo-img">
+                    <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار برواكسبو" class="logo-img">
                 </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active" aria-current="page">الرئيسية</a></li>
+                <li><a href="index.html" class="active">الرئيسية</a></li>
                 <li><a href="about.html">عن الشركة</a></li>
                 <li><a href="services.html">خدماتنا</a></li>
                 <li><a href="portfolio.html">أعمالنا</a></li>
@@ -777,23 +320,14 @@
         </div>
     </nav>
 
-    <!-- ============ الهيرو الرئيسي - تصميم جديد ============ -->
     <header class="hero">
-        <!-- نقاط الخلفية -->
         <div class="bg-dots"></div>
-        
         <div class="hero-content">
-            <!-- إطار الشعار مع ظل أبيض -->
             <div class="hero-logo-wrapper">
-                <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار PROEXPO - الحلول الاستثمارية" class="hero-logo-img">
+                <img src="https://i.imgur.com/zjR42Yj.png" alt="شعار برواكسبو" class="hero-logo-img">
             </div>
-            
-            <!-- السطر التعريفي -->
-            <p class="hero-tagline"><span>PROEXPO</span> للحلول الاستثمارية والتمويلية والدراسات الاقتصادية</p>
-            
-            <!-- فاصل -->
+            <p class="hero-tagline"><span>برواكسبو</span> للحلول الاستثمارية والتمويلية والدراسات الاقتصادية</p>
             <div class="hero-divider"></div>
-            
             <h1 class="hero-title">بوابتكم نحو <span>استثمار</span> آمن ومستدام</h1>
             <p class="hero-desc">
                 حلول استثمارية متكاملة تشمل دراسات الجدوى الاقتصادية، تنظيم المعارض الدولية، 
@@ -808,53 +342,27 @@
                 </a>
             </div>
         </div>
-        
-        <!-- التموج السفلي -->
         <div class="wave-bottom"></div>
     </header>
 
-    <!-- ============ باقي الأقسام (نفس الكود السابق) ============ -->
-    <!-- شريط الثقة -->
     <section class="trust-bar" aria-label="مميزات الشركة">
         <div class="trust-container">
-            <div class="trust-item">
-                <i class="fas fa-check-circle"></i>
-                <span>خبرة 25 عاماً</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-check-circle"></i>
-                <span>3 فروع دولية</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-check-circle"></i>
-                <span>فريق 50+ خبير</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-check-circle"></i>
-                <span>سرية تامة وموثوقية</span>
-            </div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i><span>خبرة 25 عاماً</span></div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i><span>3 فروع دولية</span></div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i><span>فريق 50+ خبير</span></div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i><span>سرية تامة وموثوقية</span></div>
         </div>
     </section>
 
-    <!-- قسم دراسة الجدوى -->
-    <section class="cta-feasibility-section" aria-labelledby="feasibility-title">
+    <section class="cta-feasibility-section">
         <div class="cta-feasibility-container">
             <div class="cta-feasibility-card">
-                <h2 id="feasibility-title">ابدأ الآن <span>بدراسة جدوى اقتصادية</span> لمشروعك</h2>
+                <h2>ابدأ الآن <span>بدراسة جدوى اقتصادية</span> لمشروعك</h2>
                 <p class="subtitle">حوّل فكرتك إلى واقع استثماري ناجح مع فريقنا المتخصص</p>
                 <div class="features-row">
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>تحليل سوقي شامل</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>خطة مالية دقيقة</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>دراسة مخاطر متكاملة</span>
-                    </div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span>تحليل سوقي شامل</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span>خطة مالية دقيقة</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span>دراسة مخاطر متكاملة</span></div>
                 </div>
                 <a href="consultation.html" class="btn-feasibility">
                     <i class="fas fa-paper-plane" style="margin-left:8px;"></i> اطلب دراستك الآن
@@ -863,8 +371,7 @@
         </div>
     </section>
 
-    <!-- عبارات ملهمة -->
-    <section class="quotes-section" aria-labelledby="quotes-title">
+    <section class="quotes-section">
         <div class="quotes-container">
             <div class="quote-card">
                 <div class="quote-icon"><i class="fas fa-lightbulb"></i></div>
@@ -881,35 +388,21 @@
         </div>
     </section>
 
-    <!-- إحصائيات -->
-    <section class="stats-section" aria-labelledby="stats-title">
+    <section class="stats-section">
         <div class="stats-container">
-            <h2 class="section-title" id="stats-title"><span>PROEXPO</span> في أرقام</h2>
+            <h2 class="section-title"><span>برواكسبو</span> في أرقام</h2>
             <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="num">+25</div>
-                    <div class="label">عاماً من الخبرة المتراكمة</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num">+250</div>
-                    <div class="label">دراسة جدوى اقتصادية منجزة</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num">3</div>
-                    <div class="label">فروع في سوريا، السودان، وتركيا</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num">+50</div>
-                    <div class="label">خبير واستشاري متخصص</div>
-                </div>
+                <div class="stat-item"><div class="num">+25</div><div class="label">عاماً من الخبرة المتراكمة</div></div>
+                <div class="stat-item"><div class="num">+250</div><div class="label">دراسة جدوى اقتصادية منجزة</div></div>
+                <div class="stat-item"><div class="num">3</div><div class="label">فروع في سوريا، السودان، وتركيا</div></div>
+                <div class="stat-item"><div class="num">+50</div><div class="label">خبير واستشاري متخصص</div></div>
             </div>
         </div>
     </section>
 
-    <!-- خدماتنا -->
-    <section class="services-section" aria-labelledby="services-title">
+    <section class="services-section">
         <div class="services-container">
-            <h2 class="section-title" id="services-title">ماذا <span>نقدم</span> لك؟</h2>
+            <h2 class="section-title">ماذا <span>نقدم</span> لك؟</h2>
             <div class="services-grid-4">
                 <a href="services.html" class="service-box">
                     <div class="s-icon"><i class="fas fa-chart-pie"></i></div>
@@ -935,58 +428,40 @@
         </div>
     </section>
 
-    <!-- لماذا PROEXPO -->
-    <section class="why-us-section" aria-labelledby="why-us-title">
+    <section class="why-us-section">
         <div class="why-us-container">
-            <h2 class="section-title" id="why-us-title">لماذا <span>PROEXPO</span>؟</h2>
+            <h2 class="section-title">لماذا <span>برواكسبو</span>؟</h2>
             <div class="why-us-grid">
                 <div class="why-us-item">
                     <div class="why-icon bg-green"><i class="fas fa-user-tie"></i></div>
-                    <div>
-                        <h4>فريق استشاري نخبوي</h4>
-                        <p>نخبة من المستشارين بخبرة تتجاوز 25 عاماً في مختلف القطاعات الاقتصادية.</p>
-                    </div>
+                    <div><h4>فريق استشاري نخبوي</h4><p>نخبة من المستشارين بخبرة تتجاوز 25 عاماً في مختلف القطاعات الاقتصادية.</p></div>
                 </div>
                 <div class="why-us-item">
                     <div class="why-icon bg-blue"><i class="fas fa-globe-asia"></i></div>
-                    <div>
-                        <h4>شبكة علاقات دولية</h4>
-                        <p>شركاء استراتيجيون في مختلف قارات العالم لتوسيع نطاق أعمالك.</p>
-                    </div>
+                    <div><h4>شبكة علاقات دولية</h4><p>شركاء استراتيجيون في مختلف قارات العالم لتوسيع نطاق أعمالك.</p></div>
                 </div>
                 <div class="why-us-item">
                     <div class="why-icon bg-red"><i class="fas fa-shield-alt"></i></div>
-                    <div>
-                        <h4>سرية واحترافية</h4>
-                        <p>نلتزم بأعلى معايير السرية وحماية بيانات العملاء والمشاريع.</p>
-                    </div>
+                    <div><h4>سرية واحترافية</h4><p>نلتزم بأعلى معايير السرية وحماية بيانات العملاء والمشاريع.</p></div>
                 </div>
                 <div class="why-us-item">
                     <div class="why-icon bg-orange"><i class="fas fa-trophy"></i></div>
-                    <div>
-                        <h4>سجل حافل بالإنجازات</h4>
-                        <p>أكثر من 250 دراسة جدوى ناجحة وعشرات المعارض الدولية المنظمة.</p>
-                    </div>
+                    <div><h4>سجل حافل بالإنجازات</h4><p>أكثر من 250 دراسة جدوى ناجحة وعشرات المعارض الدولية المنظمة.</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta-section">
         <div class="cta-container">
             <h2>هل أنت مستعد <span>للانطلاق؟</span></h2>
-            <p>
-                لا تدع فكرة مشروعك تبقى حبراً على ورق. فريقنا جاهز لتقديم استشارة أولية مجانية 
-                وتقييم فرص نجاح مشروعك على أرض الواقع.
-            </p>
+            <p>لا تدع فكرة مشروعك تبقى حبراً على ورق. فريقنا جاهز لتقديم استشارة أولية مجانية وتقييم فرص نجاح مشروعك على أرض الواقع.</p>
             <a href="consultation.html" class="btn btn-green">
                 <i class="fas fa-rocket" style="margin-left:8px;"></i> ابدأ الآن - احجز استشارتك
             </a>
         </div>
     </section>
 
-    <!-- تذييل -->
     <footer role="contentinfo">
         <div class="footer-links">
             <a href="index.html">الرئيسية</a>
@@ -998,7 +473,7 @@
             <a href="privacy.html">سياسة الخصوصية</a>
             <a href="terms.html">الشروط والأحكام</a>
         </div>
-        <p class="copyright">© 2026 PROEXPO. جميع الحقوق محفوظة. | شركة مسجلة رسمياً</p>
+        <p class="copyright">© 2026 برواكسبو. جميع الحقوق محفوظة. | شركة مسجلة رسمياً</p>
     </footer>
     
     <script src="script.js"></script>
