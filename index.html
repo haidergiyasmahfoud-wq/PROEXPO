@@ -44,8 +44,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* تم تغيير التدرج من الكحلي إلى الرمادي الغامق */
-            background: linear-gradient(160deg, rgba(44, 62, 80, 0.92) 0%, rgba(30, 30, 30, 0.9) 30%, rgba(44, 44, 44, 0.9) 70%, rgba(20, 20, 20, 0.95) 100%);
+            /* ✅ تم استبدال الكحلي بالكامل: تدرج رمادي سكري أنيق */
+            background: linear-gradient(160deg, 
+                rgba(80, 80, 80, 0.92) 0%, 
+                rgba(110, 110, 110, 0.88) 30%, 
+                rgba(140, 140, 140, 0.85) 70%, 
+                rgba(90, 90, 90, 0.93) 100%);
             z-index: 1;
         }
         
@@ -53,8 +57,8 @@
             position: absolute;
             bottom: -2px; left: 0; right: 0;
             height: 80px;
-            /* تم تغيير لون الموجة إلى الرمادي الفاتح ليتناسق مع باقي الصفحة */
-            background: #F5F6FA;
+            /* ✅ تم تغيير لون الموجة إلى رمادي فاتح جداً */
+            background: #F5F5F5;
             clip-path: ellipse(70% 100% at 50% 100%);
             z-index: 3;
         }
@@ -104,20 +108,28 @@
             position: relative;
             z-index: 1;
         }
-        .hero-tagline span { color: #27AE60; }
+        .hero-tagline span { 
+            /* ✅ لون ذهبي ناعم بدل الأخضر */
+            color: #D4AF37; 
+        }
         
         .hero-divider {
             width: 80px; height: 3px;
-            background: linear-gradient(90deg, transparent, #27AE60, transparent);
+            /* ✅ تدرج ذهبي */
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
             margin: 0 auto 25px;
             border-radius: 2px;
             position: relative; z-index: 1;
         }
         .hero-title { font-size: 1.8rem; font-weight: 600; margin-bottom: 22px; line-height: 1.6; opacity: 0.95; position: relative; z-index: 1; }
-        .hero-title span { color: #27AE60; font-weight: 800; }
+        .hero-title span { 
+            /* ✅ لون ذهبي */
+            color: #D4AF37; 
+            font-weight: 800; 
+        }
         .hero-desc { font-size: 1.15rem; opacity: 0.9; margin-bottom: 40px; line-height: 2.1; max-width: 650px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
         
-        /* ========== الأزرار - تم الإصلاح ========== */
+        /* ========== الأزرار ========== */
         .hero-btns { display: flex; gap: 18px; justify-content: center; align-items: center; flex-wrap: wrap; position: relative; z-index: 1; }
         .btn { 
             padding: 16px 38px; border-radius: 50px; font-weight: 700; 
@@ -127,110 +139,119 @@
             white-space: nowrap; box-sizing: border-box;
         }
         .btn i { margin-left: 8px; flex-shrink: 0; }
-        .btn-green { background: #27AE60; color: white; box-shadow: 0 8px 25px rgba(39,174,96,0.5); }
-        .btn-green:hover { background: #219A52; transform: translateY(-4px); box-shadow: 0 15px 40px rgba(39,174,96,0.7); }
+        /* ✅ زر ذهبي */
+        .btn-gold { background: #D4AF37; color: #1a1a1a; box-shadow: 0 8px 25px rgba(212,175,55,0.4); }
+        .btn-gold:hover { background: #C5A028; transform: translateY(-4px); box-shadow: 0 15px 40px rgba(212,175,55,0.6); }
         .btn-outline { border-color: rgba(255,255,255,0.8); color: white; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); }
-        .btn-outline:hover { background: white; color: #1a2a3a; transform: translateY(-4px); border-color: white; }
+        .btn-outline:hover { background: white; color: #555; transform: translateY(-4px); border-color: white; }
 
-        /* شريط الثقة - تم تعديل لون الخلفية إلى رمادي فاتح */
-        .trust-bar { background: #ECF0F1; padding: 25px 20px; border-bottom: 1px solid #D5D8DC; position: relative; z-index: 4; }
+        /* ✅ شريط الثقة - رمادي فاتح */
+        .trust-bar { background: #EEEEEE; padding: 25px 20px; border-bottom: 1px solid #E0E0E0; position: relative; z-index: 4; }
         .trust-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
-        .trust-item { display: flex; align-items: center; gap: 10px; color: #2C3E50; font-weight: 600; font-size: 0.95rem; }
-        .trust-item i { color: #27AE60; font-size: 1.3rem; }
+        .trust-item { display: flex; align-items: center; gap: 10px; color: #555; font-weight: 600; font-size: 0.95rem; }
+        .trust-item i { color: #D4AF37; font-size: 1.3rem; }
 
-        /* قسم دراسة الجدوى - تم تعديل الخلفية إلى رمادي فاتح */
-        .cta-feasibility-section { padding: 60px 20px; background: #F5F6FA; }
+        /* ✅ قسم دراسة الجدوى - خلفية رمادي فاتح */
+        .cta-feasibility-section { padding: 60px 20px; background: #F9F9F9; }
         .cta-feasibility-container { max-width: 900px; margin: 0 auto; }
         .cta-feasibility-card {
-            /* تم تغيير تدرج الكارد إلى رمادي غامق */
-            background: linear-gradient(135deg, #2C3E50, #34495E);
+            /* ✅ كارد بلون رمادي متوسط */
+            background: linear-gradient(135deg, #7A7A7A, #9A9A9A);
             border-radius: 24px; padding: 50px 40px; text-align: center;
-            color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.15);
             position: relative; overflow: hidden;
         }
-        .cta-feasibility-card::before { content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(39,174,96,0.15); border-radius: 50%; }
-        .cta-feasibility-card::after { content: ''; position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(39,174,96,0.1); border-radius: 50%; }
+        .cta-feasibility-card::before { content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(212,175,55,0.15); border-radius: 50%; }
+        .cta-feasibility-card::after { content: ''; position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: rgba(212,175,55,0.1); border-radius: 50%; }
         .cta-feasibility-card h2 { font-size: 2rem; font-weight: 900; margin-bottom: 12px; position: relative; z-index: 1; }
-        .cta-feasibility-card h2 span { color: #27AE60; }
+        .cta-feasibility-card h2 span { color: #D4AF37; }
         .cta-feasibility-card .subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; position: relative; z-index: 1; }
         .cta-feasibility-card .features-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 35px; position: relative; z-index: 1; }
         .cta-feasibility-card .feature-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1rem; }
-        .cta-feasibility-card .feature-item i { color: #27AE60; font-size: 1.3rem; }
-        .btn-feasibility { display: inline-block; background: #27AE60; color: white; padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: 0.3s; position: relative; z-index: 1; box-shadow: 0 10px 30px rgba(39,174,96,0.4); }
-        .btn-feasibility:hover { background: #219A52; transform: translateY(-4px); }
+        .cta-feasibility-card .feature-item i { color: #D4AF37; font-size: 1.3rem; }
+        /* ✅ زر ذهبي */
+        .btn-feasibility { display: inline-block; background: #D4AF37; color: #1a1a1a; padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: 0.3s; position: relative; z-index: 1; box-shadow: 0 10px 30px rgba(212,175,55,0.3); }
+        .btn-feasibility:hover { background: #C5A028; transform: translateY(-4px); }
 
-        /* قسم الاقتباسات - تم تعديل الخلفية إلى رمادي فاتح */
-        .quotes-section { padding: 80px 20px; background: #ECF0F1; }
+        /* ✅ قسم الاقتباسات - رمادي فاتح */
+        .quotes-section { padding: 80px 20px; background: #EEEEEE; }
         .quotes-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
-        .quote-card { background: white; border-radius: 18px; padding: 40px 28px; text-align: center; box-shadow: 0 4px 25px rgba(0,0,0,0.06); border: 1px solid #D5D8DC; transition: all 0.3s ease; position: relative; }
+        .quote-card { background: white; border-radius: 18px; padding: 40px 28px; text-align: center; box-shadow: 0 4px 25px rgba(0,0,0,0.05); border: 1px solid #E0E0E0; transition: all 0.3s ease; position: relative; }
         .quote-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-        .quote-card:nth-child(1)::before { background: #27AE60; }
-        .quote-card:nth-child(2)::before { background: #2980B9; }
-        .quote-card:nth-child(3)::before { background: #E74C3C; }
-        .quote-card:hover { transform: translateY(-7px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        /* ✅ ألوان مميزة لكن متناسقة مع الذهبي */
+        .quote-card:nth-child(1)::before { background: #D4AF37; }
+        .quote-card:nth-child(2)::before { background: #C0C0C0; }
+        .quote-card:nth-child(3)::before { background: #A0A0A0; }
+        .quote-card:hover { transform: translateY(-7px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
         .quote-icon { font-size: 2.8rem; margin-bottom: 18px; }
-        .quote-card:nth-child(1) .quote-icon { color: #27AE60; }
-        .quote-card:nth-child(2) .quote-icon { color: #2980B9; }
-        .quote-card:nth-child(3) .quote-icon { color: #E74C3C; }
-        .quote-card p { font-size: 1.1rem; color: #2C3E50; line-height: 1.9; font-weight: 700; }
+        .quote-card:nth-child(1) .quote-icon { color: #D4AF37; }
+        .quote-card:nth-child(2) .quote-icon { color: #C0C0C0; }
+        .quote-card:nth-child(3) .quote-icon { color: #A0A0A0; }
+        .quote-card p { font-size: 1.1rem; color: #555; line-height: 1.9; font-weight: 700; }
 
-        /* قسم الإحصائيات - تم تعديل الخلفية إلى رمادي فاتح */
-        .stats-section { padding: 80px 20px; background: #F5F6FA; }
+        /* ✅ قسم الإحصائيات - خلفية بيضاء ناعمة */
+        .stats-section { padding: 80px 20px; background: #FAFAFA; }
         .stats-container { max-width: 1000px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.2rem; color: #2C3E50; margin-bottom: 50px; font-weight: 800; }
-        .section-title::after { content: ''; display: block; width: 70px; height: 4px; background: #27AE60; margin: 12px auto 0; border-radius: 2px; }
-        .section-title span { color: #27AE60; }
+        .section-title { text-align: center; font-size: 2.2rem; color: #555; margin-bottom: 50px; font-weight: 800; }
+        .section-title::after { content: ''; display: block; width: 70px; height: 4px; background: #D4AF37; margin: 12px auto 0; border-radius: 2px; }
+        .section-title span { color: #D4AF37; }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .stat-item { text-align: center; padding: 35px 18px; background: white; border-radius: 18px; transition: all 0.3s ease; border: 1px solid #D5D8DC; }
-        .stat-item:hover { background: #FFFFFF; box-shadow: 0 12px 35px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .stat-item { text-align: center; padding: 35px 18px; background: white; border-radius: 18px; transition: all 0.3s ease; border: 1px solid #E0E0E0; }
+        .stat-item:hover { background: #FFFFFF; box-shadow: 0 12px 35px rgba(0,0,0,0.08); transform: translateY(-5px); }
         .stat-item .num { font-size: 3rem; font-weight: 900; margin-bottom: 10px; }
-        .stat-item:nth-child(1) .num { color: #27AE60; }
-        .stat-item:nth-child(2) .num { color: #2980B9; }
-        .stat-item:nth-child(3) .num { color: #E74C3C; }
-        .stat-item:nth-child(4) .num { color: #F39C12; }
-        .stat-item .label { color: #555; font-size: 1rem; font-weight: 600; }
+        /* ✅ تدرجات ذهبية ورمادية */
+        .stat-item:nth-child(1) .num { color: #D4AF37; }
+        .stat-item:nth-child(2) .num { color: #C0C0C0; }
+        .stat-item:nth-child(3) .num { color: #A0A0A0; }
+        .stat-item:nth-child(4) .num { color: #909090; }
+        .stat-item .label { color: #777; font-size: 1rem; font-weight: 600; }
 
-        /* قسم الخدمات - تم تعديل الخلفية إلى رمادي فاتح */
-        .services-section { padding: 80px 20px; background: #ECF0F1; }
+        /* ✅ قسم الخدمات - خلفية رمادية فاتحة */
+        .services-section { padding: 80px 20px; background: #F5F5F5; }
         .services-container { max-width: 1100px; margin: 0 auto; }
         .services-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-        .service-box { background: white; border-radius: 18px; padding: 35px 22px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #D5D8DC; transition: all 0.3s ease; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
+        .service-box { background: white; border-radius: 18px; padding: 35px 22px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #E0E0E0; transition: all 0.3s ease; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
         .service-box::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; transition: height 0.3s ease; }
-        .service-box:nth-child(1)::before { background: #27AE60; }
-        .service-box:nth-child(2)::before { background: #2980B9; }
-        .service-box:nth-child(3)::before { background: #E74C3C; }
-        .service-box:nth-child(4)::before { background: #F39C12; }
+        .service-box:nth-child(1)::before { background: #D4AF37; }
+        .service-box:nth-child(2)::before { background: #C0C0C0; }
+        .service-box:nth-child(3)::before { background: #A0A0A0; }
+        .service-box:nth-child(4)::before { background: #909090; }
         .service-box:hover::before { height: 8px; }
-        .service-box:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+        .service-box:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
         .s-icon { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; color: white; margin: 0 auto 18px; box-shadow: 0 8px 22px rgba(0,0,0,0.1); }
-        .service-box:nth-child(1) .s-icon { background: #27AE60; }
-        .service-box:nth-child(2) .s-icon { background: #2980B9; }
-        .service-box:nth-child(3) .s-icon { background: #E74C3C; }
-        .service-box:nth-child(4) .s-icon { background: #F39C12; }
-        .service-box h4 { font-size: 1.1rem; color: #2C3E50; margin-bottom: 10px; font-weight: 800; }
-        .service-box p { color: #666; font-size: 0.88rem; line-height: 1.7; }
+        .service-box:nth-child(1) .s-icon { background: #D4AF37; }
+        .service-box:nth-child(2) .s-icon { background: #C0C0C0; }
+        .service-box:nth-child(3) .s-icon { background: #A0A0A0; }
+        .service-box:nth-child(4) .s-icon { background: #909090; }
+        .service-box h4 { font-size: 1.1rem; color: #555; margin-bottom: 10px; font-weight: 800; }
+        .service-box p { color: #888; font-size: 0.88rem; line-height: 1.7; }
 
-        /* قسم لماذا نحن - تم تعديل الخلفية إلى رمادي فاتح */
-        .why-us-section { padding: 80px 20px; background: #F5F6FA; }
+        /* ✅ قسم لماذا نحن - خلفية رمادية فاتحة */
+        .why-us-section { padding: 80px 20px; background: #FAFAFA; }
         .why-us-container { max-width: 1000px; margin: 0 auto; }
         .why-us-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-        .why-us-item { display: flex; align-items: flex-start; gap: 18px; padding: 25px; background: white; border-radius: 16px; border-right: 4px solid #27AE60; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
-        .why-us-item:nth-child(2) { border-right-color: #2980B9; }
-        .why-us-item:nth-child(3) { border-right-color: #E74C3C; }
-        .why-us-item:nth-child(4) { border-right-color: #F39C12; }
-        .why-us-item:hover { background: #F8F9FA; transform: translateX(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .why-us-item { display: flex; align-items: flex-start; gap: 18px; padding: 25px; background: white; border-radius: 16px; border-right: 4px solid #D4AF37; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        .why-us-item:nth-child(2) { border-right-color: #C0C0C0; }
+        .why-us-item:nth-child(3) { border-right-color: #A0A0A0; }
+        .why-us-item:nth-child(4) { border-right-color: #909090; }
+        .why-us-item:hover { background: #F5F5F5; transform: translateX(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.06); }
         .why-icon { width: 55px; height: 55px; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; flex-shrink: 0; }
-        .why-us-item h4 { color: #2C3E50; margin-bottom: 5px; font-weight: 800; font-size: 1.05rem; }
-        .why-us-item p { color: #666; font-size: 0.9rem; line-height: 1.7; }
+        /* ✅ أيقونات بألوان متناسقة */
+        .why-us-item:nth-child(1) .why-icon { background: #D4AF37; }
+        .why-us-item:nth-child(2) .why-icon { background: #C0C0C0; }
+        .why-us-item:nth-child(3) .why-icon { background: #A0A0A0; }
+        .why-us-item:nth-child(4) .why-icon { background: #909090; }
+        .why-us-item h4 { color: #555; margin-bottom: 5px; font-weight: 800; font-size: 1.05rem; }
+        .why-us-item p { color: #888; font-size: 0.9rem; line-height: 1.7; }
 
-        /* قسم الدعوة للإجراء - تم تغيير التدرج إلى رمادي غامق */
-        .cta-section { padding: 80px 20px; background: linear-gradient(135deg, #2C3E50, #34495E); text-align: center; color: white; }
+        /* ✅ قسم الدعوة للإجراء - تدرج رمادي سكري */
+        .cta-section { padding: 80px 20px; background: linear-gradient(135deg, #7A7A7A, #9A9A9A); text-align: center; color: white; }
         .cta-container { max-width: 700px; margin: 0 auto; }
         .cta-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 15px; }
-        .cta-section h2 span { color: #27AE60; }
+        .cta-section h2 span { color: #D4AF37; }
         .cta-section p { font-size: 1.15rem; opacity: 0.9; margin-bottom: 35px; line-height: 2; }
 
-        /* ========== ميديا كويري - تم الإصلاح ========== */
+        /* ========== ميديا كويري ========== */
         @media (max-width: 768px) {
             .hero-logo-img { height: 130px; }
             .hero-logo-wrapper::before { width: 200px; height: 200px; }
@@ -304,7 +325,7 @@
             <h1 class="hero-title">بوابتكم نحو <span>استثمار</span> آمن ومستدام</h1>
             <p class="hero-desc">حلول استثمارية متكاملة تشمل دراسات الجدوى الاقتصادية، تنظيم المعارض الدولية، وهيكلة المشاريع التجارية والصناعية بأعلى المعايير المهنية</p>
             <div class="hero-btns">
-                <a href="services.html" class="btn btn-green"><i class="fas fa-briefcase"></i> اكتشف خدماتنا</a>
+                <a href="services.html" class="btn btn-gold"><i class="fas fa-briefcase"></i> اكتشف خدماتنا</a>
                 <a href="consultation.html" class="btn btn-outline"><i class="fas fa-calendar-check"></i> احجز استشارة مجانية</a>
             </div>
         </div>
@@ -372,10 +393,10 @@
         <div class="why-us-container">
             <h2 class="section-title">لماذا <span>برواكسبو</span>؟</h2>
             <div class="why-us-grid">
-                <div class="why-us-item"><div class="why-icon bg-green"><i class="fas fa-user-tie"></i></div><div><h4>فريق استشاري نخبوي</h4><p>نخبة من المستشارين بخبرة تتجاوز 25 عاماً في مختلف القطاعات الاقتصادية.</p></div></div>
-                <div class="why-us-item"><div class="why-icon bg-blue"><i class="fas fa-globe-asia"></i></div><div><h4>شبكة علاقات دولية</h4><p>شركاء استراتيجيون في مختلف قارات العالم لتوسيع نطاق أعمالك.</p></div></div>
-                <div class="why-us-item"><div class="why-icon bg-red"><i class="fas fa-shield-alt"></i></div><div><h4>سرية واحترافية</h4><p>نلتزم بأعلى معايير السرية وحماية بيانات العملاء والمشاريع.</p></div></div>
-                <div class="why-us-item"><div class="why-icon bg-orange"><i class="fas fa-trophy"></i></div><div><h4>سجل حافل بالإنجازات</h4><p>أكثر من 250 دراسة جدوى ناجحة وعشرات المعارض الدولية المنظمة.</p></div></div>
+                <div class="why-us-item"><div class="why-icon"><i class="fas fa-user-tie"></i></div><div><h4>فريق استشاري نخبوي</h4><p>نخبة من المستشارين بخبرة تتجاوز 25 عاماً في مختلف القطاعات الاقتصادية.</p></div></div>
+                <div class="why-us-item"><div class="why-icon"><i class="fas fa-globe-asia"></i></div><div><h4>شبكة علاقات دولية</h4><p>شركاء استراتيجيون في مختلف قارات العالم لتوسيع نطاق أعمالك.</p></div></div>
+                <div class="why-us-item"><div class="why-icon"><i class="fas fa-shield-alt"></i></div><div><h4>سرية واحترافية</h4><p>نلتزم بأعلى معايير السرية وحماية بيانات العملاء والمشاريع.</p></div></div>
+                <div class="why-us-item"><div class="why-icon"><i class="fas fa-trophy"></i></div><div><h4>سجل حافل بالإنجازات</h4><p>أكثر من 250 دراسة جدوى ناجحة وعشرات المعارض الدولية المنظمة.</p></div></div>
             </div>
         </div>
     </section>
@@ -384,7 +405,7 @@
         <div class="cta-container">
             <h2>هل أنت مستعد <span>للانطلاق؟</span></h2>
             <p>لا تدع فكرة مشروعك تبقى حبراً على ورق. فريقنا جاهز لتقديم استشارة أولية مجانية وتقييم فرص نجاح مشروعك على أرض الواقع.</p>
-            <a href="consultation.html" class="btn btn-green"><i class="fas fa-rocket" style="margin-left:8px;"></i> ابدأ الآن - احجز استشارتك</a>
+            <a href="consultation.html" class="btn btn-gold"><i class="fas fa-rocket" style="margin-left:8px;"></i> ابدأ الآن - احجز استشارتك</a>
         </div>
     </section>
 
@@ -412,22 +433,22 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
             
-            const ambientLight = new THREE.AmbientLight(0x27AE60, 0.4);
+            const ambientLight = new THREE.AmbientLight(0xD4AF37, 0.4);
             scene.add(ambientLight);
             
             const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
             directionalLight.position.set(5, 5, 5);
             scene.add(directionalLight);
             
-            const pointLight1 = new THREE.PointLight(0x27AE60, 0.5, 15);
+            const pointLight1 = new THREE.PointLight(0xD4AF37, 0.5, 15);
             pointLight1.position.set(-3, 2, 3);
             scene.add(pointLight1);
             
-            const pointLight2 = new THREE.PointLight(0x2980B9, 0.5, 15);
+            const pointLight2 = new THREE.PointLight(0xC0C0C0, 0.5, 15);
             pointLight2.position.set(3, -1, 2);
             scene.add(pointLight2);
             
-            const gridHelper = new THREE.GridHelper(20, 20, 0x27AE60, 0x1a3a2a);
+            const gridHelper = new THREE.GridHelper(20, 20, 0xD4AF37, 0x3a3a3a);
             gridHelper.position.y = -4;
             scene.add(gridHelper);
             
@@ -436,7 +457,7 @@
             
             const barCount = 12;
             const bars = [];
-            const barColors = [0x27AE60, 0x2980B9, 0x27AE60, 0xE74C3C, 0x27AE60, 0xF39C12, 0x27AE60, 0x2980B9, 0x27AE60, 0xE74C3C, 0x27AE60, 0xF39C12];
+            const barColors = [0xD4AF37, 0xC0C0C0, 0xD4AF37, 0xA0A0A0, 0xD4AF37, 0x909090, 0xD4AF37, 0xC0C0C0, 0xD4AF37, 0xA0A0A0, 0xD4AF37, 0x909090];
             
             for (let i = 0; i < barCount; i++) {
                 const height = Math.random() * 4 + 2;
@@ -468,13 +489,13 @@
             }
             
             const lineGeometry = new THREE.BufferGeometry().setFromPoints(linePoints);
-            const lineMaterial = new THREE.LineBasicMaterial({ color: 0x27AE60, linewidth: 1, transparent: true, opacity: 0.7 });
+            const lineMaterial = new THREE.LineBasicMaterial({ color: 0xD4AF37, linewidth: 1, transparent: true, opacity: 0.7 });
             const line = new THREE.Line(lineGeometry, lineMaterial);
             lineGroup.add(line);
             
             linePoints.forEach(point => {
                 const dotGeo = new THREE.SphereGeometry(0.08, 8, 8);
-                const dotMat = new THREE.MeshPhongMaterial({ color: 0x27AE60, emissive: 0x27AE60, emissiveIntensity: 0.6 });
+                const dotMat = new THREE.MeshPhongMaterial({ color: 0xD4AF37, emissive: 0xD4AF37, emissiveIntensity: 0.6 });
                 const dot = new THREE.Mesh(dotGeo, dotMat);
                 dot.position.copy(point);
                 lineGroup.add(dot);
@@ -489,7 +510,7 @@
             for (let i = 0; i < particlesCount; i++) {
                 const size = Math.random() * 0.08 + 0.03;
                 const geo = new THREE.SphereGeometry(size, 8, 8);
-                const mat = new THREE.MeshPhongMaterial({ color: Math.random() > 0.5 ? 0x27AE60 : 0x2ECC71, emissive: 0x27AE60, emissiveIntensity: 0.5, transparent: true, opacity: 0.7 });
+                const mat = new THREE.MeshPhongMaterial({ color: Math.random() > 0.5 ? 0xD4AF37 : 0xC0C0C0, emissive: 0xD4AF37, emissiveIntensity: 0.5, transparent: true, opacity: 0.7 });
                 const particle = new THREE.Mesh(geo, mat);
                 particle.position.set((Math.random() - 0.5) * 16, (Math.random() - 0.5) * 10, (Math.random() - 0.5) * 6);
                 particle.userData = { speedY: (Math.random() - 0.5) * 0.015, speedX: (Math.random() - 0.5) * 0.01, speedZ: (Math.random() - 0.5) * 0.01, baseY: particle.position.y, amplitude: Math.random() * 1.5, phase: Math.random() * Math.PI * 2 };
@@ -502,7 +523,7 @@
             
             for (let j = 0; j < 3; j++) {
                 const ringGeo = new THREE.TorusGeometry(3 + j * 1.5, 0.03, 16, 80);
-                const ringMat = new THREE.MeshPhongMaterial({ color: 0x27AE60, emissive: 0x27AE60, emissiveIntensity: 0.3, transparent: true, opacity: 0.3 - j * 0.08 });
+                const ringMat = new THREE.MeshPhongMaterial({ color: 0xD4AF37, emissive: 0xD4AF37, emissiveIntensity: 0.3, transparent: true, opacity: 0.3 - j * 0.08 });
                 const ring = new THREE.Mesh(ringGeo, ringMat);
                 ring.rotation.x = Math.PI / 2 + j * 0.3;
                 ring.position.y = -2;
