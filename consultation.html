@@ -15,11 +15,11 @@
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background: #f9fafb; }
+        body { background: #F5F5F5; } /* ✅ خلفية رمادية فاتحة */
         
-        /* تحسين الهيدر */
+        /* ✅ تحسين الهيدر إلى الرمادي السكري */
         .consult-header {
-            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 100%);
+            background: linear-gradient(135deg, #7A7A7A 0%, #9A9A9A 100%);
             padding: 90px 20px 80px;
             text-align: center;
             color: white;
@@ -31,7 +31,7 @@
             position: absolute;
             bottom: -2px; left: 0; right: 0;
             height: 70px;
-            background: #f9fafb;
+            background: #F5F5F5;
             clip-path: ellipse(65% 100% at 50% 100%);
         }
         .consult-header h1 { 
@@ -41,7 +41,7 @@
             letter-spacing: -1px;
         }
         .consult-header h1 span { 
-            color: #27AE60; 
+            color: #D4AF37; /* ✅ ذهبي */
             position: relative;
         }
         .consult-header h1 span::after {
@@ -49,7 +49,7 @@
             position: absolute;
             bottom: 5px; left: 0; right: 0;
             height: 3px;
-            background: #27AE60;
+            background: #D4AF37;
             border-radius: 2px;
         }
         .consult-header .header-subtitle { 
@@ -92,7 +92,7 @@
         }
         .process-step .step-number {
             width: 50px; height: 50px;
-            background: linear-gradient(135deg, #27AE60, #1e8449);
+            background: linear-gradient(135deg, #D4AF37, #B49430); /* ✅ ذهبي */
             color: white;
             border-radius: 50%;
             display: flex;
@@ -101,16 +101,16 @@
             font-size: 1.4rem;
             font-weight: 900;
             margin: 0 auto 18px;
-            box-shadow: 0 6px 18px rgba(39,174,96,0.25);
+            box-shadow: 0 6px 18px rgba(212,175,55,0.25);
         }
         .process-step h4 {
             font-size: 1.1rem;
-            color: #2C3E50;
+            color: #555;
             margin-bottom: 8px;
             font-weight: 800;
         }
         .process-step p {
-            color: #777;
+            color: #888;
             font-size: 0.9rem;
             line-height: 1.7;
         }
@@ -137,11 +137,11 @@
             position: absolute;
             top: 0; left: 0; right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #27AE60, #1e8449);
+            background: linear-gradient(90deg, #D4AF37, #B49430);
         }
         .form-wrapper .form-header-icon {
             width: 70px; height: 70px;
-            background: linear-gradient(135deg, #27AE60, #1e8449);
+            background: linear-gradient(135deg, #D4AF37, #B49430);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -149,17 +149,17 @@
             font-size: 1.8rem;
             color: white;
             margin: 0 auto 20px;
-            box-shadow: 0 8px 25px rgba(39,174,96,0.2);
+            box-shadow: 0 8px 25px rgba(212,175,55,0.2);
         }
         .form-wrapper h3 {
             font-size: 1.5rem;
-            color: #1a2a3a;
+            color: #555;
             margin-bottom: 6px;
             text-align: center;
             font-weight: 800;
         }
         .form-wrapper .form-subtitle {
-            color: #888;
+            color: #999;
             text-align: center;
             margin-bottom: 35px;
             font-size: 0.95rem;
@@ -170,7 +170,7 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: #2C3E50;
+            color: #555;
             font-weight: 700;
             font-size: 0.92rem;
         }
@@ -194,10 +194,10 @@
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
-            border-color: #27AE60;
+            border-color: #D4AF37;
             outline: none;
             background: #fff;
-            box-shadow: 0 0 0 5px rgba(39,174,96,0.06);
+            box-shadow: 0 0 0 5px rgba(212,175,55,0.06);
         }
         .form-group textarea {
             resize: vertical;
@@ -214,24 +214,24 @@
             align-items: flex-start;
             gap: 10px;
             font-size: 0.85rem;
-            color: #777;
+            color: #888;
             line-height: 1.7;
             margin-bottom: 22px;
         }
         .consent-group input[type="checkbox"] {
             width: auto;
             margin-top: 4px;
-            accent-color: #27AE60;
+            accent-color: #D4AF37;
         }
         .consent-group a {
-            color: #27AE60;
+            color: #D4AF37;
             text-decoration: underline;
         }
         
         .btn-submit {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, #27AE60, #1e8449);
+            background: linear-gradient(135deg, #D4AF37, #B49430);
             color: white;
             border: none;
             border-radius: 14px;
@@ -241,12 +241,12 @@
             font-family: 'Cairo', sans-serif;
             transition: all 0.3s ease;
             letter-spacing: 0.5px;
-            box-shadow: 0 6px 20px rgba(39,174,96,0.2);
+            box-shadow: 0 6px 20px rgba(212,175,55,0.2);
         }
         .btn-submit:hover {
-            background: linear-gradient(135deg, #219A52, #176b39);
+            background: linear-gradient(135deg, #C5A028, #A38320);
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(39,174,96,0.35);
+            box-shadow: 0 12px 30px rgba(212,175,55,0.35);
         }
         .btn-submit i { margin-left: 8px; }
         
@@ -276,10 +276,11 @@
             width: 4px;
             height: 100%;
         }
-        .info-card:nth-child(1)::before { background: #27AE60; }
-        .info-card:nth-child(2)::before { background: #2980B9; }
-        .info-card:nth-child(3)::before { background: #E74C3C; }
-        .info-card:nth-child(4)::before { background: #F39C12; }
+        /* ✅ ألوان البطاقات بتدرجات ذهبية ورمادية */
+        .info-card:nth-child(1)::before { background: #D4AF37; }
+        .info-card:nth-child(2)::before { background: #C0C0C0; }
+        .info-card:nth-child(3)::before { background: #A0A0A0; }
+        .info-card:nth-child(4)::before { background: #909090; }
         
         .info-card:hover {
             transform: translateX(-6px);
@@ -296,19 +297,19 @@
             flex-shrink: 0;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
-        .bg-green { background: linear-gradient(135deg, #27AE60, #1e8449); }
-        .bg-blue { background: linear-gradient(135deg, #2980B9, #1a5276); }
-        .bg-red { background: linear-gradient(135deg, #E74C3C, #922b21); }
-        .bg-orange { background: linear-gradient(135deg, #F39C12, #b9770e); }
+        .bg-gold { background: linear-gradient(135deg, #D4AF37, #B49430); }
+        .bg-silver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); }
+        .bg-gray { background: linear-gradient(135deg, #A0A0A0, #808080); }
+        .bg-darkgray { background: linear-gradient(135deg, #909090, #707070); }
         
         .info-card h4 { 
             font-size: 1.05rem; 
-            color: #2C3E50; 
+            color: #555; 
             margin-bottom: 5px; 
             font-weight: 800;
         }
         .info-card p { 
-            color: #666; 
+            color: #777; 
             font-size: 0.9rem; 
             line-height: 1.7; 
         }
@@ -325,7 +326,7 @@
         }
         .direct-contact h3 {
             font-size: 1.5rem;
-            color: #2C3E50;
+            color: #555;
             margin-bottom: 25px;
             font-weight: 800;
         }
@@ -339,34 +340,34 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            color: #2C3E50;
+            color: #555;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.05rem;
             padding: 15px 25px;
-            background: #f8faf9;
+            background: #FAFAFA;
             border-radius: 14px;
             transition: 0.3s;
         }
         .direct-contact .contact-link:hover {
-            background: #eafaf1;
-            color: #27AE60;
+            background: #F0F0F0;
+            color: #D4AF37;
         }
         .direct-contact .contact-link i {
             font-size: 1.4rem;
-            color: #27AE60;
+            color: #D4AF37;
         }
         
-        /* الفوتر */
+        /* ✅ الفوتر - رمادي غامق */
         footer {
-            background: #1a2a3a;
+            background: #4A4A4A;
             color: #ccc;
             text-align: center;
             padding: 25px;
             font-size: 0.9rem;
         }
         footer a {
-            color: #27AE60;
+            color: #D4AF37;
             text-decoration: none;
             margin: 0 10px;
             font-weight: 600;
@@ -501,7 +502,7 @@
             <!-- --- البطاقات الجانبية --- -->
             <aside class="info-side" aria-label="معلومات إضافية">
                 <div class="info-card">
-                    <div class="info-icon bg-green"><i class="fas fa-clock"></i></div>
+                    <div class="info-icon bg-gold"><i class="fas fa-clock"></i></div>
                     <div>
                         <h4>سرعة الاستجابة</h4>
                         <p>نلتزم بالرد على كافة الاستفسارات خلال مدة أقصاها 24 ساعة عمل.</p>
@@ -509,7 +510,7 @@
                 </div>
                 
                 <div class="info-card">
-                    <div class="info-icon bg-blue"><i class="fas fa-user-tie"></i></div>
+                    <div class="info-icon bg-silver"><i class="fas fa-user-tie"></i></div>
                     <div>
                         <h4>استشاريون معتمدون</h4>
                         <p>يضم فريقنا نخبة من المستشارين ذوي الخبرة التي تتجاوز 25 عاماً في مجالات الاستثمار والتجارة.</p>
@@ -517,7 +518,7 @@
                 </div>
                 
                 <div class="info-card">
-                    <div class="info-icon bg-red"><i class="fas fa-shield-alt"></i></div>
+                    <div class="info-icon bg-gray"><i class="fas fa-shield-alt"></i></div>
                     <div>
                         <h4>سرية وخصوصية تامة</h4>
                         <p>جميع بياناتكم ومعلومات مشاريعكم محمية بموجب اتفاقية عدم إفصاح (NDA) عند الطلب.</p>
@@ -525,7 +526,7 @@
                 </div>
                 
                 <div class="info-card">
-                    <div class="info-icon bg-orange"><i class="fas fa-globe"></i></div>
+                    <div class="info-icon bg-darkgray"><i class="fas fa-globe"></i></div>
                     <div>
                         <h4>تغطية إقليمية ودولية</h4>
                         <p>نقدم خدماتنا في سوريا، السودان، تركيا، وشبكة شركائنا تمتد لمختلف دول العالم.</p>
@@ -537,7 +538,7 @@
 
         <!-- --- قسم التواصل المباشر --- -->
         <section class="direct-contact">
-            <h3><i class="fas fa-headset" style="color:#27AE60; margin-left:10px;"></i> تفضل بالتواصل المباشر</h3>
+            <h3><i class="fas fa-headset" style="color:#D4AF37; margin-left:10px;"></i> تفضل بالتواصل المباشر</h3>
             <div class="contact-methods">
                 <a href="https://wa.me/963933438019" target="_blank" class="contact-link">
                     <i class="fab fa-whatsapp"></i> واتساب الأعمال
