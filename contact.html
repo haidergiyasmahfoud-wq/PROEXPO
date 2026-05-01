@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <style>
+        /* ✅ هيدر رمادي سكري */
         .page-header {
-            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 100%);
+            background: linear-gradient(135deg, #7A7A7A 0%, #9A9A9A 100%);
             padding: 70px 20px 60px;
             text-align: center;
             color: white;
@@ -27,11 +28,11 @@
             position: absolute;
             bottom: -2px; left: 0; right: 0;
             height: 60px;
-            background: #f9fafb;
+            background: #F5F5F5;
             clip-path: ellipse(65% 100% at 50% 100%);
         }
         .page-header h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
-        .page-header h1 span { color: #27AE60; }
+        .page-header h1 span { color: #D4AF37; } /* ✅ ذهبي */
         .page-header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         
         .contact-container {
@@ -61,7 +62,7 @@
             overflow: hidden;
         }
         .branch-card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(0,0,0,0.1); }
-        .branch-card.featured { border: 2px solid #27AE60; }
+        .branch-card.featured { border: 2px solid #D4AF37; } /* ✅ ذهبي */
         .branch-card .branch-icon {
             width: 60px; height: 60px;
             border-radius: 15px;
@@ -73,11 +74,11 @@
             margin: 0 auto 15px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
-        .branch-card h3 { font-size: 1.2rem; color: #2C3E50; margin-bottom: 5px; font-weight: 800; }
+        .branch-card h3 { font-size: 1.2rem; color: #555; margin-bottom: 5px; font-weight: 800; }
         .branch-card .branch-year {
             display: inline-block;
-            background: #f0fdf4;
-            color: #27AE60;
+            background: #F5F5F5;
+            color: #D4AF37;
             font-size: 0.8rem;
             font-weight: 700;
             padding: 4px 14px;
@@ -85,7 +86,7 @@
             margin-bottom: 12px;
         }
         .branch-card .branch-address {
-            color: #666;
+            color: #777;
             font-size: 0.85rem;
             line-height: 1.7;
             margin: 10px 0;
@@ -95,7 +96,7 @@
             display: block;
             font-size: 1.1rem;
             font-weight: 700;
-            color: #1a2a3a;
+            color: #555;
             direction: ltr;
             margin: 10px 0;
         }
@@ -124,11 +125,11 @@
         .map-section h3 {
             text-align: center;
             font-size: 1.5rem;
-            color: #2C3E50;
+            color: #555;
             margin-bottom: 15px;
             font-weight: 800;
         }
-        .map-section h3 span { color: #27AE60; }
+        .map-section h3 span { color: #D4AF37; }
         #map {
             height: 450px;
             border-radius: 14px;
@@ -145,9 +146,9 @@
         }
         .map-btn {
             padding: 10px 22px;
-            border: 2px solid #27AE60;
+            border: 2px solid #D4AF37;
             background: white;
-            color: #27AE60;
+            color: #D4AF37;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
@@ -156,7 +157,7 @@
             transition: 0.3s;
         }
         .map-btn:hover, .map-btn.active {
-            background: #27AE60;
+            background: #D4AF37;
             color: white;
         }
         
@@ -187,12 +188,12 @@
             color: white;
             margin: 0 auto 12px;
         }
-        .quick-card h4 { font-size: 1rem; color: #2C3E50; margin-bottom: 6px; font-weight: 800; }
-        .quick-card p { color: #666; font-size: 0.88rem; }
+        .quick-card h4 { font-size: 1rem; color: #555; margin-bottom: 6px; font-weight: 800; }
+        .quick-card p { color: #777; font-size: 0.88rem; }
         .quick-card .email-address {
             direction: ltr;
             display: block;
-            color: #27AE60;
+            color: #D4AF37;
             font-weight: 700;
             font-size: 0.85rem;
             margin: 6px 0;
@@ -201,7 +202,7 @@
             display: inline-block;
             margin-top: 8px;
             padding: 8px 18px;
-            background: #27AE60;
+            background: #D4AF37;
             color: white;
             text-decoration: none;
             border-radius: 20px;
@@ -209,7 +210,7 @@
             font-weight: 600;
             transition: 0.3s;
         }
-        .quick-card .btn-email:hover { background: #219A52; }
+        .quick-card .btn-email:hover { background: #C5A028; }
         
         /* ساعات العمل */
         .hours-section {
@@ -220,16 +221,16 @@
             border: 1px solid #eee;
             text-align: center;
         }
-        .hours-section h3 { font-size: 1.3rem; color: #2C3E50; margin-bottom: 18px; font-weight: 800; }
+        .hours-section h3 { font-size: 1.3rem; color: #555; margin-bottom: 18px; font-weight: 800; }
         .hours-grid {
             display: flex;
             justify-content: center;
             gap: 35px;
             flex-wrap: wrap;
         }
-        .hours-item .day { font-weight: 700; color: #2C3E50; margin-bottom: 3px; }
-        .hours-item .time { color: #27AE60; font-weight: 700; font-size: 1.05rem; }
-        .hours-note { margin-top: 18px; color: #888; font-size: 0.82rem; }
+        .hours-item .day { font-weight: 700; color: #555; margin-bottom: 3px; }
+        .hours-item .time { color: #D4AF37; font-weight: 700; font-size: 1.05rem; }
+        .hours-note { margin-top: 18px; color: #999; font-size: 0.82rem; }
         
         @media (max-width: 768px) {
             .page-header h1 { font-size: 1.8rem; }
@@ -280,7 +281,7 @@
         <section class="branches-grid">
             <!-- دمشق -->
             <div class="branch-card featured">
-                <div class="branch-icon bg-green"><i class="fas fa-building"></i></div>
+                <div class="branch-icon bg-gold"><i class="fas fa-building"></i></div>
                 <h3>دمشق - سوريا</h3>
                 <span class="branch-year">المركز الرئيسي | منذ 2000</span>
                 <p class="branch-address">📌 فكتوريا - خلف جامع الطاووسية - بناء النحاس</p>
@@ -293,7 +294,7 @@
             
             <!-- الخرطوم -->
             <div class="branch-card">
-                <div class="branch-icon bg-blue"><i class="fas fa-building"></i></div>
+                <div class="branch-icon bg-silver"><i class="fas fa-building"></i></div>
                 <h3>الخرطوم - السودان</h3>
                 <span class="branch-year">فرع إقليمي | منذ 2013</span>
                 <p class="branch-address">📌 السوق العربي - شارع الاستبانة - جانب فندق دبي</p>
@@ -305,7 +306,7 @@
             
             <!-- إسطنبول -->
             <div class="branch-card">
-                <div class="branch-icon bg-red"><i class="fas fa-building"></i></div>
+                <div class="branch-icon bg-gray"><i class="fas fa-building"></i></div>
                 <h3>إسطنبول - تركيا</h3>
                 <span class="branch-year">فرع دولي | منذ 2016</span>
                 <p class="branch-address">📌 Bağcılar - SD 1994 Bina No: 11 D:5 Kat: 4</p>
@@ -330,7 +331,7 @@
         <!-- تواصل سريع -->
         <section class="quick-contact-grid">
             <div class="quick-card">
-                <div class="qc-icon bg-orange"><i class="far fa-envelope"></i></div>
+                <div class="qc-icon bg-gold"><i class="far fa-envelope"></i></div>
                 <h4>البريد الإلكتروني</h4>
                 <span class="email-address">hussexpo@gmail.com</span>
                 <a href="mailto:hussexpo@gmail.com" class="btn-email">
@@ -339,10 +340,10 @@
             </div>
             
             <div class="quick-card">
-                <div class="qc-icon bg-purple"><i class="fas fa-globe"></i></div>
+                <div class="qc-icon bg-darkgray"><i class="fas fa-globe"></i></div>
                 <h4>موقعنا الإلكتروني</h4>
                 <p>تصفح كافة خدماتنا وحلول أعمالنا</p>
-                <a href="index.html" class="btn-email" style="background:#8E44AD;">
+                <a href="index.html" class="btn-email" style="background:#666;">
                     <i class="fas fa-home"></i> الصفحة الرئيسية
                 </a>
             </div>
@@ -351,7 +352,7 @@
                 <div class="qc-icon bg-gray"><i class="fas fa-file-alt"></i></div>
                 <h4>طلب استشارة رسمي</h4>
                 <p>قدموا طلب استشارة مكتوباً</p>
-                <a href="consultation.html" class="btn-email" style="background:#2C3E50;">
+                <a href="consultation.html" class="btn-email" style="background:#888;">
                     <i class="fas fa-pen"></i> نموذج الاستشارة
                 </a>
             </div>
@@ -359,7 +360,7 @@
         
         <!-- ساعات العمل -->
         <section class="hours-section">
-            <h3><i class="far fa-clock" style="color:#27AE60; margin-left:8px;"></i> ساعات العمل الرسمية</h3>
+            <h3><i class="far fa-clock" style="color:#D4AF37; margin-left:8px;"></i> ساعات العمل الرسمية</h3>
             <div class="hours-grid">
                 <div class="hours-item">
                     <div class="day">الأحد - الخميس</div>
@@ -379,7 +380,7 @@
 
     </main>
 
-    <footer role="contentinfo">
+    <footer role="contentinfo" style="background:#4A4A4A;">
         <div class="footer-links">
             <a href="index.html">الرئيسية</a>
             <a href="about.html">عن الشركة</a>
@@ -390,7 +391,7 @@
             <a href="privacy.html">سياسة الخصوصية</a>
             <a href="terms.html">الشروط والأحكام</a>
         </div>
-        <p class="copyright">© 2026 برواكسبو. جميع الحقوق المحفوظة. | شركة مسجلة رسمياً</p>
+        <p class="copyright">© 2026 برواكسبو. جميع الحقوق محفوظة. | شركة مسجلة رسمياً</p>
     </footer>
     
     <script src="script.js"></script>
@@ -462,6 +463,15 @@
             shadowSize: [41, 41]
         });
         
+        const goldIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+        
         const redIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
@@ -487,10 +497,10 @@
         markers.damascus = L.marker([DAMASCUS_LAT, DAMASCUS_LNG], { icon: greenIcon })
             .bindPopup(`
                 <div style="text-align:right; font-family:'Cairo',sans-serif; font-size:14px;">
-                    <strong style="font-size:16px; color:#27AE60;">🏢 برواكسبو - المركز الرئيسي</strong><br>
+                    <strong style="font-size:16px; color:#D4AF37;">🏢 برواكسبو - المركز الرئيسي</strong><br>
                     📍 <strong>دمشق - سوريا</strong><br>
                     📌 فكتوريا - خلف جامع الطاووسية - بناء النحاس<br>
-                    📞 <a href="tel:+963933438019" style="color:#27AE60; direction:ltr;">+963 933 438 019</a><br>
+                    📞 <a href="tel:+963933438019" style="color:#D4AF37; direction:ltr;">+963 933 438 019</a><br>
                     <a href="https://wa.me/963933438019" target="_blank" style="color:#25D366; font-weight:700;">💬 واتساب</a>
                 </div>
             `)
