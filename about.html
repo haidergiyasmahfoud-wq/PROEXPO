@@ -17,8 +17,9 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
         body { background: #fff; }
         
+        /* ✅ تم تغيير خلفية الهيدر إلى رمادي سكري */
         .about-header {
-            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            background: linear-gradient(135deg, #7A7A7A, #9A9A9A);
             padding: 90px 20px 80px;
             text-align: center;
             color: white;
@@ -41,13 +42,14 @@
             margin-bottom: 15px; 
             letter-spacing: -1px;
         }
-        .about-header h1 span { color: #27AE60; position: relative; }
+        /* ✅ تم تغيير اللون الأخضر إلى ذهبي */
+        .about-header h1 span { color: #D4AF37; position: relative; }
         .about-header h1 span::after {
             content: '';
             position: absolute;
             bottom: 5px; left: 0; right: 0;
             height: 3px;
-            background: #27AE60;
+            background: #D4AF37;
             border-radius: 2px;
         }
         .about-header .subtitle { 
@@ -81,9 +83,10 @@
             gap: 25px;
             flex-wrap: wrap;
         }
+        /* ✅ تغيير أيقونة التأسيس إلى الذهبي */
         .establishment-badge .est-icon {
             width: 70px; height: 70px;
-            background: linear-gradient(135deg, #27AE60, #1e8449);
+            background: linear-gradient(135deg, #D4AF37, #B49430);
             border-radius: 18px;
             display: flex;
             align-items: center;
@@ -94,11 +97,11 @@
         }
         .establishment-badge .est-text h3 {
             font-size: 1.3rem;
-            color: #2C3E50;
+            color: #555;
             margin-bottom: 5px;
         }
         .establishment-badge .est-text p {
-            color: #666;
+            color: #888;
             font-size: 0.95rem;
             line-height: 1.7;
         }
@@ -106,7 +109,7 @@
             margin-right: auto;
             font-size: 2.5rem;
             font-weight: 900;
-            color: #27AE60;
+            color: #D4AF37;
             opacity: 0.15;
             letter-spacing: 2px;
         }
@@ -125,7 +128,7 @@
             position: absolute;
             top: 15px; right: 25px;
             font-size: 5rem;
-            color: #27AE60;
+            color: #D4AF37;
             opacity: 0.08;
             font-family: serif;
             line-height: 1;
@@ -140,14 +143,14 @@
         }
         .about-intro p:last-child { margin-bottom: 0; }
         .about-intro .highlight {
-            color: #2C3E50;
+            color: #555;
             font-weight: 700;
             position: relative;
         }
         
         .section-title {
             font-size: 1.9rem;
-            color: #2C3E50;
+            color: #555;
             margin: 55px 0 30px;
             text-align: center;
             font-weight: 800;
@@ -158,11 +161,11 @@
             display: block;
             width: 70px;
             height: 3px;
-            background: #27AE60;
+            background: #D4AF37;
             margin: 10px auto 0;
             border-radius: 2px;
         }
-        .section-title span { color: #27AE60; }
+        .section-title span { color: #D4AF37; }
         
         .cards-row {
             display: grid;
@@ -187,10 +190,11 @@
             top: 0; left: 0; right: 0;
             height: 4px;
         }
-        .info-card:nth-child(1)::before { background: #27AE60; }
-        .info-card:nth-child(2)::before { background: #2980B9; }
-        .info-card:nth-child(3)::before { background: #E74C3C; }
-        .info-card:nth-child(4)::before { background: #F39C12; }
+        /* ✅ تغيير ألوان البطاقات إلى تدرجات رمادية وذهبية */
+        .info-card:nth-child(1)::before { background: #D4AF37; }
+        .info-card:nth-child(2)::before { background: #C0C0C0; }
+        .info-card:nth-child(3)::before { background: #A0A0A0; }
+        .info-card:nth-child(4)::before { background: #909090; }
         
         .info-card:hover {
             transform: translateY(-6px);
@@ -209,8 +213,8 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
         
-        .info-card h3 { font-size: 1.25rem; color: #2C3E50; margin-bottom: 15px; font-weight: 800; }
-        .info-card p { color: #555; font-size: 0.98rem; line-height: 1.9; text-align: justify; }
+        .info-card h3 { font-size: 1.25rem; color: #555; margin-bottom: 15px; font-weight: 800; }
+        .info-card p { color: #777; font-size: 0.98rem; line-height: 1.9; text-align: justify; }
         
         /* شبكة القيم */
         .values-grid {
@@ -218,32 +222,33 @@
             grid-template-columns: 1fr 1fr;
             gap: 18px;
         }
+        /* ✅ تغيير الخلفية والألوان لتتناغم مع الرمادي */
         .value-item {
-            background: #f9fafb;
+            background: #FAFAFA;
             padding: 25px 22px;
             border-radius: 14px;
-            border-right: 4px solid #27AE60;
+            border-right: 4px solid #D4AF37;
             font-size: 0.93rem;
-            color: #444;
+            color: #666;
             line-height: 1.8;
             transition: all 0.3s ease;
             position: relative;
         }
-        .value-item:nth-child(2) { border-right-color: #2980B9; }
-        .value-item:nth-child(3) { border-right-color: #E74C3C; }
-        .value-item:nth-child(4) { border-right-color: #F39C12; }
-        .value-item:nth-child(5) { border-right-color: #8E44AD; }
-        .value-item:nth-child(6) { border-right-color: #2C3E50; }
+        .value-item:nth-child(2) { border-right-color: #C0C0C0; }
+        .value-item:nth-child(3) { border-right-color: #A0A0A0; }
+        .value-item:nth-child(4) { border-right-color: #909090; }
+        .value-item:nth-child(5) { border-right-color: #808080; }
+        .value-item:nth-child(6) { border-right-color: #707070; }
         
         .value-item:hover {
-            background: #eafaf1;
+            background: #F0F0F0;
             transform: translateX(-5px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.06);
         }
         .value-item strong {
             display: block;
             margin-bottom: 6px;
-            color: #1a2a3a;
+            color: #555;
             font-size: 1.05rem;
             font-weight: 800;
         }
@@ -259,7 +264,7 @@
         }
         .branches-section h3 {
             font-size: 1.4rem;
-            color: #2C3E50;
+            color: #555;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -271,20 +276,21 @@
         }
         .branch-item {
             padding: 20px;
-            background: #f8faf9;
+            background: #FAFAFA;
             border-radius: 14px;
             transition: 0.3s;
         }
-        .branch-item:hover { background: #eafaf1; }
-        .branch-item i { font-size: 1.8rem; color: #27AE60; margin-bottom: 10px; }
-        .branch-item h4 { color: #2C3E50; margin-bottom: 5px; }
-        .branch-item p { color: #888; font-size: 0.85rem; }
+        .branch-item:hover { background: #F0F0F0; }
+        /* ✅ أيقونات ذهبية */
+        .branch-item i { font-size: 1.8rem; color: #D4AF37; margin-bottom: 10px; }
+        .branch-item h4 { color: #555; margin-bottom: 5px; }
+        .branch-item p { color: #999; font-size: 0.85rem; }
         
-        /* الألوان */
-        .bg-green { background: linear-gradient(135deg, #27AE60, #1e8449); }
-        .bg-blue { background: linear-gradient(135deg, #2980B9, #1a5276); }
-        .bg-red { background: linear-gradient(135deg, #E74C3C, #922b21); }
-        .bg-orange { background: linear-gradient(135deg, #F39C12, #b9770e); }
+        /* الألوان الجديدة للخلفيات */
+        .bg-gold { background: linear-gradient(135deg, #D4AF37, #B49430); }
+        .bg-silver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); }
+        .bg-gray { background: linear-gradient(135deg, #A0A0A0, #808080); }
+        .bg-darkgray { background: linear-gradient(135deg, #909090, #707070); }
         
         @media (max-width: 768px) {
             .about-header h1 { font-size: 2.2rem; }
@@ -361,7 +367,7 @@
         <!-- تاريخنا + رؤيتنا + رسالتنا -->
         <div class="cards-row">
             <article class="info-card">
-                <div class="card-icon bg-green"><i class="fas fa-history"></i></div>
+                <div class="card-icon bg-gold"><i class="fas fa-history"></i></div>
                 <h3>تاريخنا وتطورنا</h3>
                 <p>
                     بدأت رحلتنا في العاصمة السورية <strong>دمشق</strong> مطلع عام 2000، واستمررنا في التوسع الاستراتيجي بافتتاح <strong>فرع السودان</strong> عام 2013، ثم <strong>فرع إسطنبول - تركيا</strong> عام 2016. وقد رسخنا مكانتنا الريادية بفضل قوة الأداء والقدرة على تقديم معارض ومؤتمرات ودراسات اقتصادية استقطبت نخبة رجال الأعمال والمستثمرين من شتى أنحاء العالم.
@@ -369,7 +375,7 @@
             </article>
             
             <article class="info-card">
-                <div class="card-icon bg-blue"><i class="fas fa-eye"></i></div>
+                <div class="card-icon bg-silver"><i class="fas fa-eye"></i></div>
                 <h3>رؤيتنا ورسالتنا</h3>
                 <p>
                     <strong>رؤيتنا:</strong> أن نكون الشريك الاستراتيجي الأول في مجال حلول الأعمال والاستثمار على مستوى الشرق الأوسط وإفريقيا.<br>
@@ -380,7 +386,7 @@
 
         <!-- خبراتنا -->
         <article class="info-card" style="margin-bottom:30px;">
-            <div class="card-icon bg-red"><i class="fas fa-medal"></i></div>
+            <div class="card-icon bg-gray"><i class="fas fa-medal"></i></div>
             <h3>خبراتنا المتراكمة</h3>
             <p>
                 يضم فريقنا الاستشاري نخبة من الخبراء ذوي خبرة تتجاوز <strong>25 عاماً</strong> في مجالات الأنشطة التجارية والصناعية والسياحية والطبية. نعتبر من أعرق الشركات في إعداد دراسات الجدوى المتكاملة، وتقديم حلول الاستثمار، وتنظيم المعارض الدولية في منطقة الشرق الأوسط. يتميز فريقنا الإحصائي المتخصص بقدرته الفائقة على جمع وتحليل البيانات بدقة، مما يمكننا من تصميم خطط واستراتيجيات مبتكرة ومحدثة وقابلة للتنفيذ الفعلي.
@@ -419,7 +425,7 @@
 
         <!-- فروعنا -->
         <section class="branches-section">
-            <h3><i class="fas fa-map-marker-alt" style="color:#27AE60; margin-left:8px;"></i> تواجدنا الإقليمي</h3>
+            <h3><i class="fas fa-map-marker-alt" style="color:#D4AF37; margin-left:8px;"></i> تواجدنا الإقليمي</h3>
             <div class="branches-list">
                 <div class="branch-item">
                     <i class="fas fa-map-pin"></i>
@@ -443,7 +449,7 @@
 
     <!-- تذييل الصفحة -->
     <footer role="contentinfo">
-        <p>© 2026 PROEXPO. جميع الحقوق محفوظة. | <a href="privacy.html" style="color:#27AE60;">سياسة الخصوصية</a> | <a href="terms.html" style="color:#27AE60;">الشروط والأحكام</a></p>
+        <p>© 2026 PROEXPO. جميع الحقوق محفوظة. | <a href="privacy.html" style="color:#D4AF37;">سياسة الخصوصية</a> | <a href="terms.html" style="color:#D4AF37;">الشروط والأحكام</a></p>
     </footer>
     
     <script src="script.js"></script>
