@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
+        /* ✅ هيدر رمادي سكري */
         .page-header {
-            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 100%);
+            background: linear-gradient(135deg, #7A7A7A 0%, #9A9A9A 100%);
             padding: 70px 20px 60px;
             text-align: center;
             color: white;
@@ -24,11 +25,11 @@
             position: absolute;
             bottom: -2px; left: 0; right: 0;
             height: 60px;
-            background: #f9fafb;
+            background: #F5F5F5;
             clip-path: ellipse(65% 100% at 50% 100%);
         }
         .page-header h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
-        .page-header h1 span { color: #27AE60; }
+        .page-header h1 span { color: #D4AF37; } /* ✅ ذهبي */
         .page-header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         
         .services-container {
@@ -45,7 +46,7 @@
         }
         .section-divider h2 {
             font-size: 1.6rem;
-            color: #1a2a3a;
+            color: #555;
             font-weight: 800;
             display: inline-block;
             position: relative;
@@ -55,11 +56,11 @@
             display: block;
             width: 45px;
             height: 3px;
-            background: #27AE60;
+            background: #D4AF37; /* ✅ ذهبي */
             margin: 8px auto 0;
             border-radius: 2px;
         }
-        .section-divider h2 span { color: #27AE60; }
+        .section-divider h2 span { color: #D4AF37; }
         
         .service-card {
             background: white;
@@ -80,6 +81,7 @@
             position: absolute;
             top: 0; right: 0;
             width: 5px; height: 100%;
+            background: #D4AF37; /* ✅ ذهبي */
         }
         .service-card:hover { transform: translateX(-5px); box-shadow: 0 12px 35px rgba(0,0,0,0.1); }
         
@@ -92,7 +94,7 @@
             text-align: center;
             transition: 0.3s;
         }
-        .service-card:hover .service-num { color: #27AE60; }
+        .service-card:hover .service-num { color: #D4AF37; }
         
         .service-icon-wrapper {
             width: 55px; height: 55px;
@@ -106,13 +108,13 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
         .service-content { flex: 1; }
-        .service-content h3 { font-size: 1.2rem; color: #2C3E50; margin-bottom: 8px; font-weight: 800; }
-        .service-content p { color: #666; font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
+        .service-content h3 { font-size: 1.2rem; color: #555; margin-bottom: 8px; font-weight: 800; }
+        .service-content p { color: #777; font-size: 0.9rem; line-height: 1.8; margin-bottom: 12px; }
         
         .service-features { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
         .service-features span {
-            background: #f0fdf4;
-            color: #27AE60;
+            background: #F5F5F5;
+            color: #D4AF37;
             font-size: 0.75rem;
             font-weight: 600;
             padding: 5px 12px;
@@ -122,19 +124,19 @@
         .service-cta-btn {
             display: inline-block;
             padding: 10px 22px;
-            background: #27AE60;
-            color: white;
+            background: #D4AF37;
+            color: #333;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 0.88rem;
             transition: 0.3s;
         }
-        .service-cta-btn:hover { background: #219A52; transform: translateX(-5px); }
+        .service-cta-btn:hover { background: #C5A028; transform: translateX(-5px); }
         .service-cta-btn i { margin-right: 6px; }
         
         .cta-section {
-            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            background: linear-gradient(135deg, #7A7A7A, #9A9A9A);
             border-radius: 22px;
             padding: 45px 35px;
             text-align: center;
@@ -142,21 +144,21 @@
             margin-top: 50px;
         }
         .cta-section h3 { font-size: 1.6rem; margin-bottom: 12px; font-weight: 800; }
-        .cta-section h3 span { color: #27AE60; }
+        .cta-section h3 span { color: #D4AF37; }
         .cta-section p { opacity: 0.9; margin-bottom: 28px; line-height: 2; }
         .btn-cta {
             display: inline-block;
-            background: #27AE60;
-            color: white;
+            background: #D4AF37;
+            color: #333;
             padding: 16px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.05rem;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(39,174,96,0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
-        .btn-cta:hover { background: #219A52; transform: translateY(-4px); }
+        .btn-cta:hover { background: #C5A028; transform: translateY(-4px); }
         
         @media (max-width: 768px) {
             .page-header h1 { font-size: 1.8rem; }
@@ -164,6 +166,13 @@
             .service-num { display: none; }
             .cta-section { padding: 30px 20px; }
         }
+        
+        /* ✅ ألوان الأيقونات الجديدة */
+        .bg-gold { background: linear-gradient(135deg, #D4AF37, #B49430); }
+        .bg-silver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); }
+        .bg-gray { background: linear-gradient(135deg, #A0A0A0, #808080); }
+        .bg-darkgray { background: linear-gradient(135deg, #909090, #707070); }
+        .bg-medium { background: linear-gradient(135deg, #808080, #606060); }
     </style>
 </head>
 <body>
@@ -192,12 +201,12 @@
     <main class="services-container">
         
         <div class="section-divider">
-            <h2><i class="fas fa-chart-pie" style="color:#27AE60; margin-left:8px;"></i> دراسات الجدوى <span>والاستشارات</span></h2>
+            <h2><i class="fas fa-chart-pie" style="color:#D4AF37; margin-left:8px;"></i> دراسات الجدوى <span>والاستشارات</span></h2>
         </div>
 
-        <div class="service-card" style="--border-color: #27AE60;">
+        <div class="service-card">
             <div class="service-num">01</div>
-            <div class="service-icon-wrapper bg-green"><i class="fas fa-chart-pie"></i></div>
+            <div class="service-icon-wrapper bg-gold"><i class="fas fa-chart-pie"></i></div>
             <div class="service-content">
                 <h3>دراسات الجدوى الاقتصادية</h3>
                 <p>نعد دراسات جدوى اقتصادية شاملة ومتكاملة وفق أعلى المعايير الدولية. تشمل الدراسة التحليل السوقي، التحليل المالي، تقييم المخاطر، تحليل المنافسين، والخطة التشغيلية لضمان نجاح مشروعك.</p>
@@ -210,7 +219,7 @@
 
         <div class="service-card">
             <div class="service-num">02</div>
-            <div class="service-icon-wrapper bg-blue"><i class="fas fa-chart-line"></i></div>
+            <div class="service-icon-wrapper bg-silver"><i class="fas fa-chart-line"></i></div>
             <div class="service-content">
                 <h3>دراسات الجدوى الاستثمارية</h3>
                 <p>تحليل معمق للفرص الاستثمارية وتقييم المخاطر والعوائد المتوقعة. تعتمد دراساتنا على بيانات محدثة ونماذج مالية متطورة لتزويد المستثمر برؤية واضحة قبل اتخاذ القرار.</p>
@@ -223,7 +232,7 @@
 
         <div class="service-card">
             <div class="service-num">03</div>
-            <div class="service-icon-wrapper bg-red"><i class="fas fa-search-dollar"></i></div>
+            <div class="service-icon-wrapper bg-gray"><i class="fas fa-search-dollar"></i></div>
             <div class="service-content">
                 <h3>تحليل متطلبات توسع الأنشطة التسويقية والتجارية</h3>
                 <p>ندرس الأسواق المستهدفة ونحلل فرص التوسع التجاري والتسويقي لأنشطتك، مع تقديم خارطة طريق واضحة للنمو والتوسع في أسواق جديدة.</p>
@@ -235,12 +244,12 @@
         </div>
 
         <div class="section-divider">
-            <h2><i class="fas fa-globe" style="color:#2980B9; margin-left:8px;"></i> المعارض <span>والفعاليات الدولية</span></h2>
+            <h2><i class="fas fa-globe" style="color:#D4AF37; margin-left:8px;"></i> المعارض <span>والفعاليات الدولية</span></h2>
         </div>
 
         <div class="service-card">
             <div class="service-num">04</div>
-            <div class="service-icon-wrapper bg-orange"><i class="fas fa-globe"></i></div>
+            <div class="service-icon-wrapper bg-darkgray"><i class="fas fa-globe"></i></div>
             <div class="service-content">
                 <h3>تنظيم وتجهيز المعارض والمؤتمرات الدولية</h3>
                 <p>نمتلك خبرة تزيد عن 20 عاماً في تنظيم المعارض والمؤتمرات الدولية بأعلى مستويات الاحترافية. نتولى كافة مراحل التنظيم بدءاً من التخطيط وحتى التنفيذ والمتابعة.</p>
@@ -252,12 +261,12 @@
         </div>
 
         <div class="section-divider">
-            <h2><i class="fas fa-hand-holding-usd" style="color:#E74C3C; margin-left:8px;"></i> التمويل <span>والتأسيس</span></h2>
+            <h2><i class="fas fa-hand-holding-usd" style="color:#D4AF37; margin-left:8px;"></i> التمويل <span>والتأسيس</span></h2>
         </div>
 
         <div class="service-card">
             <div class="service-num">05</div>
-            <div class="service-icon-wrapper bg-purple"><i class="fas fa-file-invoice"></i></div>
+            <div class="service-icon-wrapper bg-medium"><i class="fas fa-file-invoice"></i></div>
             <div class="service-content">
                 <h3>إعداد ملفات التمويل والمرابحة</h3>
                 <p>نقوم بتجهيز ملفات تمويل متكاملة للمشاريع الواعدة من خلال علاقاتنا الوثيقة بالعديد من المحافظ المالية الراغبة في الاستثمار. نساعدك في الحصول على التمويل الأنسب لمشروعك.</p>
@@ -270,7 +279,7 @@
 
         <div class="service-card">
             <div class="service-num">06</div>
-            <div class="service-icon-wrapper bg-gray"><i class="fas fa-industry"></i></div>
+            <div class="service-icon-wrapper bg-gold"><i class="fas fa-industry"></i></div>
             <div class="service-content">
                 <h3>توريد خطوط الإنتاج والآلات والمعدات</h3>
                 <p>نوفر خطوط الإنتاج والآلات والمعدات من أفضل المصادر العالمية بأسعار تنافسية وجودة مضمونة. نرافقك من مرحلة الاختيار وحتى التركيب والتشغيل.</p>
@@ -283,7 +292,7 @@
 
         <div class="service-card">
             <div class="service-num">07</div>
-            <div class="service-icon-wrapper bg-red"><i class="fas fa-building"></i></div>
+            <div class="service-icon-wrapper bg-silver"><i class="fas fa-building"></i></div>
             <div class="service-content">
                 <h3>تقييم الشركات والمصانع</h3>
                 <p>نقدم خدمة تقييم شامل للشركات والمصانع من الناحية المالية والإدارية والفنية والتشغيلية، وتقديم تقرير مفصل مع توصيات للتطوير والتحسين.</p>
@@ -296,7 +305,7 @@
 
         <div class="service-card">
             <div class="service-num">08</div>
-            <div class="service-icon-wrapper bg-teal"><i class="fas fa-clipboard-check"></i></div>
+            <div class="service-icon-wrapper bg-gray"><i class="fas fa-clipboard-check"></i></div>
             <div class="service-content">
                 <h3>دراسة المنتج وتقييم خطوط الإنتاج</h3>
                 <p>نحلل المنتجات الحالية ونقيم كفاءة خطوط الإنتاج ونقدم توصيات عملية للتطوير ورفع الكفاءة الإنتاجية وخفض التكاليف التشغيلية.</p>
@@ -308,12 +317,12 @@
         </div>
 
         <div class="section-divider">
-            <h2><i class="fas fa-handshake" style="color:#16A085; margin-left:8px;"></i> التجارة <span>والوساطة الدولية</span></h2>
+            <h2><i class="fas fa-handshake" style="color:#D4AF37; margin-left:8px;"></i> التجارة <span>والوساطة الدولية</span></h2>
         </div>
 
         <div class="service-card">
             <div class="service-num">09</div>
-            <div class="service-icon-wrapper bg-teal"><i class="fas fa-handshake"></i></div>
+            <div class="service-icon-wrapper bg-darkgray"><i class="fas fa-handshake"></i></div>
             <div class="service-content">
                 <h3>تنظيم التعاقدات التجارية (الوساطة الدولية)</h3>
                 <p>نقوم بتسهيل التعاقدات التجارية عبر شبكة علاقاتنا الدولية الواسعة، ونعمل كوسيط موثوق بين الشركات والمستثمرين من مختلف دول العالم.</p>
@@ -326,7 +335,7 @@
 
         <div class="service-card">
             <div class="service-num">10</div>
-            <div class="service-icon-wrapper bg-orange"><i class="fas fa-tag"></i></div>
+            <div class="service-icon-wrapper bg-gold"><i class="fas fa-tag"></i></div>
             <div class="service-content">
                 <h3>تهيئة العلامات التجارية للمنتجات الدولية</h3>
                 <p>نساعد في تجهيز وتسجيل العلامات التجارية للمنتجات للدخول إلى الأسواق الدولية، مع دراسة متطلبات كل سوق وتوفير الاستشارات اللازمة للامتثال للمعايير.</p>
@@ -347,7 +356,7 @@
 
     </main>
 
-    <footer role="contentinfo">
+    <footer role="contentinfo" style="background:#4A4A4A;">
         <div class="footer-links">
             <a href="index.html">الرئيسية</a>
             <a href="about.html">عن الشركة</a>
