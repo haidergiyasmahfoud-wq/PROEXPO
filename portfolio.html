@@ -15,11 +15,11 @@
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background: #f9fafb; }
+        body { background: #F5F5F5; }
         
-        /* ===== هيدر الصفحة ===== */
+        /* ===== هيدر الصفحة (رمادي سكري) ===== */
         .page-header {
-            background: linear-gradient(135deg, #1a2a3a 0%, #2C3E50 100%);
+            background: linear-gradient(135deg, #7A7A7A 0%, #9A9A9A 100%);
             padding: 90px 20px 80px;
             text-align: center;
             color: white;
@@ -31,7 +31,7 @@
             position: absolute;
             bottom: -2px; left: 0; right: 0;
             height: 70px;
-            background: #f9fafb;
+            background: #F5F5F5;
             clip-path: ellipse(65% 100% at 50% 100%);
         }
         .page-header h1 { 
@@ -41,7 +41,7 @@
             letter-spacing: -1px;
         }
         .page-header h1 span { 
-            color: #27AE60; 
+            color: #D4AF37; 
             position: relative;
         }
         .page-header h1 span::after {
@@ -49,7 +49,7 @@
             position: absolute;
             bottom: 5px; left: 0; right: 0;
             height: 3px;
-            background: #27AE60;
+            background: #D4AF37;
             border-radius: 2px;
         }
         .page-header .header-subtitle { 
@@ -94,10 +94,10 @@
             font-weight: 900;
             margin-bottom: 5px;
         }
-        .quick-stat:nth-child(1) .qs-num { color: #27AE60; }
-        .quick-stat:nth-child(2) .qs-num { color: #2980B9; }
-        .quick-stat:nth-child(3) .qs-num { color: #E74C3C; }
-        .quick-stat:nth-child(4) .qs-num { color: #F39C12; }
+        .quick-stat:nth-child(1) .qs-num { color: #D4AF37; }
+        .quick-stat:nth-child(2) .qs-num { color: #C0C0C0; }
+        .quick-stat:nth-child(3) .qs-num { color: #A0A0A0; }
+        .quick-stat:nth-child(4) .qs-num { color: #909090; }
         
         .quick-stat .qs-label {
             color: #555;
@@ -114,10 +114,10 @@
             border: 1px solid #eee;
             margin-bottom: 30px;
             text-align: center;
-            border-right: 5px solid #27AE60;
+            border-right: 5px solid #D4AF37;
         }
         .intro-card p {
-            color: #444;
+            color: #555;
             font-size: 1.1rem;
             line-height: 2.2;
             text-align: justify;
@@ -141,11 +141,11 @@
             top: 0; left: 0; right: 0;
             height: 5px;
         }
-        .section-card:nth-of-type(1)::before { background: #27AE60; }
-        .section-card:nth-of-type(2)::before { background: #2980B9; }
-        .section-card:nth-of-type(3)::before { background: #E74C3C; }
-        .section-card:nth-of-type(4)::before { background: #F39C12; }
-        .section-card:nth-of-type(5)::before { background: #8E44AD; }
+        .section-card:nth-of-type(1)::before { background: #D4AF37; }
+        .section-card:nth-of-type(2)::before { background: #C0C0C0; }
+        .section-card:nth-of-type(3)::before { background: #A0A0A0; }
+        .section-card:nth-of-type(4)::before { background: #909090; }
+        .section-card:nth-of-type(5)::before { background: #808080; }
         
         .section-card:hover {
             transform: translateY(-3px);
@@ -169,19 +169,18 @@
             flex-shrink: 0;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
-        .bg-green { background: linear-gradient(135deg, #27AE60, #1e8449); }
-        .bg-blue { background: linear-gradient(135deg, #2980B9, #1a5276); }
-        .bg-red { background: linear-gradient(135deg, #E74C3C, #922b21); }
-        .bg-orange { background: linear-gradient(135deg, #F39C12, #b9770e); }
-        .bg-purple { background: linear-gradient(135deg, #8E44AD, #6c3483); }
+        .bg-gold { background: linear-gradient(135deg, #D4AF37, #B49430); }
+        .bg-silver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); }
+        .bg-gray { background: linear-gradient(135deg, #A0A0A0, #808080); }
+        .bg-darkgray { background: linear-gradient(135deg, #909090, #707070); }
         
         .section-card h3 {
             font-size: 1.4rem;
-            color: #2C3E50;
+            color: #555;
             font-weight: 800;
         }
         .section-card .card-subtitle { 
-            color: #888; 
+            color: #999;
             margin-bottom: 28px; 
             font-size: 0.95rem; 
             display: block;
@@ -195,12 +194,12 @@
             gap: 14px;
         }
         .item-row {
-            background: #f8faf9;
+            background: #FAFAFA;
             padding: 16px 18px;
             border-radius: 12px;
-            border-right: 4px solid #27AE60;
+            border-right: 4px solid #D4AF37;
             font-size: 0.92rem;
-            color: #333;
+            color: #555;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
@@ -208,7 +207,7 @@
             font-weight: 500;
         }
         .item-row:hover {
-            background: #eafaf1;
+            background: #F0F0F0;
             transform: translateX(-4px);
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
@@ -219,22 +218,21 @@
             flex-shrink: 0;
             box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         }
-        .dot-green { background: #27AE60; }
-        .dot-blue { background: #2980B9; }
-        .dot-red { background: #E74C3C; }
-        .dot-gray { background: #2C3E50; }
-        .dot-orange { background: #F39C12; }
-        .dot-purple { background: #8E44AD; }
+        .dot-gold { background: #D4AF37; }
+        .dot-silver { background: #C0C0C0; }
+        .dot-gray { background: #A0A0A0; }
+        .dot-darkgray { background: #909090; }
+        .dot-medium { background: #808080; }
         
         /* ===== معرض الصور ===== */
         .gallery-section-title {
             font-size: 1.6rem;
-            color: #2C3E50;
+            color: #555;
             text-align: center;
             margin: 40px 0 25px;
             font-weight: 800;
         }
-        .gallery-section-title span { color: #27AE60; }
+        .gallery-section-title span { color: #D4AF37; }
         
         .gallery-grid {
             display: grid;
@@ -299,14 +297,14 @@
         }
         .testimonial-card .quote-mark {
             font-size: 3rem;
-            color: #27AE60;
+            color: #D4AF37;
             opacity: 0.2;
             position: absolute;
             top: 15px; right: 20px;
             font-family: serif;
         }
         .testimonial-card p {
-            color: #555;
+            color: #666;
             font-size: 0.95rem;
             line-height: 1.9;
             margin-bottom: 15px;
@@ -319,7 +317,7 @@
         .testimonial-card .client-avatar {
             width: 45px; height: 45px;
             border-radius: 50%;
-            background: #27AE60;
+            background: #D4AF37;
             color: white;
             display: flex;
             align-items: center;
@@ -329,16 +327,16 @@
         }
         .testimonial-card .client-name {
             font-weight: 700;
-            color: #2C3E50;
+            color: #555;
         }
         .testimonial-card .client-role {
-            color: #888;
+            color: #999;
             font-size: 0.8rem;
         }
         
         /* ===== دعوة للتواصل ===== */
         .cta-mini {
-            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            background: linear-gradient(135deg, #7A7A7A, #9A9A9A);
             border-radius: 20px;
             padding: 40px 30px;
             text-align: center;
@@ -347,10 +345,10 @@
         }
         .cta-mini h3 { font-size: 1.5rem; margin-bottom: 12px; }
         .cta-mini p { opacity: 0.9; margin-bottom: 25px; line-height: 1.9; }
-        .cta-mini .btn-green {
+        .cta-mini .btn-gold {
             display: inline-block;
-            background: #27AE60;
-            color: white;
+            background: #D4AF37;
+            color: #333;
             padding: 14px 35px;
             border-radius: 50px;
             text-decoration: none;
@@ -358,8 +356,8 @@
             font-size: 1rem;
             transition: 0.3s;
         }
-        .cta-mini .btn-green:hover {
-            background: #219A52;
+        .cta-mini .btn-gold:hover {
+            background: #C5A028;
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
@@ -390,18 +388,18 @@
             font-weight: bold;
             transition: 0.3s;
         }
-        .lightbox .close:hover { color: #E74C3C; }
+        .lightbox .close:hover { color: #D4AF37; }
         
         /* ===== الفوتر ===== */
         footer {
-            background: #1a2a3a;
+            background: #4A4A4A;
             color: #ccc;
             text-align: center;
             padding: 25px;
             font-size: 0.9rem;
         }
         footer a {
-            color: #27AE60;
+            color: #D4AF37;
             text-decoration: none;
             margin: 0 10px;
             font-weight: 600;
@@ -492,79 +490,79 @@
         <!-- ===== القسم الأول: الدراسات المنجزة ===== -->
         <section class="section-card" aria-labelledby="studies-title">
             <div class="card-header">
-                <div class="card-icon bg-green"><i class="fas fa-file-alt"></i></div>
+                <div class="card-icon bg-gold"><i class="fas fa-file-alt"></i></div>
                 <h3 id="studies-title">الدراسات المنجزة</h3>
             </div>
             <span class="card-subtitle">نفخر بإنجاز أكثر من 250 دراسة جدوى اقتصادية متكاملة في مختلف القطاعات</span>
             
             <div class="items-grid">
-                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع صناعة الأدوية</div>
-                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع صناعة الأسمدة العضوية</div>
-                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع مصنع ريبورت</div>
-                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع النسيج العضوي</div>
-                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع صناعة المعادن من البازلت</div>
-                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع البطاطا النصف مقلية</div>
-                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع صناعة الشوكولا والبسكويت</div>
-                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع صناعة الأحذية</div>
-                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع الملابس الجاهزة الرجالية</div>
-                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع مصنع الإسمنت</div>
-                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع الأجبان والألبان</div>
-                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع الحلاوة والطحينة</div>
-                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع البطاطا الحلوة</div>
-                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع الكونسروة</div>
-                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع لوحات الإعلان الإلكترونية (الأوليد)</div>
-                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع الحفظ الغذائي بطريقة الضغط</div>
-                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع زراعة الذرة العلفية</div>
-                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع زراعة الموز</div>
-                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع مستشفى تجميلية</div>
-                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع صناعة السيارات الكهربائية</div>
-                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع صناعة الأدوية البيطرية</div>
-                <div class="item-row"><span class="dot dot-blue"></span> دراسة جدوى اقتصادية لمشروع مستشفى ونادي بيطري</div>
-                <div class="item-row"><span class="dot dot-red"></span> دراسة جدوى اقتصادية لمشروع تربية الأرانب</div>
-                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع منتجع صحي سياحي</div>
-                <div class="item-row"><span class="dot dot-orange"></span> دراسة جدوى اقتصادية لمشروع شاليهات عائلية</div>
-                <div class="item-row"><span class="dot dot-green"></span> دراسة جدوى اقتصادية لمشروع محطة توليد الكهرباء الكهروضوئية</div>
+                <div class="item-row"><span class="dot dot-gold"></span> دراسة جدوى اقتصادية لمشروع صناعة الأدوية</div>
+                <div class="item-row"><span class="dot dot-silver"></span> دراسة جدوى اقتصادية لمشروع صناعة الأسمدة العضوية</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع مصنع ريبورت</div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> دراسة جدوى اقتصادية لمشروع النسيج العضوي</div>
+                <div class="item-row"><span class="dot dot-medium"></span> دراسة جدوى اقتصادية لمشروع صناعة المعادن من البازلت</div>
+                <div class="item-row"><span class="dot dot-gold"></span> دراسة جدوى اقتصادية لمشروع البطاطا النصف مقلية</div>
+                <div class="item-row"><span class="dot dot-silver"></span> دراسة جدوى اقتصادية لمشروع صناعة الشوكولا والبسكويت</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع صناعة الأحذية</div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> دراسة جدوى اقتصادية لمشروع الملابس الجاهزة الرجالية</div>
+                <div class="item-row"><span class="dot dot-medium"></span> دراسة جدوى اقتصادية لمشروع مصنع الإسمنت</div>
+                <div class="item-row"><span class="dot dot-gold"></span> دراسة جدوى اقتصادية لمشروع الأجبان والألبان</div>
+                <div class="item-row"><span class="dot dot-silver"></span> دراسة جدوى اقتصادية لمشروع الحلاوة والطحينة</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع البطاطا الحلوة</div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> دراسة جدوى اقتصادية لمشروع الكونسروة</div>
+                <div class="item-row"><span class="dot dot-medium"></span> دراسة جدوى اقتصادية لمشروع لوحات الإعلان الإلكترونية (الأوليد)</div>
+                <div class="item-row"><span class="dot dot-gold"></span> دراسة جدوى اقتصادية لمشروع الحفظ الغذائي بطريقة الضغط</div>
+                <div class="item-row"><span class="dot dot-silver"></span> دراسة جدوى اقتصادية لمشروع زراعة الذرة العلفية</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع زراعة الموز</div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> دراسة جدوى اقتصادية لمشروع مستشفى تجميلية</div>
+                <div class="item-row"><span class="dot dot-medium"></span> دراسة جدوى اقتصادية لمشروع صناعة السيارات الكهربائية</div>
+                <div class="item-row"><span class="dot dot-gold"></span> دراسة جدوى اقتصادية لمشروع صناعة الأدوية البيطرية</div>
+                <div class="item-row"><span class="dot dot-silver"></span> دراسة جدوى اقتصادية لمشروع مستشفى ونادي بيطري</div>
+                <div class="item-row"><span class="dot dot-gray"></span> دراسة جدوى اقتصادية لمشروع تربية الأرانب</div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> دراسة جدوى اقتصادية لمشروع منتجع صحي سياحي</div>
+                <div class="item-row"><span class="dot dot-medium"></span> دراسة جدوى اقتصادية لمشروع شاليهات عائلية</div>
+                <div class="item-row"><span class="dot dot-gold"></span> دراسة جدوى اقتصادية لمشروع محطة توليد الكهرباء الكهروضوئية</div>
             </div>
         </section>
 
         <!-- ===== القسم الثاني: تأسيس المشاريع ===== -->
         <section class="section-card" aria-labelledby="setup-title">
             <div class="card-header">
-                <div class="card-icon bg-blue"><i class="fas fa-industry"></i></div>
+                <div class="card-icon bg-silver"><i class="fas fa-industry"></i></div>
                 <h3 id="setup-title">تأسيس وتجهيز المشاريع</h3>
             </div>
             <span class="card-subtitle">مشاريع تم تأسيسها وتجهيزها بالكامل في عدة دول</span>
             
             <div class="items-grid">
-                <div class="item-row"><span class="dot dot-blue"></span> تأسيس وتجهيز مصنع لصناعة الأدوية - <strong>السودان</strong></div>
-                <div class="item-row"><span class="dot dot-green"></span> تأسيس وتجهيز مصنع لصناعة الأسمدة العضوية - <strong>أرمينيا</strong></div>
-                <div class="item-row"><span class="dot dot-red"></span> تأسيس وتجهيز مصنع لصناعة النسيج العضوي - <strong>تركيا</strong></div>
-                <div class="item-row"><span class="dot dot-gray"></span> تأسيس وتجهيز مصنع لمشروع البطاطا النصف مقلية - <strong>تركيا</strong></div>
-                <div class="item-row"><span class="dot dot-orange"></span> تأسيس وتجهيز مصنع لصناعة الشوكولا والبسكويت - <strong>سوريا</strong></div>
-                <div class="item-row"><span class="dot dot-blue"></span> تأسيس وتجهيز مصنع لصناعة الموبيليا والأبواب - <strong>السودان</strong></div>
+                <div class="item-row"><span class="dot dot-silver"></span> تأسيس وتجهيز مصنع لصناعة الأدوية - <strong>السودان</strong></div>
+                <div class="item-row"><span class="dot dot-gold"></span> تأسيس وتجهيز مصنع لصناعة الأسمدة العضوية - <strong>أرمينيا</strong></div>
+                <div class="item-row"><span class="dot dot-gray"></span> تأسيس وتجهيز مصنع لصناعة النسيج العضوي - <strong>تركيا</strong></div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> تأسيس وتجهيز مصنع لمشروع البطاطا النصف مقلية - <strong>تركيا</strong></div>
+                <div class="item-row"><span class="dot dot-medium"></span> تأسيس وتجهيز مصنع لصناعة الشوكولا والبسكويت - <strong>سوريا</strong></div>
+                <div class="item-row"><span class="dot dot-silver"></span> تأسيس وتجهيز مصنع لصناعة الموبيليا والأبواب - <strong>السودان</strong></div>
             </div>
         </section>
 
         <!-- ===== القسم الثالث: المعارض السابقة ===== -->
         <section class="section-card" aria-labelledby="exhibitions-title">
             <div class="card-header">
-                <div class="card-icon bg-red"><i class="fas fa-globe"></i></div>
+                <div class="card-icon bg-gray"><i class="fas fa-globe"></i></div>
                 <h3 id="exhibitions-title">معارضنا ومؤتمراتنا السابقة</h3>
             </div>
             <span class="card-subtitle">سجل حافل من المعارض والمؤتمرات والرحلات التجارية الدولية</span>
             
             <div class="items-grid">
-                <div class="item-row"><span class="dot dot-green"></span> معرض المنتجات السورية في ليبيا 2003 / 2004 / 2005</div>
-                <div class="item-row"><span class="dot dot-blue"></span> معرض المنتجات السورية في طرابلس 2006</div>
-                <div class="item-row"><span class="dot dot-red"></span> المعرض الدولي للزراعة والري والصناعات الغذائية - عمان (الرابعة والخامسة)</div>
-                <div class="item-row"><span class="dot dot-gray"></span> معرض دواجن السودان منذ 2004</div>
-                <div class="item-row"><span class="dot dot-orange"></span> المعرض الزراعي السوري الدولي - تسويق مشترك مع وزارة الزراعة</div>
-                <div class="item-row"><span class="dot dot-green"></span> معرض المنتجات السورية العربية وروسيا 2007</div>
-                <div class="item-row"><span class="dot dot-blue"></span> معرض دواجن إثيوبيا ديسمبر 2011 / 2014 / 2017</div>
-                <div class="item-row"><span class="dot dot-red"></span> معرض تسوق في الخرطوم - السودان</div>
-                <div class="item-row"><span class="dot dot-gray"></span> معرض التمور في إسطنبول - تركيا 2019</div>
-                <div class="item-row"><span class="dot dot-orange"></span> معرض منتدى الاستثمار والتعاون الدولي - إسطنبول 2018 / 2019</div>
-                <div class="item-row"><span class="dot dot-green"></span> تنظيم رحلات تجارية وزراعية لكبار الشخصيات - هولندا، تركيا، روسيا، ألمانيا</div>
+                <div class="item-row"><span class="dot dot-gold"></span> معرض المنتجات السورية في ليبيا 2003 / 2004 / 2005</div>
+                <div class="item-row"><span class="dot dot-silver"></span> معرض المنتجات السورية في طرابلس 2006</div>
+                <div class="item-row"><span class="dot dot-gray"></span> المعرض الدولي للزراعة والري والصناعات الغذائية - عمان (الرابعة والخامسة)</div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> معرض دواجن السودان منذ 2004</div>
+                <div class="item-row"><span class="dot dot-medium"></span> المعرض الزراعي السوري الدولي - تسويق مشترك مع وزارة الزراعة</div>
+                <div class="item-row"><span class="dot dot-gold"></span> معرض المنتجات السورية العربية وروسيا 2007</div>
+                <div class="item-row"><span class="dot dot-silver"></span> معرض دواجن إثيوبيا ديسمبر 2011 / 2014 / 2017</div>
+                <div class="item-row"><span class="dot dot-gray"></span> معرض تسوق في الخرطوم - السودان</div>
+                <div class="item-row"><span class="dot dot-darkgray"></span> معرض التمور في إسطنبول - تركيا 2019</div>
+                <div class="item-row"><span class="dot dot-medium"></span> معرض منتدى الاستثمار والتعاون الدولي - إسطنبول 2018 / 2019</div>
+                <div class="item-row"><span class="dot dot-gold"></span> تنظيم رحلات تجارية وزراعية لكبار الشخصيات - هولندا، تركيا، روسيا، ألمانيا</div>
             </div>
         </section>
 
@@ -576,7 +574,7 @@
                     <div class="quote-mark">"</div>
                     <p>"فريق PROEXPO قدم لنا دراسة جدوى متكاملة لمشروعنا الصناعي، وكانت دقيقة جداً وساعدتنا في الحصول على التمويل المناسب. أنصح بالتعامل معهم."</p>
                     <div class="client-info">
-                        <div class="client-avatar" style="background:#2980B9;">أ.م</div>
+                        <div class="client-avatar" style="background:#C0C0C0;">أ.م</div>
                         <div>
                             <div class="client-name">أحمد المصري</div>
                             <div class="client-role">رئيس مجلس إدارة - شركة صناعية</div>
@@ -587,7 +585,7 @@
                     <div class="quote-mark">"</div>
                     <p>"تعاملت مع PROEXPO في تنظيم معرض دولي، وكان التنظيم على أعلى مستوى. علاقاتهم الدولية ساعدتنا في استقطاب مستثمرين من دول مختلفة."</p>
                     <div class="client-info">
-                        <div class="client-avatar" style="background:#E74C3C;">خ.ع</div>
+                        <div class="client-avatar" style="background:#A0A0A0;">خ.ع</div>
                         <div>
                             <div class="client-name">د. خالد العلي</div>
                             <div class="client-role">مدير عام - مجموعة تجارية</div>
@@ -618,9 +616,9 @@
         
         <!-- ===== دعوة للتواصل ===== -->
         <div class="cta-mini">
-            <h3>هل لديك مشروع وتريد <span style="color:#27AE60;">دراسة جدوى</span> احترافية؟</h3>
+            <h3>هل لديك مشروع وتريد <span style="color:#D4AF37;">دراسة جدوى</span> احترافية؟</h3>
             <p>فريقنا من الخبراء جاهز لتحويل فكرتك إلى مشروع ناجح. اطلب استشارتك الآن.</p>
-            <a href="consultation.html" class="btn-green">
+            <a href="consultation.html" class="btn-gold">
                 <i class="fas fa-paper-plane" style="margin-left:8px;"></i> احجز استشارة مجانية
             </a>
         </div>
