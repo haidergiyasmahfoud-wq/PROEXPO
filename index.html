@@ -16,6 +16,125 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
+        /* ========== شريط التواصل الاجتماعي العلوي الثابت ========== */
+        .social-top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            background: #333;
+            color: #eee;
+            padding: 8px 0;
+            border-bottom: 2px solid #D4AF37;
+            font-size: 0.85rem;
+        }
+        .social-top-bar .social-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .social-top-bar .social-text {
+            font-weight: 600;
+            color: #fff;
+            white-space: nowrap;
+        }
+        .social-top-bar .social-text i {
+            color: #D4AF37;
+            margin-left: 6px;
+            animation: bellRing 2s infinite;
+        }
+        @keyframes bellRing {
+            0%, 100% { transform: rotate(0); }
+            10% { transform: rotate(15deg); }
+            20% { transform: rotate(-15deg); }
+            30% { transform: rotate(10deg); }
+            40% { transform: rotate(-10deg); }
+            50% { transform: rotate(0); }
+        }
+        .social-top-bar .social-icons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .social-top-bar .social-icons a {
+            color: #ccc;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+        }
+        .social-top-bar .social-icons a:hover {
+            color: #fff;
+            background: #D4AF37;
+            transform: translateY(-2px);
+        }
+        
+        /* تعويض المسافة للـ navbar */
+        .navbar {
+            top: 48px !important;
+        }
+        
+        /* تعويض المسافة للهيرو */
+        .hero {
+            padding-top: 130px !important;
+        }
+        
+        /* الأيقونات العائمة - تعديل المواقع */
+        .whatsapp-float {
+            bottom: 20px !important;
+        }
+        .consult-float {
+            bottom: 82px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .social-top-bar {
+                font-size: 0.75rem;
+                padding: 6px 0;
+            }
+            .social-top-bar .social-container {
+                gap: 8px;
+            }
+            .social-top-bar .social-text {
+                font-size: 0.7rem;
+            }
+            .social-top-bar .social-icons a {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+            .navbar {
+                top: 42px !important;
+            }
+            .hero {
+                padding-top: 120px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .social-top-bar .social-container {
+                flex-direction: column;
+                gap: 4px;
+            }
+            .navbar {
+                top: 62px !important;
+            }
+            .hero {
+                padding-top: 140px !important;
+            }
+        }
+        
         /* ========== الهيرو مع Canvas ثلاثي الأبعاد ========== */
         .hero {
             position: relative;
@@ -44,12 +163,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* ✅ تم استبدال الكحلي بالكامل: تدرج رمادي سكري أنيق */
-            background: linear-gradient(160deg, 
-                rgba(80, 80, 80, 0.92) 0%, 
-                rgba(110, 110, 110, 0.88) 30%, 
-                rgba(140, 140, 140, 0.85) 70%, 
-                rgba(90, 90, 90, 0.93) 100%);
+            background: linear-gradient(160deg, rgba(80, 80, 80, 0.92) 0%, rgba(110, 110, 110, 0.88) 30%, rgba(140, 140, 140, 0.85) 70%, rgba(90, 90, 90, 0.93) 100%);
             z-index: 1;
         }
         
@@ -57,7 +171,6 @@
             position: absolute;
             bottom: -2px; left: 0; right: 0;
             height: 80px;
-            /* ✅ تم تغيير لون الموجة إلى رمادي فاتح جداً */
             background: #F5F5F5;
             clip-path: ellipse(70% 100% at 50% 100%);
             z-index: 3;
@@ -108,25 +221,17 @@
             position: relative;
             z-index: 1;
         }
-        .hero-tagline span { 
-            /* ✅ لون ذهبي ناعم بدل الأخضر */
-            color: #D4AF37; 
-        }
+        .hero-tagline span { color: #D4AF37; }
         
         .hero-divider {
             width: 80px; height: 3px;
-            /* ✅ تدرج ذهبي */
             background: linear-gradient(90deg, transparent, #D4AF37, transparent);
             margin: 0 auto 25px;
             border-radius: 2px;
             position: relative; z-index: 1;
         }
         .hero-title { font-size: 1.8rem; font-weight: 600; margin-bottom: 22px; line-height: 1.6; opacity: 0.95; position: relative; z-index: 1; }
-        .hero-title span { 
-            /* ✅ لون ذهبي */
-            color: #D4AF37; 
-            font-weight: 800; 
-        }
+        .hero-title span { color: #D4AF37; font-weight: 800; }
         .hero-desc { font-size: 1.15rem; opacity: 0.9; margin-bottom: 40px; line-height: 2.1; max-width: 650px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
         
         /* ========== الأزرار ========== */
@@ -139,23 +244,20 @@
             white-space: nowrap; box-sizing: border-box;
         }
         .btn i { margin-left: 8px; flex-shrink: 0; }
-        /* ✅ زر ذهبي */
         .btn-gold { background: #D4AF37; color: #1a1a1a; box-shadow: 0 8px 25px rgba(212,175,55,0.4); }
         .btn-gold:hover { background: #C5A028; transform: translateY(-4px); box-shadow: 0 15px 40px rgba(212,175,55,0.6); }
         .btn-outline { border-color: rgba(255,255,255,0.8); color: white; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); }
         .btn-outline:hover { background: white; color: #555; transform: translateY(-4px); border-color: white; }
 
-        /* ✅ شريط الثقة - رمادي فاتح */
+        /* شريط الثقة */
         .trust-bar { background: #EEEEEE; padding: 25px 20px; border-bottom: 1px solid #E0E0E0; position: relative; z-index: 4; }
         .trust-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
         .trust-item { display: flex; align-items: center; gap: 10px; color: #555; font-weight: 600; font-size: 0.95rem; }
         .trust-item i { color: #D4AF37; font-size: 1.3rem; }
 
-        /* ✅ قسم دراسة الجدوى - خلفية رمادي فاتح */
         .cta-feasibility-section { padding: 60px 20px; background: #F9F9F9; }
         .cta-feasibility-container { max-width: 900px; margin: 0 auto; }
         .cta-feasibility-card {
-            /* ✅ كارد بلون رمادي متوسط */
             background: linear-gradient(135deg, #7A7A7A, #9A9A9A);
             border-radius: 24px; padding: 50px 40px; text-align: center;
             color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.15);
@@ -169,16 +271,13 @@
         .cta-feasibility-card .features-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 35px; position: relative; z-index: 1; }
         .cta-feasibility-card .feature-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1rem; }
         .cta-feasibility-card .feature-item i { color: #D4AF37; font-size: 1.3rem; }
-        /* ✅ زر ذهبي */
         .btn-feasibility { display: inline-block; background: #D4AF37; color: #1a1a1a; padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: 0.3s; position: relative; z-index: 1; box-shadow: 0 10px 30px rgba(212,175,55,0.3); }
         .btn-feasibility:hover { background: #C5A028; transform: translateY(-4px); }
 
-        /* ✅ قسم الاقتباسات - رمادي فاتح */
         .quotes-section { padding: 80px 20px; background: #EEEEEE; }
         .quotes-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
         .quote-card { background: white; border-radius: 18px; padding: 40px 28px; text-align: center; box-shadow: 0 4px 25px rgba(0,0,0,0.05); border: 1px solid #E0E0E0; transition: all 0.3s ease; position: relative; }
         .quote-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-        /* ✅ ألوان مميزة لكن متناسقة مع الذهبي */
         .quote-card:nth-child(1)::before { background: #D4AF37; }
         .quote-card:nth-child(2)::before { background: #C0C0C0; }
         .quote-card:nth-child(3)::before { background: #A0A0A0; }
@@ -189,7 +288,6 @@
         .quote-card:nth-child(3) .quote-icon { color: #A0A0A0; }
         .quote-card p { font-size: 1.1rem; color: #555; line-height: 1.9; font-weight: 700; }
 
-        /* ✅ قسم الإحصائيات - خلفية بيضاء ناعمة */
         .stats-section { padding: 80px 20px; background: #FAFAFA; }
         .stats-container { max-width: 1000px; margin: 0 auto; }
         .section-title { text-align: center; font-size: 2.2rem; color: #555; margin-bottom: 50px; font-weight: 800; }
@@ -199,14 +297,12 @@
         .stat-item { text-align: center; padding: 35px 18px; background: white; border-radius: 18px; transition: all 0.3s ease; border: 1px solid #E0E0E0; }
         .stat-item:hover { background: #FFFFFF; box-shadow: 0 12px 35px rgba(0,0,0,0.08); transform: translateY(-5px); }
         .stat-item .num { font-size: 3rem; font-weight: 900; margin-bottom: 10px; }
-        /* ✅ تدرجات ذهبية ورمادية */
         .stat-item:nth-child(1) .num { color: #D4AF37; }
         .stat-item:nth-child(2) .num { color: #C0C0C0; }
         .stat-item:nth-child(3) .num { color: #A0A0A0; }
         .stat-item:nth-child(4) .num { color: #909090; }
         .stat-item .label { color: #777; font-size: 1rem; font-weight: 600; }
 
-        /* ✅ قسم الخدمات - خلفية رمادية فاتحة */
         .services-section { padding: 80px 20px; background: #F5F5F5; }
         .services-container { max-width: 1100px; margin: 0 auto; }
         .services-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
@@ -226,7 +322,6 @@
         .service-box h4 { font-size: 1.1rem; color: #555; margin-bottom: 10px; font-weight: 800; }
         .service-box p { color: #888; font-size: 0.88rem; line-height: 1.7; }
 
-        /* ✅ قسم لماذا نحن - خلفية رمادية فاتحة */
         .why-us-section { padding: 80px 20px; background: #FAFAFA; }
         .why-us-container { max-width: 1000px; margin: 0 auto; }
         .why-us-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
@@ -236,7 +331,6 @@
         .why-us-item:nth-child(4) { border-right-color: #909090; }
         .why-us-item:hover { background: #F5F5F5; transform: translateX(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.06); }
         .why-icon { width: 55px; height: 55px; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; flex-shrink: 0; }
-        /* ✅ أيقونات بألوان متناسقة */
         .why-us-item:nth-child(1) .why-icon { background: #D4AF37; }
         .why-us-item:nth-child(2) .why-icon { background: #C0C0C0; }
         .why-us-item:nth-child(3) .why-icon { background: #A0A0A0; }
@@ -244,7 +338,6 @@
         .why-us-item h4 { color: #555; margin-bottom: 5px; font-weight: 800; font-size: 1.05rem; }
         .why-us-item p { color: #888; font-size: 0.9rem; line-height: 1.7; }
 
-        /* ✅ قسم الدعوة للإجراء - تدرج رمادي سكري */
         .cta-section { padding: 80px 20px; background: linear-gradient(135deg, #7A7A7A, #9A9A9A); text-align: center; color: white; }
         .cta-container { max-width: 700px; margin: 0 auto; }
         .cta-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 15px; }
@@ -287,6 +380,29 @@
 </head>
 <body>
     
+    <!-- ========== شريط التواصل الاجتماعي العلوي الثابت ========== -->
+    <div class="social-top-bar" aria-label="تابعونا على صفحاتنا الرسمية">
+        <div class="social-container">
+            <span class="social-text">
+                <i class="fas fa-bell"></i> تابعونا على صفحاتنا الرسمية للاطلاع على أحدث المعارض والدراسات والعروض الاستثمارية
+            </span>
+            <div class="social-icons">
+                <a href="https://facebook.com/proexpo" target="_blank" title="فيسبوك" aria-label="صفحتنا على فيسبوك">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/proexpo" target="_blank" title="تويتر" aria-label="حسابنا على تويتر">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/company/proexpo" target="_blank" title="لينكد إن" aria-label="صفحتنا على لينكد إن">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://youtube.com/@proexpo" target="_blank" title="يوتيوب" aria-label="قناتنا على يوتيوب">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <a href="https://wa.me/963933438019" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
