@@ -13,14 +13,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
+        /* ✅ هيدر رمادي سكري */
         .terms-header {
-            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            background: linear-gradient(135deg, #7A7A7A, #9A9A9A);
             padding: 70px 20px 60px;
             text-align: center;
             color: white;
         }
         .terms-header h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 10px; }
-        .terms-header h1 span { color: #27AE60; }
+        .terms-header h1 span { color: #D4AF37; } /* ✅ ذهبي */
         .terms-header .last-update { opacity: 0.7; font-size: 0.9rem; margin-top: 8px; }
         
         .terms-container {
@@ -39,15 +40,15 @@
         }
         .terms-content h2 {
             font-size: 1.4rem;
-            color: #2C3E50;
+            color: #555;
             margin: 30px 0 15px;
             font-weight: 800;
-            border-right: 4px solid #27AE60;
+            border-right: 4px solid #D4AF37; /* ✅ ذهبي */
             padding-right: 15px;
         }
         .terms-content h2:first-of-type { margin-top: 0; }
         .terms-content p, .terms-content li {
-            color: #444;
+            color: #555;
             line-height: 2.1;
             font-size: 1rem;
             margin-bottom: 15px;
@@ -60,18 +61,21 @@
         .terms-content ul li::before {
             content: '\f058';
             font-family: 'Font Awesome 6 Free';
-            color: #27AE60;
+            color: #D4AF37; /* ✅ ذهبي */
             margin-left: 10px;
             font-weight: 900;
         }
         .important-note {
-            background: #fef9e7;
-            border: 1px solid #F39C12;
+            background: #FAFAFA;
+            border: 1px solid #D4AF37;
             border-radius: 14px;
             padding: 20px 25px;
             margin: 25px 0;
         }
-        .important-note p { margin-bottom: 0; color: #7d6608; font-weight: 600; }
+        .important-note p { margin-bottom: 0; color: #555; font-weight: 600; }
+        
+        a { color: #D4AF37; }
+        a:hover { color: #C5A028; }
         
         @media (max-width: 768px) {
             .terms-header h1 { font-size: 1.8rem; }
@@ -116,7 +120,7 @@
         <div class="terms-content">
             
             <div class="important-note">
-                <p><i class="fas fa-exclamation-triangle" style="color:#F39C12; margin-left:8px;"></i> باستخدامكم لموقع PROEXPO أو التعامل مع خدماتنا، فإنكم توافقون على الالتزام بهذه الشروط والأحكام. إذا كنتم لا توافقون على أي بند، يرجى عدم استخدام الموقع.</p>
+                <p><i class="fas fa-exclamation-triangle" style="color:#D4AF37; margin-left:8px;"></i> باستخدامكم لموقع PROEXPO أو التعامل مع خدماتنا، فإنكم توافقون على الالتزام بهذه الشروط والأحكام. إذا كنتم لا توافقون على أي بند، يرجى عدم استخدام الموقع.</p>
             </div>
 
             <h2>1. تعريفات</h2>
@@ -181,16 +185,16 @@
             <h2>13. الاتصال بنا</h2>
             <p>لأي استفسارات أو ملاحظات حول هذه الشروط والأحكام، يرجى التواصل معنا عبر:</p>
             <ul>
-                <li>البريد الإلكتروني: <a href="mailto:hussexpo@gmail.com" style="color:#27AE60;">hussexpo@gmail.com</a></li>
-                <li>واتساب: <a href="https://wa.me/963933438019" style="color:#27AE60;">+963 933 438 019</a></li>
-                <li>أو عبر <a href="contact.html" style="color:#27AE60;">صفحة اتصل بنا</a></li>
+                <li>البريد الإلكتروني: <a href="mailto:hussexpo@gmail.com">hussexpo@gmail.com</a></li>
+                <li>واتساب: <a href="https://wa.me/963933438019">+963 933 438 019</a></li>
+                <li>أو عبر <a href="contact.html">صفحة اتصل بنا</a></li>
             </ul>
 
         </div>
     </main>
 
     <!-- تذييل الصفحة -->
-    <footer role="contentinfo">
+    <footer role="contentinfo" style="background:#4A4A4A;">
         <p>
             <a href="index.html">الرئيسية</a> | 
             <a href="about.html">عن الشركة</a> | 
@@ -199,7 +203,7 @@
             <a href="privacy.html">سياسة الخصوصية</a> | 
             <a href="terms.html">الشروط والأحكام</a>
         </p>
-        <p style="margin-top:8px; color:#888;">© 2026 PROEXPO. جميع الحقوق محفوظة. | شركة مسجلة رسمياً</p>
+        <p style="margin-top:8px; color:#ccc;">© 2026 PROEXPO. جميع الحقوق محفوظة. | شركة مسجلة رسمياً</p>
     </footer>
     
     <script src="script.js"></script>
