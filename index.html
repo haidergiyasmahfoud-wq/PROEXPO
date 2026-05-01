@@ -44,7 +44,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(160deg, rgba(13,27,42,0.88) 0%, rgba(26,42,58,0.82) 30%, rgba(27,58,42,0.85) 70%, rgba(13,27,42,0.9) 100%);
+            /* تم تغيير التدرج من الكحلي إلى الرمادي الغامق */
+            background: linear-gradient(160deg, rgba(44, 62, 80, 0.92) 0%, rgba(30, 30, 30, 0.9) 30%, rgba(44, 44, 44, 0.9) 70%, rgba(20, 20, 20, 0.95) 100%);
             z-index: 1;
         }
         
@@ -52,7 +53,8 @@
             position: absolute;
             bottom: -2px; left: 0; right: 0;
             height: 80px;
-            background: #fff;
+            /* تم تغيير لون الموجة إلى الرمادي الفاتح ليتناسق مع باقي الصفحة */
+            background: #F5F6FA;
             clip-path: ellipse(70% 100% at 50% 100%);
             z-index: 3;
         }
@@ -130,16 +132,18 @@
         .btn-outline { border-color: rgba(255,255,255,0.8); color: white; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); }
         .btn-outline:hover { background: white; color: #1a2a3a; transform: translateY(-4px); border-color: white; }
 
-        /* شريط الثقة */
-        .trust-bar { background: white; padding: 25px 20px; border-bottom: 1px solid #f0f0f0; position: relative; z-index: 4; }
+        /* شريط الثقة - تم تعديل لون الخلفية إلى رمادي فاتح */
+        .trust-bar { background: #ECF0F1; padding: 25px 20px; border-bottom: 1px solid #D5D8DC; position: relative; z-index: 4; }
         .trust-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; }
         .trust-item { display: flex; align-items: center; gap: 10px; color: #2C3E50; font-weight: 600; font-size: 0.95rem; }
         .trust-item i { color: #27AE60; font-size: 1.3rem; }
 
-        .cta-feasibility-section { padding: 60px 20px; background: #fff; }
+        /* قسم دراسة الجدوى - تم تعديل الخلفية إلى رمادي فاتح */
+        .cta-feasibility-section { padding: 60px 20px; background: #F5F6FA; }
         .cta-feasibility-container { max-width: 900px; margin: 0 auto; }
         .cta-feasibility-card {
-            background: linear-gradient(135deg, #1a2a3a, #2C3E50);
+            /* تم تغيير تدرج الكارد إلى رمادي غامق */
+            background: linear-gradient(135deg, #2C3E50, #34495E);
             border-radius: 24px; padding: 50px 40px; text-align: center;
             color: white; box-shadow: 0 20px 50px rgba(0,0,0,0.2);
             position: relative; overflow: hidden;
@@ -155,9 +159,10 @@
         .btn-feasibility { display: inline-block; background: #27AE60; color: white; padding: 16px 40px; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: 0.3s; position: relative; z-index: 1; box-shadow: 0 10px 30px rgba(39,174,96,0.4); }
         .btn-feasibility:hover { background: #219A52; transform: translateY(-4px); }
 
-        .quotes-section { padding: 80px 20px; background: #f8faf9; }
+        /* قسم الاقتباسات - تم تعديل الخلفية إلى رمادي فاتح */
+        .quotes-section { padding: 80px 20px; background: #ECF0F1; }
         .quotes-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
-        .quote-card { background: white; border-radius: 18px; padding: 40px 28px; text-align: center; box-shadow: 0 4px 25px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; transition: all 0.3s ease; position: relative; }
+        .quote-card { background: white; border-radius: 18px; padding: 40px 28px; text-align: center; box-shadow: 0 4px 25px rgba(0,0,0,0.06); border: 1px solid #D5D8DC; transition: all 0.3s ease; position: relative; }
         .quote-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
         .quote-card:nth-child(1)::before { background: #27AE60; }
         .quote-card:nth-child(2)::before { background: #2980B9; }
@@ -169,14 +174,15 @@
         .quote-card:nth-child(3) .quote-icon { color: #E74C3C; }
         .quote-card p { font-size: 1.1rem; color: #2C3E50; line-height: 1.9; font-weight: 700; }
 
-        .stats-section { padding: 80px 20px; background: white; }
+        /* قسم الإحصائيات - تم تعديل الخلفية إلى رمادي فاتح */
+        .stats-section { padding: 80px 20px; background: #F5F6FA; }
         .stats-container { max-width: 1000px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 2.2rem; color: #1a2a3a; margin-bottom: 50px; font-weight: 800; }
+        .section-title { text-align: center; font-size: 2.2rem; color: #2C3E50; margin-bottom: 50px; font-weight: 800; }
         .section-title::after { content: ''; display: block; width: 70px; height: 4px; background: #27AE60; margin: 12px auto 0; border-radius: 2px; }
         .section-title span { color: #27AE60; }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .stat-item { text-align: center; padding: 35px 18px; background: #f8faf9; border-radius: 18px; transition: all 0.3s ease; border: 1px solid #eee; }
-        .stat-item:hover { background: white; box-shadow: 0 12px 35px rgba(0,0,0,0.08); transform: translateY(-5px); }
+        .stat-item { text-align: center; padding: 35px 18px; background: white; border-radius: 18px; transition: all 0.3s ease; border: 1px solid #D5D8DC; }
+        .stat-item:hover { background: #FFFFFF; box-shadow: 0 12px 35px rgba(0,0,0,0.1); transform: translateY(-5px); }
         .stat-item .num { font-size: 3rem; font-weight: 900; margin-bottom: 10px; }
         .stat-item:nth-child(1) .num { color: #27AE60; }
         .stat-item:nth-child(2) .num { color: #2980B9; }
@@ -184,17 +190,18 @@
         .stat-item:nth-child(4) .num { color: #F39C12; }
         .stat-item .label { color: #555; font-size: 1rem; font-weight: 600; }
 
-        .services-section { padding: 80px 20px; background: #f8faf9; }
+        /* قسم الخدمات - تم تعديل الخلفية إلى رمادي فاتح */
+        .services-section { padding: 80px 20px; background: #ECF0F1; }
         .services-container { max-width: 1100px; margin: 0 auto; }
         .services-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-        .service-box { background: white; border-radius: 18px; padding: 35px 22px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; transition: all 0.3s ease; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
+        .service-box { background: white; border-radius: 18px; padding: 35px 22px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #D5D8DC; transition: all 0.3s ease; text-decoration: none; color: inherit; position: relative; overflow: hidden; }
         .service-box::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; transition: height 0.3s ease; }
         .service-box:nth-child(1)::before { background: #27AE60; }
         .service-box:nth-child(2)::before { background: #2980B9; }
         .service-box:nth-child(3)::before { background: #E74C3C; }
         .service-box:nth-child(4)::before { background: #F39C12; }
         .service-box:hover::before { height: 8px; }
-        .service-box:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+        .service-box:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
         .s-icon { width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; color: white; margin: 0 auto 18px; box-shadow: 0 8px 22px rgba(0,0,0,0.1); }
         .service-box:nth-child(1) .s-icon { background: #27AE60; }
         .service-box:nth-child(2) .s-icon { background: #2980B9; }
@@ -203,19 +210,21 @@
         .service-box h4 { font-size: 1.1rem; color: #2C3E50; margin-bottom: 10px; font-weight: 800; }
         .service-box p { color: #666; font-size: 0.88rem; line-height: 1.7; }
 
-        .why-us-section { padding: 80px 20px; background: white; }
+        /* قسم لماذا نحن - تم تعديل الخلفية إلى رمادي فاتح */
+        .why-us-section { padding: 80px 20px; background: #F5F6FA; }
         .why-us-container { max-width: 1000px; margin: 0 auto; }
         .why-us-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-        .why-us-item { display: flex; align-items: flex-start; gap: 18px; padding: 25px; background: #f8faf9; border-radius: 16px; border-right: 4px solid #27AE60; transition: all 0.3s ease; }
+        .why-us-item { display: flex; align-items: flex-start; gap: 18px; padding: 25px; background: white; border-radius: 16px; border-right: 4px solid #27AE60; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
         .why-us-item:nth-child(2) { border-right-color: #2980B9; }
         .why-us-item:nth-child(3) { border-right-color: #E74C3C; }
         .why-us-item:nth-child(4) { border-right-color: #F39C12; }
-        .why-us-item:hover { background: #eafaf1; transform: translateX(-5px); }
+        .why-us-item:hover { background: #F8F9FA; transform: translateX(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
         .why-icon { width: 55px; height: 55px; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; flex-shrink: 0; }
         .why-us-item h4 { color: #2C3E50; margin-bottom: 5px; font-weight: 800; font-size: 1.05rem; }
         .why-us-item p { color: #666; font-size: 0.9rem; line-height: 1.7; }
 
-        .cta-section { padding: 80px 20px; background: linear-gradient(135deg, #1a2a3a, #2C3E50); text-align: center; color: white; }
+        /* قسم الدعوة للإجراء - تم تغيير التدرج إلى رمادي غامق */
+        .cta-section { padding: 80px 20px; background: linear-gradient(135deg, #2C3E50, #34495E); text-align: center; color: white; }
         .cta-container { max-width: 700px; margin: 0 auto; }
         .cta-section h2 { font-size: 2rem; font-weight: 800; margin-bottom: 15px; }
         .cta-section h2 span { color: #27AE60; }
